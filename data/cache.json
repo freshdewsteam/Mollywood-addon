@@ -93,11 +93,11 @@
       "type": "movie",
       "name": "Revolver Rinko",
       "releaseInfo": "2026-05-08",
-      "description": "A group of youngsters residing in a rural village, their imaginations ignited by the desire to craft a superhero saga.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2026-05-08",
+      "description": "A group of youngsters residing in a rural village, their imaginations ignited by the desire to craft a superhero saga.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2026-05-08\n⭐ Rating: 2.0/10",
       "poster": "https://image.tmdb.org/t/p/w500/wVRfL0cfDOnOqJPRtiBVRyav5N0.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/rQKZvZL4VX71EDRxoI17DZzOgbB.jpg",
       "genres": [
-        "Family",
+        "Comedy",
         "Drama"
       ]
     },
@@ -307,6 +307,18 @@
       "background": "https://image.tmdb.org/t/p/w1280/b38UJmNlW4ZSWgtIgk7inlFOaup.jpg",
       "genres": [
         "Comedy",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt27541778",
+      "type": "movie",
+      "name": "Anomie",
+      "releaseInfo": "2026-02-06",
+      "description": "📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-02-06",
+      "poster": "https://image.tmdb.org/t/p/w500/j0ZLUMdBimCAkblfcaBlrGzzYoq.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/wRTyeSLgTU5Xs3A2tAAGyrZPu2k.jpg",
+      "genres": [
         "Thriller"
       ]
     },
@@ -868,7 +880,7 @@
       "name": "Odum Kuthira Chadum Kuthira",
       "releaseInfo": "2025-08-28",
       "description": "Jilted at his wedding, Aby encounters a reserved woman needing help. As they heal together, his ex returns with newfound insight into his dreams. A hidden truth leads Aby to find peace.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-08-28\n⭐ Rating: 5.4/10",
-      "poster": "https://image.tmdb.org/t/p/w500/A7tcEl28jq2dOm3iU2WqGVzGnTP.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/zIEV0sb7RNcLB7ZKRqt2rx1ANbA.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/bNH7K4yJtPqLd1VHvsjZHwx4BUa.jpg",
       "genres": [
         "Drama",
@@ -1232,20 +1244,6 @@
         "Drama",
         "Action"
       ]
-    },
-    {
-      "id": "tt32105116",
-      "type": "movie",
-      "name": "Prince and Family",
-      "releaseInfo": "2025-05-09",
-      "description": "Introverted bridal boutique owner, Prince, the town's most eligible bachelor, marries his polar opposite. Chaos and comedy ensue as their contrasting personalities clash in rural Kerala.\n\n📺 Streaming on: Zee5\n📅 Release: 2025-05-09\n⭐ Rating: 5.3/10",
-      "poster": "https://image.tmdb.org/t/p/w500/bsFg2yv4zeOSbch0K3xxObrvux1.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/oOyFOEnucVpdbIQj5GIyHZfRhS5.jpg",
-      "genres": [
-        "Family",
-        "Comedy",
-        "Drama"
-      ]
     }
   ],
   "malayalam-series": [
@@ -1486,7 +1484,7 @@
       "type": "movie",
       "name": "Ego Raman",
       "releaseInfo": "2026-07-24",
-      "description": "📺 Streaming on: Prime Video\n📅 Release: 2026-07-24"
+      "description": "Follows the toxic relationship between a prospective civil servant and a conceited school principal, which intensifies when a Yamaha motorbike enters the narrative.\n\n📺 Streaming on: Prime Video\n📅 Release: 2026-07-24"
     },
     {
       "id": "tt39182439",
@@ -1494,12 +1492,26 @@
       "name": "Con City",
       "releaseInfo": "2026-07-24",
       "description": "Follows a struggling family whose lives change when a receipt printer starts generating money after a lightning strike, leading to public chaos when society discovers the money-making machine.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-07-24\n⭐ Rating: 7.0/10",
-      "poster": "https://image.tmdb.org/t/p/w500/pJ4UwvLpek1jK8d540Ho8xI08iL.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/vUsDcZkFTDoqthmxQ7SKnrVGb3V.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/jzDjIHDknKz9jhTvBF9aSeoax1V.jpg",
       "genres": [
         "Comedy",
         "Crime",
         "Drama"
+      ]
+    },
+    {
+      "id": "tt28259290",
+      "type": "movie",
+      "name": "Moondram Kan",
+      "releaseInfo": "2026-06-12",
+      "description": "Follows the investigation of a factory general manager's murder, where four workers—a mechanic, assistant manager, owner, and new recruit—become the primary suspects.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2026-06-12",
+      "poster": "https://image.tmdb.org/t/p/w500/zScF00DoAaZoTxysoxTQk7aUge4.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/i24a2DQNM12AAZczm4Ju04Wesdn.jpg",
+      "genres": [
+        "Thriller",
+        "Drama",
+        "Crime"
       ]
     },
     {
@@ -2020,19 +2032,6 @@
       ]
     },
     {
-      "id": "tt39028191",
-      "type": "movie",
-      "name": "Dear Radhi",
-      "releaseInfo": "2026-01-02",
-      "description": "Madhan goes on a one-day date with Radhi, a beautiful girl who works at a spa; the day spirals into a dangerous chase as both the police and a gang hunt for Radhi, ending in a shocking truth that reveals their connection.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2026-01-02\n⭐ Rating: 6.0/10",
-      "poster": "https://image.tmdb.org/t/p/w500/9m7Bq47NxPxbJrkzu3QaDiv1D1W.jpg",
-      "genres": [
-        "Drama",
-        "Romance",
-        "Comedy"
-      ]
-    },
-    {
       "id": "tt35684868",
       "type": "movie",
       "name": "Sirai",
@@ -2114,7 +2113,7 @@
       "type": "movie",
       "name": "Revolver Rita",
       "releaseInfo": "2025-11-28",
-      "description": "A woman must use her intelligence and grit to protect her family after they are unexpectedly caught in the crossfire of gang violence.\n\n📺 Streaming on: Netflix, JioHotstar\n📅 Release: 2025-11-28\n⭐ Rating: 6.4/10",
+      "description": "A woman must use her intelligence and grit to protect her family after they are unexpectedly caught in the crossfire of gang violence.\n\n📺 Streaming on: Netflix, JioHotstar\n📅 Release: 2025-11-28\n⭐ Rating: 6.5/10",
       "poster": "https://image.tmdb.org/t/p/w500/vhllGhZ2TBbyB0f5xjgj181PP5T.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/nbV74XlKammNDGJM4SxShSupOgc.jpg",
       "genres": [
@@ -2933,5 +2932,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-07-24T14:19:49.137Z"
+  "builtAt": "2026-07-24T20:16:06.925Z"
 }
