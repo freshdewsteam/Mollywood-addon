@@ -1484,7 +1484,9 @@
       "type": "movie",
       "name": "Ego Raman",
       "releaseInfo": "2026-07-24",
-      "description": "Follows the toxic relationship between a prospective civil servant and a conceited school principal, which intensifies when a Yamaha motorbike enters the narrative.\n\n📺 Streaming on: Prime Video\n📅 Release: 2026-07-24"
+      "description": "Follows the toxic relationship between a prospective civil servant and a conceited school principal, which intensifies when a Yamaha motorbike enters the narrative.\n\n📺 Streaming on: Prime Video\n📅 Release: 2026-07-24",
+      "poster": "https://image.tmdb.org/t/p/w500/xHfrl3LNJBWho5Thsofdy8VBfHh.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/sRphVl1MoUc9lggaZlRqBYXa9hW.jpg"
     },
     {
       "id": "tt39182439",
@@ -1519,7 +1521,7 @@
       "type": "movie",
       "name": "Double Occupancy",
       "releaseInfo": "2026-06-12",
-      "description": "Rajini transforms between woman by day and man by night, hiding this gender swap from partners creating tangled complications.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-06-12",
+      "description": "Rajini transforms between woman by day and man by night, hiding this gender swap from partners creating tangled complications.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-06-12\n⭐ Rating: 6.0/10",
       "poster": "https://image.tmdb.org/t/p/w500/afwvI8D1SLSMqINJbq0Wi9eCBWt.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/v4Fkzv4wrlGzF3af60Xwxpb5tJk.jpg",
       "genres": [
@@ -2931,5 +2933,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-07-25T04:44:11.656Z"
+  "builtAt": "2026-07-25T09:02:31.562Z"
 }
