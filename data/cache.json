@@ -18,9 +18,13 @@
       "type": "movie",
       "name": "Secret of Kalinga",
       "releaseInfo": "2026-07-24",
-      "description": "📺 Streaming on: SunNxt\n📅 Release: 2026-07-24",
+      "description": "A college sits on ancient Kalinga kingdom land. Behind it, a forest well holds a princess's spirit, imprisoned centuries ago. Students accidentally break the seal on New Year's Eve, triggering comedic chaos.\n\n📺 Streaming on: SunNxt\n📅 Release: 2026-07-24\n⭐ Rating: 1.0/10",
       "poster": "https://image.tmdb.org/t/p/w500/fIDU3LSWigWq9ges3Dw5KvGn3Av.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/1gCAMqd8SKeQEzbgKRwTwzvrxgX.jpg"
+      "background": "https://image.tmdb.org/t/p/w1280/1gCAMqd8SKeQEzbgKRwTwzvrxgX.jpg",
+      "genres": [
+        "Horror",
+        "Comedy"
+      ]
     },
     {
       "id": "tt29959401",
@@ -53,7 +57,7 @@
       "type": "movie",
       "name": "Dose",
       "releaseInfo": "2026-05-22",
-      "description": "A doctor uncovers a suspicious death at his hospital, unraveling secrets and lies. Joined by a haunted investigator, their search for truth becomes a deadly fight for survival.\n\n📺 Streaming on: Amazon Prime Video, ManoramaMax, Lionsgate Play, Lionsgate Play Apple TV Channel, Lionsgate Play Amazon Channel, ManoramaMAX Amazon Channel, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel\n📅 Release: 2026-05-22",
+      "description": "Bodies begin to pile up in a hospital meant to save lives, forcing a doctor with a troubled past to confront buried secrets when a woman from his past returns. As the investigation deepens, each revelation becomes more dangerous than the last.\n\n📺 Streaming on: Amazon Prime Video, ManoramaMax, Lionsgate Play, Lionsgate Play Apple TV Channel, Lionsgate Play Amazon Channel, ManoramaMAX Amazon Channel, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel\n📅 Release: 2026-05-22\n⭐ Rating: 2.0/10",
       "poster": "https://image.tmdb.org/t/p/w500/wuEQbDF5jHaOOAMGiXWmDRz9imG.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/swelLWmdNwZVU403GG5L2pDtaaS.jpg",
       "genres": [
@@ -1480,20 +1484,11 @@
   ],
   "tamil-movies": [
     {
-      "id": "tt43202886",
-      "type": "movie",
-      "name": "Ego Raman",
-      "releaseInfo": "2026-07-24",
-      "description": "Follows the toxic relationship between a prospective civil servant and a conceited school principal, which intensifies when a Yamaha motorbike enters the narrative.\n\n📺 Streaming on: Prime Video\n📅 Release: 2026-07-24",
-      "poster": "https://image.tmdb.org/t/p/w500/xHfrl3LNJBWho5Thsofdy8VBfHh.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/sRphVl1MoUc9lggaZlRqBYXa9hW.jpg"
-    },
-    {
       "id": "tt39182439",
       "type": "movie",
       "name": "Con City",
       "releaseInfo": "2026-07-24",
-      "description": "Follows a struggling family whose lives change when a receipt printer starts generating money after a lightning strike, leading to public chaos when society discovers the money-making machine.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-07-24\n⭐ Rating: 6.5/10",
+      "description": "📺 Streaming on: Netflix\n📅 OTT Release: 2026-07-24",
       "poster": "https://image.tmdb.org/t/p/w500/vUsDcZkFTDoqthmxQ7SKnrVGb3V.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/jzDjIHDknKz9jhTvBF9aSeoax1V.jpg",
       "genres": [
@@ -1501,6 +1496,15 @@
         "Crime",
         "Drama"
       ]
+    },
+    {
+      "id": "tt43202886",
+      "type": "movie",
+      "name": "Ego Raman",
+      "releaseInfo": "2026-07-24",
+      "description": "Follows the toxic relationship between a prospective civil servant and a conceited school principal, which intensifies when a Yamaha motorbike enters the narrative.\n\n📺 Streaming on: Prime Video\n📅 Release: 2026-07-24",
+      "poster": "https://image.tmdb.org/t/p/w500/xHfrl3LNJBWho5Thsofdy8VBfHh.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/sRphVl1MoUc9lggaZlRqBYXa9hW.jpg"
     },
     {
       "id": "tt28259290",
@@ -2019,21 +2023,6 @@
       ]
     },
     {
-      "id": "tt35019998",
-      "type": "movie",
-      "name": "Parasakthi",
-      "releaseInfo": "2026-01-09",
-      "description": "In a time of civil disobedience in the erstwhile Madras state, a ruthless intelligent officer turns up with a duty to track down rebels. Chezhian and his brother Chinndurai are of different personalities, one a hardworking fireman, the other a rebel. A deadly game of cat and mouse ensues as Chezhian is forced to abandon his peaceful ways to protect his people and takes on the mighty forces, culminating in a fierce battle for justice.\n\n📺 Streaming on: Zee5\n📅 Release: 2026-01-09\n⭐ Rating: 6.1/10",
-      "poster": "https://image.tmdb.org/t/p/w500/cpKJGYU8Z1iSXzkgDl8vhazk5EQ.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/yMgpIzfqHZXbEN8ar9EAHJvdYJj.jpg",
-      "genres": [
-        "History",
-        "Drama",
-        "Action",
-        "Romance"
-      ]
-    },
-    {
       "id": "tt39028191",
       "type": "movie",
       "name": "Dear Radhi",
@@ -2260,6 +2249,20 @@
       ]
     },
     {
+      "id": "tt28434143",
+      "type": "movie",
+      "name": "Aaryan",
+      "releaseInfo": "2025-10-31",
+      "description": "A struggling writer announces he'll commit the perfect crime, sparking a tense pursuit as police try to prevent his methodically planned killing spree.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-10-31\n⭐ Rating: 5.1/10",
+      "poster": "https://image.tmdb.org/t/p/w500/rRjh3zumdW89fNMe4tdjmALB1xG.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/mRyCfbc3vZblB8slswmwovrEhTR.jpg",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ]
+    },
+    {
       "id": "tt36388163",
       "type": "movie",
       "name": "Dude",
@@ -2457,6 +2460,21 @@
       "genres": [
         "Crime",
         "Drama"
+      ]
+    },
+    {
+      "id": "tt32278054",
+      "type": "movie",
+      "name": "House Mates",
+      "releaseInfo": "2025-08-01",
+      "description": "Karthick and Anu fall in love, get married and buy an old flat for their own. Many strange incidents happening in that house. They found out the reason and hand over the flat to the first owner Ramesh.\n\n📺 Streaming on: Zee5\n📅 Release: 2025-08-01\n⭐ Rating: 7.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/1HeWmcvzXKyBrUxCFdbvEni4spb.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/en6q9MmuuG6SBTEtlYmoGQPcYWh.jpg",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Fantasy",
+        "Horror"
       ]
     },
     {
@@ -2722,31 +2740,6 @@
         "Crime",
         "Drama"
       ]
-    },
-    {
-      "id": "tt26345633",
-      "type": "movie",
-      "name": "Jinn-The Pet",
-      "releaseInfo": "2025-05-30",
-      "description": "A musician brings home an ancient box containing a mystical Jinn, only to discover the creature he blamed for his family's misfortunes is actually their protector.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2025-05-30\n⭐ Rating: 4.0/10",
-      "poster": "https://image.tmdb.org/t/p/w500/gNnp6agOO6KCsEOzo9ll7P9U2VK.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/7gOKWbSrSbvlQy2SPBoujdelJrq.jpg",
-      "genres": [
-        "Comedy",
-        "Horror"
-      ]
-    },
-    {
-      "id": "tt28601576",
-      "type": "movie",
-      "name": "Vembu",
-      "releaseInfo": "2025-05-23",
-      "description": "Vembu follows the journey of a bold village girl passionate about martial arts. Raised by her supportive father, she dreams of excelling in martial arts while preparing for government exams. Pressured by society, she agrees to marry her cousin Vetri. Understanding her inner conflict, Vetri promises to support her dreams. As financial struggles arise, Vembu steps up to take care of the family. The film portrays her resilience and determination to rise above challenges and pursue her passion.\n\n📺 Streaming on: aha\n📅 Release: 2025-05-23",
-      "poster": "https://image.tmdb.org/t/p/w500/8SjgNhZuUzdgHV83dijsJlpnqQI.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/zMkF0rY6QfNAC4k6rDeRrI81Bqn.jpg",
-      "genres": [
-        "Drama"
-      ]
     }
   ],
   "tamil-series": [
@@ -2933,5 +2926,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-07-26T14:07:05.440Z"
+  "builtAt": "2026-07-26T20:05:46.378Z"
 }
