@@ -319,10 +319,11 @@
       "type": "movie",
       "name": "Anomie",
       "releaseInfo": "2026-02-06",
-      "description": "📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-02-06",
+      "description": "Zaara, a relentless sister seeking answers in her brother's unresolved case, confronts a police officer after days of failed investigation. As faith in the system erodes, she pursues the truth on parallel paths, leading to a haunting revelation.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-02-06\n⭐ Rating: 3.0/10",
       "poster": "https://image.tmdb.org/t/p/w500/j0ZLUMdBimCAkblfcaBlrGzzYoq.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/wRTyeSLgTU5Xs3A2tAAGyrZPu2k.jpg",
       "genres": [
+        "Crime",
         "Thriller"
       ]
     },
@@ -2927,5 +2928,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-07-27T05:12:17.066Z"
+  "builtAt": "2026-07-27T10:42:58.562Z"
 }
