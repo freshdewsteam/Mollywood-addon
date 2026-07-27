@@ -2023,6 +2023,21 @@
       ]
     },
     {
+      "id": "tt35019998",
+      "type": "movie",
+      "name": "Parasakthi",
+      "releaseInfo": "2026-01-09",
+      "description": "In a time of civil disobedience in the erstwhile Madras state, a ruthless intelligent officer turns up with a duty to track down rebels. Chezhian and his brother Chinndurai are of different personalities, one a hardworking fireman, the other a rebel. A deadly game of cat and mouse ensues as Chezhian is forced to abandon his peaceful ways to protect his people and takes on the mighty forces, culminating in a fierce battle for justice.\n\n📺 Streaming on: Zee5\n📅 Release: 2026-01-09\n⭐ Rating: 6.1/10",
+      "poster": "https://image.tmdb.org/t/p/w500/cpKJGYU8Z1iSXzkgDl8vhazk5EQ.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/yMgpIzfqHZXbEN8ar9EAHJvdYJj.jpg",
+      "genres": [
+        "History",
+        "Drama",
+        "Action",
+        "Romance"
+      ]
+    },
+    {
       "id": "tt39028191",
       "type": "movie",
       "name": "Dear Radhi",
@@ -2232,20 +2247,6 @@
         "Comedy",
         "Romance",
         "Drama"
-      ]
-    },
-    {
-      "id": "tt28434143",
-      "type": "movie",
-      "name": "Aaryan",
-      "releaseInfo": "2025-10-31",
-      "description": "A struggling writer announces he'll commit the perfect crime, sparking a tense pursuit as police try to prevent his methodically planned killing spree.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-10-31\n⭐ Rating: 5.1/10",
-      "poster": "https://image.tmdb.org/t/p/w500/rRjh3zumdW89fNMe4tdjmALB1xG.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/mRyCfbc3vZblB8slswmwovrEhTR.jpg",
-      "genres": [
-        "Action",
-        "Thriller",
-        "Crime"
       ]
     },
     {
@@ -2926,5 +2927,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-07-26T20:05:46.378Z"
+  "builtAt": "2026-07-27T05:12:17.066Z"
 }
