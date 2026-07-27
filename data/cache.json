@@ -776,13 +776,12 @@
       "type": "movie",
       "name": "Balti",
       "releaseInfo": "2025-09-26",
-      "description": "A star kabaddi player's life takes a dangerous turn when he's pulled into the criminal underworld.\n\n📺 Streaming on: Sony Liv\n📅 Release: 2025-09-26\n⭐ Rating: 6.3/10",
+      "description": "A star kabaddi player's life takes a dangerous turn when he's pulled into the criminal underworld.\n\n📺 Streaming on: Sony Liv\n📅 Release: 2025-09-26\n⭐ Rating: 5.5/10",
       "poster": "https://image.tmdb.org/t/p/w500/tpgbGGIM76Vk44KLxTNM2UkzmLG.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/6ZZNqEJSorszn4NPuPBWE4xAwUr.jpg",
       "genres": [
         "Action",
-        "Drama",
-        "Romance"
+        "Drama"
       ]
     },
     {
@@ -1546,6 +1545,19 @@
       "genres": [
         "Drama",
         "Music"
+      ]
+    },
+    {
+      "id": "tt29429839",
+      "type": "movie",
+      "name": "Sannidhanam P.O.",
+      "releaseInfo": "2026-06-05",
+      "description": "A mother's search for her son who went missing when he was a child.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel\n📅 Release: 2026-06-05",
+      "poster": "https://image.tmdb.org/t/p/w500/1CHaHGqw4DaQppjxKDzOzGJCdv7.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/hskdNGEUWYoOgSGah0cAd9XmGKX.jpg",
+      "genres": [
+        "Drama",
+        "Mystery"
       ]
     },
     {
@@ -2914,5 +2926,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-07-27T15:22:51.297Z"
+  "builtAt": "2026-07-27T20:18:26.303Z"
 }
