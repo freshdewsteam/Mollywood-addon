@@ -1484,6 +1484,18 @@
   ],
   "tamil-movies": [
     {
+      "id": "tt35076988",
+      "type": "movie",
+      "name": "Chinna Chinna Aasai",
+      "releaseInfo": "2026-07-28",
+      "description": "On the enchanting shores of Varanasi, two souls meet by chance. Somewhere within this unfolding chaos, an unspoken bond begins to form, slowly slipping beyond friendship.\n\n📺 Streaming on: Jiohotstar\n📅 Release: 2026-07-28",
+      "poster": "https://image.tmdb.org/t/p/w500/IM2OXyozpmi9dLpx46XYQXxOTd.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/1KXnH4NcCQTAxV0pZwvIIGCepIx.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
       "id": "tt39182439",
       "type": "movie",
       "name": "Con City",
@@ -2926,5 +2938,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-07-27T20:18:26.303Z"
+  "builtAt": "2026-07-28T04:42:55.960Z"
 }
