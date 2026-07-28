@@ -3,9 +3,9 @@
     {
       "id": "tt10515398",
       "type": "movie",
-      "name": "Pallichattambi: The Origin",
+      "name": "Pallichattambi",
       "releaseInfo": "2026-07-24",
-      "description": "Set in the politically turbulent late 1950s, Krishnan Pillai, a playful ruffian chosen by the Church to lead a defensive force, the Christopher Sena. His mission to resist the Communist government takes a detour when he experiences an ideological awakening and falls in love with a comrade, sparking an epic tale of rebellion against feudal power and oppression.\n\n📺 Streaming on: Sony LIV\n📅 Release: 2026-07-24\n⭐ Rating: 4.7/10",
+      "description": "📺 Streaming on: Sony LIV\n📅 OTT Release: 2026-07-24",
       "poster": "https://image.tmdb.org/t/p/w500/pEzXdyJhdWc2msM0oBC9N8pKtMY.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/kAJK8Kp6oPYb3T2gIHfp2SNitJ.jpg",
       "genres": [
@@ -179,6 +179,17 @@
       "background": "https://image.tmdb.org/t/p/w1280/uNA0OVk09Hbwflye3eBoOiGIKGc.jpg",
       "genres": [
         "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt43505958",
+      "type": "movie",
+      "name": "Kalyanamaram",
+      "releaseInfo": "2026-03-27",
+      "description": "📺 Streaming on: ManoramaMAX Amazon Channel\n📅 Release: 2026-03-27",
+      "poster": "https://image.tmdb.org/t/p/w500/s4a61OK9DPfGK7ErqTH8zx6dPCr.jpg",
+      "genres": [
         "Drama"
       ]
     },
@@ -1222,32 +1233,6 @@
         "Drama",
         "Thriller"
       ]
-    },
-    {
-      "id": "tt33319697",
-      "type": "movie",
-      "name": "Detective Ujjwalan",
-      "releaseInfo": "2025-05-23",
-      "description": "In the village of Plaachikkaavu, a local detective, Ujjwalan, must outsmart a mysterious figure in a deadly battle of wits, where his skills are put to the ultimate test.\n\n📺 Streaming on: Netflix, Amazon Prime Video, Lionsgate Play, Lionsgate Play Apple TV Channel, Lionsgate Play Amazon Channel, Amazon Prime Video with Ads, JioHotstar\n📅 Release: 2025-05-23\n⭐ Rating: 5.7/10",
-      "poster": "https://image.tmdb.org/t/p/w500/rVCNbMW2bmbPE2XaUMUsnA9YgAh.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/6jsyu5qmBxqdmlG2RCRizrczdMc.jpg",
-      "genres": [
-        "Mystery",
-        "Crime"
-      ]
-    },
-    {
-      "id": "tt28479285",
-      "type": "movie",
-      "name": "Narivetta",
-      "releaseInfo": "2025-05-16",
-      "description": "A police officer uncovers a conspiracy based around state-sanctioned violence against victimized villagers.\n\n📺 Streaming on: Sony Liv\n📅 Release: 2025-05-16\n⭐ Rating: 6.4/10",
-      "poster": "https://image.tmdb.org/t/p/w500/2i0gIDVrCwzb52Elwnv4bUJEbHP.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/dMgF7mMbZO6ogxI4teciz5203UV.jpg",
-      "genres": [
-        "Drama",
-        "Action"
-      ]
     }
   ],
   "malayalam-series": [
@@ -1662,7 +1647,7 @@
       "type": "movie",
       "name": "Breakfast: Accept the Reality",
       "releaseInfo": "2026-04-24",
-      "description": "Divorcing couple Rishab and Lakshmi meet counselor Dr. Gangadevi, who recounts a film about Shantanu and heiress Janvi — on hearing that story the couple finds about an estranged person and the get to know about the relationship between them.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-04-24",
+      "description": "Divorcing couple Rishab and Lakshmi meet counselor Dr. Gangadevi, who recounts a film about Shantanu and heiress Janvi — on hearing that story the couple finds about an estranged person and the get to know about the relationship between them.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel\n📅 Release: 2026-04-24",
       "poster": "https://image.tmdb.org/t/p/w500/xpFEHrivqCbeRem5XQsSmh1TMWi.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/cSRqSiw4oB638PtrgtXDbCd6YOC.jpg",
       "genres": [
@@ -2938,5 +2923,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-07-28T09:36:29.485Z"
+  "builtAt": "2026-07-28T14:57:59.411Z"
 }
