@@ -27,6 +27,18 @@
       ]
     },
     {
+      "id": "tt35076988",
+      "type": "movie",
+      "name": "Chinna Chinna Aasai",
+      "releaseInfo": "2026-06-19",
+      "description": "On the enchanting shores of Varanasi, two souls meet by chance. Somewhere within this unfolding chaos, an unspoken bond begins to form, slowly slipping beyond friendship.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2026-06-19",
+      "poster": "https://image.tmdb.org/t/p/w500/8THEBd1bdOsJZRGTCR3oYrFHaiP.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/1KXnH4NcCQTAxV0pZwvIIGCepIx.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
       "id": "tt29959401",
       "type": "movie",
       "name": "Mollywood Times",
@@ -149,7 +161,7 @@
       "name": "Oru Durooha Saahacharyathil",
       "releaseInfo": "2026-04-15",
       "description": "Humble health care worker Sethu lives a quiet life caring for his sick brother — until a mysterious armed fugitive seeks refuge in his home.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-04-15\n⭐ Rating: 5.8/10",
-      "poster": "https://image.tmdb.org/t/p/w500/rsMHfc75OJmdRYKsgJlALDVyMGz.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/m5QAeVHpqSedMEvIpbUle6aUn5q.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/ypAZ45yFGfGpGGHyaLFUhE8psMS.jpg",
       "genres": [
         "Comedy",
@@ -866,7 +878,7 @@
       "name": "Hridayapoorvam",
       "releaseInfo": "2025-08-28",
       "description": "Sandeep, a middle-aged bachelor who recently got a heart transplant, travels to Pune to attend the engagement of his heart-donor’s daughter, Haritha. Her engagement gets broken and Sandeep injures his back on the same day, forcing him to stay back in Pune for a few weeks, in his heart-donor’s house – who was an adventurous Colonel.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2025-08-28\n⭐ Rating: 6.9/10",
-      "poster": "https://image.tmdb.org/t/p/w500/eZt12fSr4eu4mKk1x9LsPnfdj3q.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/j6M2odS1RqGEUPKirIvB1VZ9i6Y.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/7HATFCB88pCbTyFytbUM48aZtpy.jpg",
       "genres": [
         "Romance",
@@ -1187,7 +1199,7 @@
       "name": "Aabhyanthara Kuttavaali",
       "releaseInfo": "2025-06-06",
       "description": "Sahadevan's dreams of a happy marriage get shattered when his wife Nayana accuses him of dowry demands and domestic abuse. As he decides to fight for his innocence, how far will he go to prove it?\n\n📺 Streaming on: Zee5\n📅 Release: 2025-06-06\n⭐ Rating: 4.2/10",
-      "poster": "https://image.tmdb.org/t/p/w500/nCQTYCSrf6Zzf4JfQZAz20QdWk1.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/zQ4crcJm2QBX2bM8i0NuCKnnD2T.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/aszckwGB9Qy2pPSBLFp9nDmDXjq.jpg",
       "genres": [
         "Family",
@@ -1461,7 +1473,7 @@
       "name": "Chinna Chinna Aasai",
       "releaseInfo": "2026-07-28",
       "description": "On the enchanting shores of Varanasi, two souls meet by chance. Somewhere within this unfolding chaos, an unspoken bond begins to form, slowly slipping beyond friendship.\n\n📺 Streaming on: Jiohotstar\n📅 Release: 2026-07-28",
-      "poster": "https://image.tmdb.org/t/p/w500/IM2OXyozpmi9dLpx46XYQXxOTd.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/8THEBd1bdOsJZRGTCR3oYrFHaiP.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/1KXnH4NcCQTAxV0pZwvIIGCepIx.jpg",
       "genres": [
         "Drama"
@@ -1473,7 +1485,7 @@
       "name": "Con City",
       "releaseInfo": "2026-07-24",
       "description": "📺 Streaming on: Netflix\n📅 OTT Release: 2026-07-24",
-      "poster": "https://image.tmdb.org/t/p/w500/vUsDcZkFTDoqthmxQ7SKnrVGb3V.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/pJ4UwvLpek1jK8d540Ho8xI08iL.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/jzDjIHDknKz9jhTvBF9aSeoax1V.jpg",
       "genres": [
         "Comedy",
@@ -2910,5 +2922,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-07-29T14:40:19.706Z"
+  "builtAt": "2026-07-29T20:09:14.496Z"
 }
