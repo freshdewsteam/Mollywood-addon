@@ -332,7 +332,7 @@
       "releaseInfo": "2026-02-06",
       "description": "Zaara, a relentless sister seeking answers in her brother's unresolved case, confronts a police officer after days of failed investigation. As faith in the system erodes, she pursues the truth on parallel paths, leading to a haunting revelation.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-02-06\n⭐ Rating: 3.0/10",
       "poster": "https://image.tmdb.org/t/p/w500/j0ZLUMdBimCAkblfcaBlrGzzYoq.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/wRTyeSLgTU5Xs3A2tAAGyrZPu2k.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/pztQG3jKVQEgf8JZAVKLt885EyG.jpg",
       "genres": [
         "Crime",
         "Thriller"
@@ -471,7 +471,7 @@
       "name": "Sarvam Maya",
       "releaseInfo": "2025-12-25",
       "description": "A man who loses his belief in God meets the spirit of a young woman unable to remember what happened to her.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2025-12-25\n⭐ Rating: 7.9/10",
-      "poster": "https://image.tmdb.org/t/p/w500/ntyO3ngllfNxDMkZ2QxHytwFzxT.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/mgLY1aQayVX6dQ2DiylLAhjEG8w.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/6Zn4PaLwLHFJ2bw7s6B10fHiuAD.jpg",
       "genres": [
         "Comedy",
@@ -1220,19 +1220,6 @@
         "Crime",
         "Drama"
       ]
-    },
-    {
-      "id": "tt27494358",
-      "type": "movie",
-      "name": "Azadi",
-      "releaseInfo": "2025-05-23",
-      "description": "An elaborate plan is made to break a pregnant woman out of prison.\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2025-05-23\n⭐ Rating: 2.7/10",
-      "poster": "https://image.tmdb.org/t/p/w500/A3t50UA1rl6Yt15eMJPkpMe2eMh.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/lDZsBLqD2BskD4OPhesmm7vYo8N.jpg",
-      "genres": [
-        "Drama",
-        "Thriller"
-      ]
     }
   ],
   "malayalam-series": [
@@ -1760,20 +1747,6 @@
       "genres": [
         "Drama",
         "Romance"
-      ]
-    },
-    {
-      "id": "tt39122419",
-      "type": "movie",
-      "name": "Happy Raj",
-      "releaseInfo": "2026-03-27",
-      "description": "A city romance meets a rural family invasion. What follows is chaos, comedy, and heartfelt moments. The story unfolds as a joyful entertainer that explores love, cultural clashes, and the importance of family bonds.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-03-27\n⭐ Rating: 4.5/10",
-      "poster": "https://image.tmdb.org/t/p/w500/8hmB6KNUFFzChYJxngIp063H2YR.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/fug20H3qffP941XVDJCnpY61GVn.jpg",
-      "genres": [
-        "Romance",
-        "Comedy",
-        "Drama"
       ]
     },
     {
@@ -2737,6 +2710,20 @@
       "genres": [
         "Drama"
       ]
+    },
+    {
+      "id": "tt23398540",
+      "type": "movie",
+      "name": "Thug Life",
+      "releaseInfo": "2025-06-04",
+      "description": "In a world ruled by crime and betrayal, mafia kingpin Sakthivel and his brother Manikkam rescue a young boy, Amaran, during a violent police shootout and raise him as their own. Years later, when an assassination attempt shakes Sakthivel's empire, suspicion turns inward. Consumed by vengeance, Sakthivel sets out to destroy the very family he once built.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-06-04\n⭐ Rating: 5.1/10",
+      "poster": "https://image.tmdb.org/t/p/w500/DmBbUtbA3T9sdVXDgIJ8bsIDw0.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/of9YQ9XE2aUVbiorECRnFCu5iIn.jpg",
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ]
     }
   ],
   "tamil-series": [
@@ -2923,5 +2910,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-07-29T09:37:05.431Z"
+  "builtAt": "2026-07-29T14:40:19.706Z"
 }
