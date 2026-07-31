@@ -2734,20 +2734,6 @@
       "genres": [
         "Drama"
       ]
-    },
-    {
-      "id": "tt23398540",
-      "type": "movie",
-      "name": "Thug Life",
-      "releaseInfo": "2025-06-04",
-      "description": "In a world ruled by crime and betrayal, mafia kingpin Sakthivel and his brother Manikkam rescue a young boy, Amaran, during a violent police shootout and raise him as their own. Years later, when an assassination attempt shakes Sakthivel's empire, suspicion turns inward. Consumed by vengeance, Sakthivel sets out to destroy the very family he once built.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-06-04\n⭐ Rating: 5.1/10",
-      "poster": "https://image.tmdb.org/t/p/w500/DmBbUtbA3T9sdVXDgIJ8bsIDw0.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/of9YQ9XE2aUVbiorECRnFCu5iIn.jpg",
-      "genres": [
-        "Action",
-        "Crime",
-        "Drama"
-      ]
     }
   ],
   "tamil-series": [
@@ -2859,8 +2845,7 @@
       "poster": "https://image.tmdb.org/t/p/w500/cL7iOwqapRRb7eKKlXI4FDaP6rh.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/wQ1cpJW9uxfKmO8msAF5z4edK63.jpg",
       "genres": [
-        "Drama",
-        "Comedy"
+        "Drama"
       ]
     },
     {
@@ -2934,5 +2919,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-07-31T09:44:36.067Z"
+  "builtAt": "2026-07-31T14:57:11.522Z"
 }
