@@ -185,7 +185,7 @@
       "type": "movie",
       "name": "Bharathanatyam 2 Mohiniyattam",
       "releaseInfo": "2026-04-10",
-      "description": "The family's journey to Sreekandapuram to settle the late Bharathan Nair's second wife and son takes a dark turn when an issue from his past resurfaces, leading to an unexpected crime. Forced into a desperate cover-up to protect their future, the family must navigate a treacherous path of secrecy and mounting pressure, determined to overcome any obstacle by any means necessary.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-04-10\n⭐ Rating: 8.3/10",
+      "description": "The family's journey to Sreekandapuram to settle the late Bharathan Nair's second wife and son takes a dark turn when an issue from his past resurfaces, leading to an unexpected crime. Forced into a desperate cover-up to protect their future, the family must navigate a treacherous path of secrecy and mounting pressure, determined to overcome any obstacle by any means necessary.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-04-10\n⭐ Rating: 8.2/10",
       "poster": "https://image.tmdb.org/t/p/w500/lsg0IxNQCUxKqs63YjturEuY0qQ.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/g7y8EDiXvlZYrIKDLlhtbcAPnxS.jpg",
       "genres": [
@@ -1513,6 +1513,19 @@
       "description": "Follows the toxic relationship between a prospective civil servant and a conceited school principal, which intensifies when a Yamaha motorbike enters the narrative.\n\n📺 Streaming on: Prime Video\n📅 Release: 2026-07-24",
       "poster": "https://image.tmdb.org/t/p/w500/rFKCzvt5uw7wjG9ZXaUXL8MMq1Y.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/7sILP5U85V5OTzX3BsRsiy8WNyJ.jpg"
+    },
+    {
+      "id": "tt42203456",
+      "type": "movie",
+      "name": "Love Oh Love",
+      "releaseInfo": "2026-07-10",
+      "description": "A couple is in love. One partner's excessive spending pushes the other into debt. When the burdened partner decides to seek a divorce, the other files a police complaint through the leader of a women's association. As they begin living together, they gradually understand each other's struggles. Eventually, they reconcile and choose to continue their life together.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-07-10",
+      "poster": "https://image.tmdb.org/t/p/w500/o6O7sNFE59Zd3LIS2T45e1mt4Q9.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/dfoDrbAaeACqYxdMULEHFCpR9us.jpg",
+      "genres": [
+        "Romance",
+        "Comedy"
+      ]
     },
     {
       "id": "tt28259290",
@@ -2919,5 +2932,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-07-31T14:57:11.522Z"
+  "builtAt": "2026-07-31T20:15:59.050Z"
 }
