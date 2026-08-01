@@ -43,7 +43,7 @@
       "type": "movie",
       "name": "Chinna Chinna Aasai",
       "releaseInfo": "2026-06-19",
-      "description": "On the enchanting shores of Varanasi, two souls meet by chance. Somewhere within this unfolding chaos, an unspoken bond begins to form, slowly slipping beyond friendship.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2026-06-19",
+      "description": "On the enchanting shores of Varanasi, two souls meet by chance. Somewhere within this unfolding chaos, an unspoken bond begins to form, slowly slipping beyond friendship.\n\n📺 Streaming on: JioHotstar, Sun Nxt\n📅 Release: 2026-06-19",
       "poster": "https://image.tmdb.org/t/p/w500/8THEBd1bdOsJZRGTCR3oYrFHaiP.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/1KXnH4NcCQTAxV0pZwvIIGCepIx.jpg",
       "genres": [
@@ -918,7 +918,7 @@
       "type": "movie",
       "name": "Odum Kuthira Chadum Kuthira",
       "releaseInfo": "2025-08-28",
-      "description": "Jilted at his wedding, Aby encounters a reserved woman needing help. As they heal together, his ex returns with newfound insight into his dreams. A hidden truth leads Aby to find peace.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-08-28\n⭐ Rating: 5.4/10",
+      "description": "Jilted at his wedding, Aby encounters a reserved woman needing help. As they heal together, his ex returns with newfound insight into his dreams. A hidden truth leads Aby to find peace.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-08-28\n⭐ Rating: 5.3/10",
       "poster": "https://image.tmdb.org/t/p/w500/zIEV0sb7RNcLB7ZKRqt2rx1ANbA.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/bNH7K4yJtPqLd1VHvsjZHwx4BUa.jpg",
       "genres": [
@@ -1266,7 +1266,7 @@
       "releaseInfo": "2026-07-03",
       "description": "In a remote village haunted by ancient secrets, a mother's love is put to the ultimate test when her son becomes entangled in a terrifying supernatural curse.\n\n📺 Streaming on: ZEE5\n📅 Release: 2026-07-03",
       "poster": "https://image.tmdb.org/t/p/w500/upghryFPaiUMjlzgmnHpwtnYJx3.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/yjffBOFmUORT79ja3gD42GO7hI3.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/lzXWWlIg05WXmWhe666a8TNO75P.jpg",
       "genres": [
         "Mystery"
       ]
@@ -1525,6 +1525,19 @@
       "genres": [
         "Romance",
         "Comedy"
+      ]
+    },
+    {
+      "id": "tt37458495",
+      "type": "movie",
+      "name": "Gatta Kusthi 2",
+      "releaseInfo": "2026-07-03",
+      "description": "Picks up after the first film, with Veera and Keerthi balancing parenthood and Keerthi's wrestling career, featuring a role reversal where Veera takes on more domestic responsibilities.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-07-03\n⭐ Rating: 2.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/5U8MWIk9XZ60NALyOTpyX7vXIR7.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/nLMUoZn09tjeqae7lzK3x9Wf84V.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
       ]
     },
     {
@@ -2920,5 +2933,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-01T14:05:49.282Z"
+  "builtAt": "2026-08-01T20:07:24.010Z"
 }
