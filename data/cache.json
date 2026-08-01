@@ -287,7 +287,7 @@
       "type": "movie",
       "name": "Sambhavam Adhyayam Onnu",
       "releaseInfo": "2026-03-06",
-      "description": "Three Kerala Police officers venture into a mysterious forest on the Kerala-Tamil Nadu border to find a missing officer. They encounter strange time-related phenomena, uncovering the hidden secrets of Velloorkkatt forest.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-03-06\n⭐ Rating: 6.9/10",
+      "description": "Three Kerala Police officers venture into a mysterious forest on the Kerala-Tamil Nadu border to find a missing officer. They encounter strange time-related phenomena, uncovering the hidden secrets of Velloorkkatt forest.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-03-06\n⭐ Rating: 7.0/10",
       "poster": "https://image.tmdb.org/t/p/w500/4ASKGsPMbzChx0YX5Pqc9HFXQm3.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/rfMWciUEZkqL9AiNcTedhtXQHr0.jpg",
       "genres": [
@@ -2735,18 +2735,6 @@
         "Drama",
         "Family"
       ]
-    },
-    {
-      "id": "tt27504248",
-      "type": "movie",
-      "name": "Peranbum Perungobamum",
-      "releaseInfo": "2025-06-05",
-      "description": "The story follows the protagonist's three phases of life, and the antagonists, the caste heads of the village whom he avenges for the wounds and sufferings he and his beloved endured in the past.\n\n📺 Streaming on: aha\n📅 Release: 2025-06-05",
-      "poster": "https://image.tmdb.org/t/p/w500/b9o0Yjqy0U83zAbc10oAAR0Qm6i.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/hh8Ww0NmMWqw6YaUpRcEV3gAXp2.jpg",
-      "genres": [
-        "Drama"
-      ]
     }
   ],
   "tamil-series": [
@@ -2932,5 +2920,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-01T09:05:47.416Z"
+  "builtAt": "2026-08-01T14:05:49.282Z"
 }
