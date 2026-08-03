@@ -1801,6 +1801,20 @@
       ]
     },
     {
+      "id": "tt39122419",
+      "type": "movie",
+      "name": "Happy Raj",
+      "releaseInfo": "2026-03-27",
+      "description": "A city romance meets a rural family invasion. What follows is chaos, comedy, and heartfelt moments. The story unfolds as a joyful entertainer that explores love, cultural clashes, and the importance of family bonds.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-03-27\n⭐ Rating: 4.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/8hmB6KNUFFzChYJxngIp063H2YR.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/fug20H3qffP941XVDJCnpY61GVn.jpg",
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
       "id": "tt38693803",
       "type": "movie",
       "name": "Satan - The Dark",
@@ -2736,19 +2750,6 @@
         "Drama",
         "Crime"
       ]
-    },
-    {
-      "id": "tt36454677",
-      "type": "movie",
-      "name": "Madras Matinee",
-      "releaseInfo": "2025-06-06",
-      "description": "An aging sci-fi writer is challenged by his caretaker to write about the life of a common man. Reluctantly, he begins the story of Kannan, an auto rickshaw driver, and his family—only to discover that ordinary life holds unexpected depth and drama.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2025-06-06\n⭐ Rating: 7.2/10",
-      "poster": "https://image.tmdb.org/t/p/w500/gydwfpaMZtTdR5zOgLSPRWDoEJg.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/biR1Du8yECTyV9DYhexzcZJZgyg.jpg",
-      "genres": [
-        "Drama",
-        "Family"
-      ]
     }
   ],
   "tamil-series": [
@@ -2934,5 +2935,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-03T10:42:16.885Z"
+  "builtAt": "2026-08-03T15:24:39.935Z"
 }
