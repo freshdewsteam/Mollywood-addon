@@ -64,6 +64,19 @@
       ]
     },
     {
+      "id": "tt36932908",
+      "type": "movie",
+      "name": "Paithallattam",
+      "releaseInfo": "2026-05-29",
+      "description": "When the sacred Theyyam ritual demands the ultimate sacrifice from a young boy, his parents dare to challenge centuries-old beliefs. An emotional drama about faith, loss, and the courage to defy tradition\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2026-05-29",
+      "poster": "https://image.tmdb.org/t/p/w500/s0pyikd2DEAur692r1B5yjK9dzY.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/rSRHWvnvrsDhvPCN2CW2yFgO2e6.jpg",
+      "genres": [
+        "Crime",
+        "Thriller"
+      ]
+    },
+    {
       "id": "tt37561290",
       "type": "movie",
       "name": "Karakkam",
@@ -992,15 +1005,6 @@
         "Action",
         "Comedy"
       ]
-    },
-    {
-      "id": "tt37748818",
-      "type": "movie",
-      "name": "Surabhila Sundara Swapnam",
-      "releaseInfo": "2025-08-01",
-      "description": "Surabhila Sundara Swapnam features the story of a common man leading a life with his wife and friends in a quaint town. With a dream that he needs to fulfill, the man sets out on a journey, owning a land under his name.  How he manages to achieve his dream and what challenges he faces to get there form the entire story.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2025-08-01",
-      "poster": "https://image.tmdb.org/t/p/w500/xE3qx6VwlrR6sHER2TiFk0M9maZ.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/iojAkuRTuPUiTV6E6DHDUnesJiP.jpg"
     },
     {
       "id": "tt31888759",
@@ -2935,5 +2939,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-04T09:38:24.401Z"
+  "builtAt": "2026-08-04T14:59:21.736Z"
 }
