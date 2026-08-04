@@ -1007,6 +1007,15 @@
       ]
     },
     {
+      "id": "tt37748818",
+      "type": "movie",
+      "name": "Surabhila Sundara Swapnam",
+      "releaseInfo": "2025-08-01",
+      "description": "Surabhila Sundara Swapnam features the story of a common man leading a life with his wife and friends in a quaint town. With a dream that he needs to fulfill, the man sets out on a journey, owning a land under his name.  How he manages to achieve his dream and what challenges he faces to get there form the entire story.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2025-08-01",
+      "poster": "https://image.tmdb.org/t/p/w500/xE3qx6VwlrR6sHER2TiFk0M9maZ.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/iojAkuRTuPUiTV6E6DHDUnesJiP.jpg"
+    },
+    {
       "id": "tt31888759",
       "type": "movie",
       "name": "Thayyal Machine",
@@ -1234,20 +1243,6 @@
       "genres": [
         "Fantasy",
         "Comedy"
-      ]
-    },
-    {
-      "id": "tt36329718",
-      "type": "movie",
-      "name": "916 Kunjoottan",
-      "releaseInfo": "2025-05-23",
-      "description": "A man with a small frame but a massive presence leads a double life as a beloved villager and a sharp city tycoon. As love and secrets collide, he must prove that true worth comes from the mind, not the size..\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-05-23\n⭐ Rating: 3.0/10",
-      "poster": "https://image.tmdb.org/t/p/w500/5ryScjLTAfNl38PQYlWvSMafgu2.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/fJAih1oPnIKCOj8pH2mM2gAGlb7.jpg",
-      "genres": [
-        "Family",
-        "Crime",
-        "Drama"
       ]
     }
   ],
@@ -1978,7 +1973,7 @@
       "type": "movie",
       "name": "With Love",
       "releaseInfo": "2026-02-06",
-      "description": "Sathya reluctantly agrees to a blind date arranged by his sister and meets Monisha. They discover they attended the same school years ago. Bonding over shared memories and old crushes, they reconnect with their past and grow closer.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-02-06\n⭐ Rating: 6.7/10",
+      "description": "Sathya reluctantly agrees to a blind date arranged by his sister and meets Monisha. They discover they attended the same school years ago. Bonding over shared memories and old crushes, they reconnect with their past and grow closer.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-02-06\n⭐ Rating: 6.6/10",
       "poster": "https://image.tmdb.org/t/p/w500/mKVSozOhy9to5AFfIX1tsDDFrFK.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/k9GObZbUUUxOjlRjY172GVroeSJ.jpg",
       "genres": [
@@ -2939,5 +2934,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-04T14:59:21.736Z"
+  "builtAt": "2026-08-04T20:20:50.864Z"
 }
