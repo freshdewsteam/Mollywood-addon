@@ -1,6 +1,19 @@
 {
   "malayalam-movies": [
     {
+      "id": "tt37510017",
+      "type": "movie",
+      "name": "Thudakkam",
+      "releaseInfo": "2026-08-07",
+      "description": "📺 Streaming on: Prime Video\n📅 OTT Release: 2026-08-07",
+      "poster": "https://image.tmdb.org/t/p/w500/hMS6YwXo1iw6vVZL53YwSf9MgVo.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/xcvPY9Wk2TzZWQRynWSwHEhnK2j.jpg",
+      "genres": [
+        "Action",
+        "Drama"
+      ]
+    },
+    {
       "id": "tt35254624",
       "type": "movie",
       "name": "Balan - The Boy",
@@ -1231,19 +1244,6 @@
         "Family",
         "Drama"
       ]
-    },
-    {
-      "id": "tt27170332",
-      "type": "movie",
-      "name": "Written & Directed by God",
-      "releaseInfo": "2025-06-05",
-      "description": "A frustrated filmmaker meets God in person and goes on a transformative journey. When the deity appears to Jijo, they embark on an extraordinary road trip together.\n\n📺 Streaming on: ManoramaMAX Amazon Channel,  AP International South Cinema Amazon Channel\n📅 Release: 2025-06-05\n⭐ Rating: 4.0/10",
-      "poster": "https://image.tmdb.org/t/p/w500/vYCJihP5IQwUw9RMSmeGg7yU1FP.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/2r4Q1bpKkTMCbe7930QCSJmY97V.jpg",
-      "genres": [
-        "Fantasy",
-        "Comedy"
-      ]
     }
   ],
   "malayalam-series": [
@@ -1927,6 +1927,19 @@
       "genres": [
         "Thriller",
         "Horror"
+      ]
+    },
+    {
+      "id": "tt29996704",
+      "type": "movie",
+      "name": "Mylanji",
+      "releaseInfo": "2026-02-13",
+      "description": "Surya, a National Geographic photographer who struggles with a rare speech disorder, travels to Ooty to capture a rare bird and unexpectedly meets Charu, a lively orphan trapped by a forced marriage. Desperate to escape, Charu decides to fall in love with another man, while unknowingly growing closer to Surya during their birding journeys.. On the day Kathir comes to take Charu away, fate stands still—leaving one haunting question: will love choose truth, or sacrifice?\n\n📺 Streaming on: Hungama Play\n📅 Release: 2026-02-13",
+      "poster": "https://image.tmdb.org/t/p/w500/88CE1iiFGBZWM2JgWaqta7XloXu.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/gAnlzHn9xMxh19Os4p52VHW2uFD.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
       ]
     },
     {
@@ -2736,19 +2749,6 @@
         "Action",
         "Thriller"
       ]
-    },
-    {
-      "id": "tt34823501",
-      "type": "movie",
-      "name": "Paramasivan Fathima",
-      "releaseInfo": "2025-06-06",
-      "description": "Two feuding villages, Hindu dominated Subramaniapuram and Christian dominated Yokopuram, face a series of wedding night murders that have both communities pointing fingers, lead to the revelation of spirits seeking justice for past religious conflicts.\n\n📺 Streaming on: aha\n📅 Release: 2025-06-06\n⭐ Rating: 3.0/10",
-      "poster": "https://image.tmdb.org/t/p/w500/km9Hx9wNVzUeqWpvOhfnLqEFrO0.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/6vgOpaqpDEOK8AEwP1o8YOgIuRy.jpg",
-      "genres": [
-        "Drama",
-        "Crime"
-      ]
     }
   ],
   "tamil-series": [
@@ -2946,5 +2946,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-06T14:52:07.942Z"
+  "builtAt": "2026-08-07T00:38:08.402Z"
 }
