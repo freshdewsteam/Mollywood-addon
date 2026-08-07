@@ -5,7 +5,7 @@
       "type": "movie",
       "name": "Thudakkam",
       "releaseInfo": "2026-08-07",
-      "description": "📺 Streaming on: Prime Video\n📅 OTT Release: 2026-08-07",
+      "description": "When danger strikes, a young woman fights to survive through courage and determination.\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2026-08-07",
       "poster": "https://image.tmdb.org/t/p/w500/hMS6YwXo1iw6vVZL53YwSf9MgVo.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/xcvPY9Wk2TzZWQRynWSwHEhnK2j.jpg",
       "genres": [
@@ -147,7 +147,7 @@
       "type": "movie",
       "name": "Revolver Rinko",
       "releaseInfo": "2026-05-08",
-      "description": "A group of youngsters residing in a rural village, their imaginations ignited by the desire to craft a superhero saga.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2026-05-08\n⭐ Rating: 2.0/10",
+      "description": "A group of youngsters residing in a rural village, their imaginations ignited by the desire to craft a superhero saga.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2026-05-08\n⭐ Rating: 2.0/10",
       "poster": "https://image.tmdb.org/t/p/w500/wVRfL0cfDOnOqJPRtiBVRyav5N0.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/rQKZvZL4VX71EDRxoI17DZzOgbB.jpg",
       "genres": [
@@ -1480,6 +1480,19 @@
   ],
   "tamil-movies": [
     {
+      "id": "tt38267486",
+      "type": "movie",
+      "name": "Nooru Saami",
+      "releaseInfo": "2026-08-07",
+      "description": "Selvi, a widowed mother, devotes her life to raising her two sons in a conservative village. Years later, unfulfilled life comes back into focus, challenging deep-rooted traditions. As family and society strongly oppose change, Selvi must choose between societal expectations and her own happiness.\n\n📺 Streaming on: Zee5\n📅 Release: 2026-08-07",
+      "poster": "https://image.tmdb.org/t/p/w500/1dKmZB9KVSOA6mq6Oa2t6HYd8E1.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/bRhPcbtPfnrfJPllQtYY7SWoLbu.jpg",
+      "genres": [
+        "Drama",
+        "Family"
+      ]
+    },
+    {
       "id": "tt35076988",
       "type": "movie",
       "name": "Chinna Chinna Aasai",
@@ -2753,6 +2766,20 @@
   ],
   "tamil-series": [
     {
+      "id": "tt21908550",
+      "type": "series",
+      "name": "Vadhandhi: The Fable Of Velonie",
+      "releaseInfo": "2026-08-07",
+      "description": "Vivek, a diligent cop, takes charge of the investigation of the murder of a beautiful young girl, Velonie. The rumours about her that spring up post her death threatens to irrevocably damage Velonie's image, Vivek must wade through a web of half-truths and confusing leads to solve the case.\n\n📺 Streaming on: Prime Video\n📅 Release: 2026-08-07\n⭐ Rating: 6.9/10",
+      "poster": "https://image.tmdb.org/t/p/w500/2EgR5kgv4yHbJpR3GutxzbGd4rw.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/mRq7ZKtXp2eI52iQ2tLF2jWelLX.jpg",
+      "genres": [
+        "Mystery",
+        "Crime",
+        "Drama"
+      ]
+    },
+    {
       "id": "tt31862809",
       "type": "series",
       "name": "Heart Beat",
@@ -2946,5 +2973,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-07T13:47:43.573Z"
+  "builtAt": "2026-08-07T19:48:36.013Z"
 }
