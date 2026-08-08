@@ -22,7 +22,8 @@
       "poster": "https://image.tmdb.org/t/p/w500/boKxdR9tgXfkazf6yWgiDdleBy0.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/cb4b4K3E2jBGaSjkuIkZHJHmoWG.jpg",
       "genres": [
-        "Drama"
+        "Drama",
+        "Thriller"
       ]
     },
     {
@@ -2973,5 +2974,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-08T07:49:45.212Z"
+  "builtAt": "2026-08-08T13:26:00.920Z"
 }
