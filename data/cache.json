@@ -2045,6 +2045,18 @@
       ]
     },
     {
+      "id": "tt8205190",
+      "type": "movie",
+      "name": "Gandhi Talks",
+      "releaseInfo": "2026-01-30",
+      "description": "A silent black comedy, about the monetary needs of a character & how it impacts the others. A young, unemployed graduate Mahadev’s struggle to land a job through any means possible and crosses paths with a businessman and petty thief. A subject wherein silence speaks much louder than words. Although a work of fiction by the writer, all the characters in the film are sketched out to seem very real and relatable ensuring an enriching journey as well a laugh riot as the cat and mouse guffaws amongst them unfold. Gandhi Talks aims at telling a story by switching off the device of dialogue, which is not only scary but also interesting and challenging.\n\n📺 Streaming on: Amazon Prime Video, Zee5, Amazon Prime Video with Ads\n📅 Release: 2026-01-30\n⭐ Rating: 7.3/10",
+      "poster": "https://image.tmdb.org/t/p/w500/p4iQT3s97T3gQOLhTj0UplzYMOj.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/4Cqad6ZpWJRhBumGE1QwHs9pVuB.jpg",
+      "genres": [
+        "Comedy"
+      ]
+    },
+    {
       "id": "tt33088887",
       "type": "movie",
       "name": "Hotspot 2 Much",
@@ -2511,20 +2523,6 @@
       ]
     },
     {
-      "id": "tt27441481",
-      "type": "movie",
-      "name": "Coolie",
-      "releaseInfo": "2025-08-13",
-      "description": "Deva, once living a quiet life, is shaken when his close friend dies under suspicious circumstances. Determined to uncover the truth, he infiltrates a powerful gang operating in the shadows. As he investigates, Deva becomes entangled in a dangerous web of crime, betrayal, and secrets from his own past, forcing him to confront powerful enemies while protecting the ones he loves.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-08-13\n⭐ Rating: 6.2/10",
-      "poster": "https://image.tmdb.org/t/p/w500/kr36awqmziEI5mfUElsHB0pj9zP.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/bLn0CPzrrqFLicjNTgrzaIyE0gZ.jpg",
-      "genres": [
-        "Action",
-        "Thriller",
-        "Crime"
-      ]
-    },
-    {
       "id": "tt37080020",
       "type": "movie",
       "name": "Surrender",
@@ -2974,5 +2972,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-09T13:29:24.007Z"
+  "builtAt": "2026-08-09T19:28:13.062Z"
 }
