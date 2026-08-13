@@ -149,7 +149,7 @@
       "name": "Revolver Rinko",
       "releaseInfo": "2026-05-08",
       "description": "A group of youngsters residing in a rural village, their imaginations ignited by the desire to craft a superhero saga.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2026-05-08\n⭐ Rating: 2.0/10",
-      "poster": "https://image.tmdb.org/t/p/w500/wVRfL0cfDOnOqJPRtiBVRyav5N0.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/6dd8zVbXLJmiQBUIzU8QNZXlb3o.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/rQKZvZL4VX71EDRxoI17DZzOgbB.jpg",
       "genres": [
         "Comedy",
@@ -1232,19 +1232,6 @@
         "Mystery",
         "Thriller"
       ]
-    },
-    {
-      "id": "tt33074379",
-      "type": "movie",
-      "name": "Aabhyanthara Kuttavaali",
-      "releaseInfo": "2025-06-06",
-      "description": "Sahadevan's dreams of a happy marriage get shattered when his wife Nayana accuses him of dowry demands and domestic abuse. As he decides to fight for his innocence, how far will he go to prove it?\n\n📺 Streaming on: Zee5\n📅 Release: 2025-06-06\n⭐ Rating: 4.2/10",
-      "poster": "https://image.tmdb.org/t/p/w500/zQ4crcJm2QBX2bM8i0NuCKnnD2T.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/aszckwGB9Qy2pPSBLFp9nDmDXjq.jpg",
-      "genres": [
-        "Family",
-        "Drama"
-      ]
     }
   ],
   "malayalam-series": [
@@ -1483,9 +1470,9 @@
     {
       "id": "tt38267486",
       "type": "movie",
-      "name": "Nooru Saami",
+      "name": "Nooru Sami",
       "releaseInfo": "2026-08-07",
-      "description": "Selvi, a widowed mother, devotes her life to raising her two sons in a conservative village. Years later, unfulfilled life comes back into focus, challenging deep-rooted traditions. As family and society strongly oppose change, Selvi must choose between societal expectations and her own happiness.\n\n📺 Streaming on: Zee5\n📅 Release: 2026-08-07",
+      "description": "📺 Streaming on: Zee5\n📅 OTT Release: 2026-08-07",
       "poster": "https://image.tmdb.org/t/p/w500/1dKmZB9KVSOA6mq6Oa2t6HYd8E1.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/bRhPcbtPfnrfJPllQtYY7SWoLbu.jpg",
       "genres": [
@@ -1772,19 +1759,6 @@
       "genres": [
         "Thriller",
         "War"
-      ]
-    },
-    {
-      "id": "tt38111710",
-      "type": "movie",
-      "name": "Carmeni Selvam",
-      "releaseInfo": "2026-04-03",
-      "description": "A content man's life turns chaotic when money fever strikes. His newfound greed leads to a series of amusing situations that unfold in this humorous tale.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-04-03",
-      "poster": "https://image.tmdb.org/t/p/w500/1VjWJjNt5jefOJAnxJEvC7B7ulV.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/hkxyILpj5Gws3Ak8lOLuviZW8ei.jpg",
-      "genres": [
-        "Drama",
-        "Comedy"
       ]
     },
     {
@@ -2156,7 +2130,7 @@
       "type": "movie",
       "name": "Sirai",
       "releaseInfo": "2025-12-25",
-      "description": "As he transfers a young convict from prison to court, a police officer learns about the chain of events that led to the young man's conviction for violence.\n\n📺 Streaming on: Zee5\n📅 Release: 2025-12-25\n⭐ Rating: 6.1/10",
+      "description": "As he transfers a young convict from prison to court, a police officer learns about the chain of events that led to the young man's conviction for violence.\n\n📺 Streaming on: Zee5\n📅 Release: 2025-12-25\n⭐ Rating: 6.3/10",
       "poster": "https://image.tmdb.org/t/p/w500/mltVJD7mBayiw1BubwUL0cx6T1c.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/jlX42iJ6JB1C2TqxALYyc4mIcXa.jpg",
       "genres": [
@@ -2369,7 +2343,7 @@
       "type": "movie",
       "name": "Dude",
       "releaseInfo": "2025-10-17",
-      "description": "Childhood friends Agan and Kural are inseparable. When Kural encounters romantic troubles, Agan must balance his hidden feelings for her with his desire to ensure her happiness.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-10-17\n⭐ Rating: 5.4/10",
+      "description": "Childhood friends Agan and Kural are inseparable. When Kural encounters romantic troubles, Agan must balance his hidden feelings for her with his desire to ensure her happiness.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-10-17\n⭐ Rating: 5.5/10",
       "poster": "https://image.tmdb.org/t/p/w500/oLUbL4RtynlTtKd1byseeOCkIZO.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/kDRkOFPkjYjubhiIcvurBKuLSRI.jpg",
       "genres": [
@@ -2976,5 +2950,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-12T19:58:36.811Z"
+  "builtAt": "2026-08-13T03:41:38.574Z"
 }
