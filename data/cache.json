@@ -157,6 +157,19 @@
       ]
     },
     {
+      "id": "tt35668756",
+      "type": "movie",
+      "name": "Kattalan",
+      "releaseInfo": "2026-05-14",
+      "description": "Power-hungry forces clash in the Ivory cartel war-a fierce story of control, vengeance, and survival where compassion vanishes and only the ruthless endure.\n\n📺 Streaming on: ManoramaMAX Amazon Channel\n📅 Release: 2026-05-14\n⭐ Rating: 6.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/53FATyQirV8BuBcrsQMGPvGKgCu.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/nTimAHDG7PoycFF2afMZVPyOokg.jpg",
+      "genres": [
+        "Action",
+        "Thriller"
+      ]
+    },
+    {
       "id": "tt32065745",
       "type": "movie",
       "name": "Revolver Rinko",
@@ -1216,19 +1229,6 @@
       "background": "https://image.tmdb.org/t/p/w1280/9Q7NaGY4xg45IZAnQsYchWvo07v.jpg",
       "genres": [
         "Comedy",
-        "Drama"
-      ]
-    },
-    {
-      "id": "tt33294533",
-      "type": "movie",
-      "name": "Ronth",
-      "releaseInfo": "2025-06-13",
-      "description": "Two patrol officers face mounting tensions during a night shift as they navigate dangerous calls while confronting their strained partnership and personal demons.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2025-06-13\n⭐ Rating: 7.1/10",
-      "poster": "https://image.tmdb.org/t/p/w500/50MxvHckUkNgPI4EzjMwcWAq7ea.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/8J7Wg51TeHM7w8Jtg5IPewNIspP.jpg",
-      "genres": [
-        "Crime",
         "Drama"
       ]
     }
@@ -2949,5 +2949,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-14T19:43:43.184Z"
+  "builtAt": "2026-08-15T02:33:30.073Z"
 }
