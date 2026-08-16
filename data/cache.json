@@ -341,7 +341,7 @@
       "type": "movie",
       "name": "Sambhavam Adhyayam Onnu",
       "releaseInfo": "2026-03-06",
-      "description": "Three Kerala Police officers venture into a mysterious forest on the Kerala-Tamil Nadu border to find a missing officer. They encounter strange time-related phenomena, uncovering the hidden secrets of Velloorkkatt forest.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-03-06\n⭐ Rating: 7.0/10",
+      "description": "Three Kerala Police officers venture into a mysterious forest on the Kerala-Tamil Nadu border to find a missing officer. They encounter strange time-related phenomena, uncovering the hidden secrets of Velloorkkatt forest.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-03-06\n⭐ Rating: 7.1/10",
       "poster": "https://image.tmdb.org/t/p/w500/4ASKGsPMbzChx0YX5Pqc9HFXQm3.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/rfMWciUEZkqL9AiNcTedhtXQHr0.jpg",
       "genres": [
@@ -1555,6 +1555,20 @@
       ]
     },
     {
+      "id": "tt35741123",
+      "type": "movie",
+      "name": "Heartin",
+      "releaseInfo": "2026-06-26",
+      "description": "Fate tosses a couple into an unexpected situation with an ex-girlfriend in the mix.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-06-26\n⭐ Rating: 6.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/7xvMocNLZov64aOU1X3BRWawjD7.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/ufVCGoqEHOCahpXwDguGIq8CxAP.jpg",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Drama"
+      ]
+    },
+    {
       "id": "tt28259290",
       "type": "movie",
       "name": "Moondram Kan",
@@ -2726,18 +2740,6 @@
         "Crime",
         "Drama"
       ]
-    },
-    {
-      "id": "tt29471661",
-      "type": "movie",
-      "name": "DNA",
-      "releaseInfo": "2025-06-20",
-      "description": "A young woman with borderline personality disorder, fights a lonely battle when she believes her newborn baby was swapped with someone else’s minutes after her delivery. Her loving husband, who initially doubts, eventually believes and starts investigating with an experienced cop.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2025-06-20\n⭐ Rating: 6.2/10",
-      "poster": "https://image.tmdb.org/t/p/w500/82eWyEvVP01sV5DvBer9QyNgCh2.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/mDynWzuxyljITFYq4r3IsT9K2JZ.jpg",
-      "genres": [
-        "Drama"
-      ]
     }
   ],
   "tamil-series": [
@@ -2949,5 +2951,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-15T19:17:40.996Z"
+  "builtAt": "2026-08-16T02:42:27.703Z"
 }
