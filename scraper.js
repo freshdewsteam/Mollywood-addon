@@ -384,6 +384,26 @@ async function processMovie(item, lang) {
       return null;
     }
 
+    // ── VERIFY DIGITAL RELEASE ──────────────────────────────────────────────
+    // Sometimes TMDB adds an OTT provider before the actual digital launch.
+    // We verify that India actually has a 'Digital' (Type 4) or 'TV' (Type 6) release date.
+    // If it only has a Theatrical (Type 3) date, we skip it as premature.
+    try {
+      const releaseData = await tmdb('/movie/' + item.id + '/release_dates');
+      const inReleases = (releaseData.results || []).find(r => r.iso_3166_1 === 'IN');
+      if (inReleases) {
+        const hasDigitalRelease = inReleases.release_dates.some(rd => rd.type === 4 || rd.type === 6);
+        if (!hasDigitalRelease) {
+          setSkip(movieCache, cacheKey);
+          console.log('[Skip] Premature OTT tag (Only Theatrical Date): ' + (detail.title || ''));
+          return null;
+        }
+      }
+    } catch(e) {
+      console.warn('[Release Dates] Failed for ' + item.id + ': ' + e.message);
+      // If the API call fails, we let the movie pass to avoid blocking valid movies on network errors
+    }
+
     const seenP    = new Set();
     const platform = all
       .filter(p => { if (seenP.has(p.provider_id)) return false; seenP.add(p.provider_id); return true; })
@@ -412,7 +432,6 @@ async function processMovie(item, lang) {
     return null;
   }
 }
-
 async function enrichMovie(imdbId, title, lang) {
   const cacheKey = imdbId && imdbId.startsWith('tt') ? imdbId : 'title_' + title.toLowerCase().replace(/[^a-z0-9]/g, '_').slice(0, 50);
   const cached   = readCacheEntry(movieCache[cacheKey]);
