@@ -1,1 +1,2967 @@
-
+{
+  "malayalam-movies": [
+    {
+      "id": "tt37510017",
+      "type": "movie",
+      "name": "Thudakkam",
+      "releaseInfo": "2026-08-07",
+      "description": "When danger strikes, a young woman fights to survive through courage and determination.\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2026-08-07\n⭐ Rating: 3.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/A8Y0QLNqaFvsergQe80tC6Nfa2k.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/xcvPY9Wk2TzZWQRynWSwHEhnK2j.jpg",
+      "genres": [
+        "Action",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt35254624",
+      "type": "movie",
+      "name": "Balan - The Boy",
+      "releaseInfo": "2026-07-31",
+      "description": "A teenage boy searches for his missing mother following a turbulent childhood and her subsequent disappearance, exploring his search for closure and the truth about his past.\n\n📺 Streaming on: Zee5\n📅 Release: 2026-07-31\n⭐ Rating: 7.9/10",
+      "poster": "https://image.tmdb.org/t/p/w500/boKxdR9tgXfkazf6yWgiDdleBy0.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/cb4b4K3E2jBGaSjkuIkZHJHmoWG.jpg",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt10515398",
+      "type": "movie",
+      "name": "Pallichattambi",
+      "releaseInfo": "2026-07-24",
+      "description": "📺 Streaming on: Sony LIV\n📅 OTT Release: 2026-07-24",
+      "poster": "https://image.tmdb.org/t/p/w500/pEzXdyJhdWc2msM0oBC9N8pKtMY.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/kAJK8Kp6oPYb3T2gIHfp2SNitJ.jpg",
+      "genres": [
+        "Action",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt41944664",
+      "type": "movie",
+      "name": "Secret of Kalinga",
+      "releaseInfo": "2026-07-24",
+      "description": "A college sits on ancient Kalinga kingdom land. Behind it, a forest well holds a princess's spirit, imprisoned centuries ago. Students accidentally break the seal on New Year's Eve, triggering comedic chaos.\n\n📺 Streaming on: SunNxt\n📅 Release: 2026-07-24\n⭐ Rating: 1.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/fIDU3LSWigWq9ges3Dw5KvGn3Av.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/1gCAMqd8SKeQEzbgKRwTwzvrxgX.jpg",
+      "genres": [
+        "Horror",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt37079110",
+      "type": "movie",
+      "name": "Uyir",
+      "releaseInfo": "2026-06-26",
+      "description": "Follows Ajeeb, a sub-inspector serving his probationary period at the Dharmadam Police Station in Kannur district, based on real incidents.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-06-26",
+      "poster": "https://image.tmdb.org/t/p/w500/r512xdTd9aXjpIxjY2JlhvJYvIb.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/sxs1ME8rwQIccp7SL37fRgt0sFH.jpg",
+      "genres": [
+        "Crime",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt35076988",
+      "type": "movie",
+      "name": "Chinna Chinna Aasai",
+      "releaseInfo": "2026-06-19",
+      "description": "On the enchanting shores of Varanasi, two souls meet by chance. Somewhere within this unfolding chaos, an unspoken bond begins to form, slowly slipping beyond friendship.\n\n📺 Streaming on: JioHotstar, Sun Nxt\n📅 Release: 2026-06-19",
+      "poster": "https://image.tmdb.org/t/p/w500/bPP7IWH0GeQDZ5VC9QsE6lRlijI.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/1KXnH4NcCQTAxV0pZwvIIGCepIx.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt29959401",
+      "type": "movie",
+      "name": "Mollywood Times",
+      "releaseInfo": "2026-06-05",
+      "description": "Vineeth Madhavan tries hard to become Malayalam cinema's greatest horror filmmaker, but will the toxic industry affect his dream?\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-06-05\n⭐ Rating: 5.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/zUBCBtMsQ8dxnhJhhng4C8U80IU.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/wQwbainQ5CtPWbnwXX144rMIS4E.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt36932908",
+      "type": "movie",
+      "name": "Paithallattam",
+      "releaseInfo": "2026-05-29",
+      "description": "When the sacred Theyyam ritual demands the ultimate sacrifice from a young boy, his parents dare to challenge centuries-old beliefs. An emotional drama about faith, loss, and the courage to defy tradition\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2026-05-29",
+      "poster": "https://image.tmdb.org/t/p/w500/s0pyikd2DEAur692r1B5yjK9dzY.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/rSRHWvnvrsDhvPCN2CW2yFgO2e6.jpg",
+      "genres": [
+        "Crime",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt37561290",
+      "type": "movie",
+      "name": "Karakkam",
+      "releaseInfo": "2026-05-28",
+      "description": "A drunken New Year's prank goes horribly wrong when two young men remove sacred crosses from graves. Five restless ghosts emerge to haunt their every move, driving them to seek redemption and release.\n\n📺 Streaming on: Sony Liv\n📅 Release: 2026-05-28\n⭐ Rating: 7.4/10",
+      "poster": "https://image.tmdb.org/t/p/w500/xCc5K9hy7Nkmkag1yS3HC75j9e2.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/j9OltPrsFRBDiRCQG8Y5VbDsspu.jpg",
+      "genres": [
+        "Horror",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt38573318",
+      "type": "movie",
+      "name": "Dose",
+      "releaseInfo": "2026-05-22",
+      "description": "Bodies begin to pile up in a hospital meant to save lives, forcing a doctor with a troubled past to confront buried secrets when a woman from his past returns. As the investigation deepens, each revelation becomes more dangerous than the last.\n\n📺 Streaming on: Amazon Prime Video, ManoramaMax, Lionsgate Play, Lionsgate Play Apple TV Channel, Lionsgate Play Amazon Channel, ManoramaMAX Amazon Channel, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel\n📅 Release: 2026-05-22\n⭐ Rating: 2.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/wuEQbDF5jHaOOAMGiXWmDRz9imG.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/swelLWmdNwZVU403GG5L2pDtaaS.jpg",
+      "genres": [
+        "Mystery",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt14113634",
+      "type": "movie",
+      "name": "Drishyam 3",
+      "releaseInfo": "2026-05-21",
+      "description": "To protect his family and their dark secret, Georgekutty faces an organized new threat. As walls close in and cracks widen, how much more is he willing to sacrifice?\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-05-21\n⭐ Rating: 6.7/10",
+      "poster": "https://image.tmdb.org/t/p/w500/456FlpiU1iOBnaOxSd783QhZKWw.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/enwc2Acl38mvX33QffmTzDSV89D.jpg",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt38721131",
+      "type": "movie",
+      "name": "Athiradi",
+      "releaseInfo": "2026-05-14",
+      "description": "Energetic student Samkutty revives a banned college festival, igniting a fierce rivalry that transforms celebration into chaos.\n\n📺 Streaming on: Sony Liv\n📅 Release: 2026-05-14\n⭐ Rating: 6.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/vbYoC9wmfo2w7EDVXYrnX4PRBWr.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/uZr793pQJJZJBjUJYrY9EC32jUL.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt35668756",
+      "type": "movie",
+      "name": "Kattalan",
+      "releaseInfo": "2026-05-14",
+      "description": "Power-hungry forces clash in the Ivory cartel war-a fierce story of control, vengeance, and survival where compassion vanishes and only the ruthless endure.\n\n📺 Streaming on: ManoramaMAX Amazon Channel\n📅 Release: 2026-05-14\n⭐ Rating: 6.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/53FATyQirV8BuBcrsQMGPvGKgCu.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/nTimAHDG7PoycFF2afMZVPyOokg.jpg",
+      "genres": [
+        "Action",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt32065745",
+      "type": "movie",
+      "name": "Revolver Rinko",
+      "releaseInfo": "2026-05-08",
+      "description": "A group of youngsters residing in a rural village, their imaginations ignited by the desire to craft a superhero saga.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2026-05-08\n⭐ Rating: 2.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/6dd8zVbXLJmiQBUIzU8QNZXlb3o.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/rQKZvZL4VX71EDRxoI17DZzOgbB.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt35518410",
+      "type": "movie",
+      "name": "Dridam",
+      "releaseInfo": "2026-05-08",
+      "description": "A police officer arrives at a seemingly peaceful station but faces pressure when human remains are discovered. Given only a week to solve the murder, he must navigate demands from his department and an anxious public seeking swift justice.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-05-08\n⭐ Rating: 5.2/10",
+      "poster": "https://image.tmdb.org/t/p/w500/9JqWaizfeplMDEZGuJAZZUO4Xtp.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/sRVg5yfJJQ2emGhl6XPYJssilu.jpg",
+      "genres": [
+        "Crime",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt30334316",
+      "type": "movie",
+      "name": "Aval",
+      "releaseInfo": "2026-05-01",
+      "description": "Aval authentically portrays Prabha's life with a hearing challenge, inspired by a real-life character, resonating with genuine emotion and depth.\n\n📺 Streaming on: ManoramaMAX Amazon Channel\n📅 Release: 2026-05-01",
+      "poster": "https://image.tmdb.org/t/p/w500/bzoKVgb5YoozTwFRQqCH88Sy8E5.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt38781091",
+      "type": "movie",
+      "name": "Madhuvidhu",
+      "releaseInfo": "2026-04-23",
+      "description": "When Amrutharaj, a groom from an all-male household repeatedly rejected by brides' families, falls in love with Sneha Marcose, their journey toward marriage ignites a chain of hilarious chaos inside his unruly home.\n\n📺 Streaming on: Sony Liv\n📅 Release: 2026-04-23\n⭐ Rating: 6.2/10",
+      "poster": "https://image.tmdb.org/t/p/w500/jVSnpXklfxi3FchGqweRMvrC8Gd.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/139NrqPcyhJpax9gAGIhtJCFfX9.jpg",
+      "genres": [
+        "Family",
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt34442799",
+      "type": "movie",
+      "name": "Oru Durooha Saahacharyathil",
+      "releaseInfo": "2026-04-15",
+      "description": "Humble health care worker Sethu lives a quiet life caring for his sick brother — until a mysterious armed fugitive seeks refuge in his home.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-04-15\n⭐ Rating: 5.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/rsMHfc75OJmdRYKsgJlALDVyMGz.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/ypAZ45yFGfGpGGHyaLFUhE8psMS.jpg",
+      "genres": [
+        "Comedy",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt37541677",
+      "type": "movie",
+      "name": "Bharathanatyam 2 Mohiniyattam",
+      "releaseInfo": "2026-04-10",
+      "description": "The family's journey to Sreekandapuram to settle the late Bharathan Nair's second wife and son takes a dark turn when an issue from his past resurfaces, leading to an unexpected crime. Forced into a desperate cover-up to protect their future, the family must navigate a treacherous path of secrecy and mounting pressure, determined to overcome any obstacle by any means necessary.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-04-10\n⭐ Rating: 8.2/10",
+      "poster": "https://image.tmdb.org/t/p/w500/lsg0IxNQCUxKqs63YjturEuY0qQ.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/g7y8EDiXvlZYrIKDLlhtbcAPnxS.jpg",
+      "genres": [
+        "Comedy",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt33245761",
+      "type": "movie",
+      "name": "Vaazha II",
+      "releaseInfo": "2026-04-02",
+      "description": "Four friends – Hashir, Alan, Ajin and Vinayak – are considered losers and troublemakers by parents, family and the school management. They face immense social pressure as they reach adulthood, embarking them on an emotional journey of self discovery and acceptance, where they finally learn to take up their responsibilities and find success.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-04-02\n⭐ Rating: 7.3/10",
+      "poster": "https://image.tmdb.org/t/p/w500/1yLZ7kExd0UGGbaZW4LxmYD4OIf.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/uNA0OVk09Hbwflye3eBoOiGIKGc.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt43505958",
+      "type": "movie",
+      "name": "Kalyanamaram",
+      "releaseInfo": "2026-03-27",
+      "description": "In a quiet hill village, young Mallika shares a deep bond with a tree she calls her friend. When her family plans to cut it down for her sisters wedding, she fights tirelessly to save it ultimately inspiring change and being honoured for her courage.\n\n📺 Streaming on: ManoramaMAX Amazon Channel\n📅 Release: 2026-03-27",
+      "poster": "https://image.tmdb.org/t/p/w500/3oud1sKZoCOhIefDmULbRBT4eba.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/pDREhuO6ymFN63TjiygZmdHXiOF.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt40430802",
+      "type": "movie",
+      "name": "Derby",
+      "releaseInfo": "2026-03-27",
+      "description": "A campus entertainer who follows a group of college students navigating friendship, rivalry, love, and ambition. What begins as carefree fun soon turns into intense competition as campus pride and personal egos come into play.\n\n📺 Streaming on: Amazon Prime Video, ManoramaMAX Amazon Channel, Amazon Prime Video with Ads\n📅 Release: 2026-03-27\n⭐ Rating: 1.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/zaTTuhOJMTzlSRx7kvzVZevc2wQ.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/2r4KjntMBwCPITn2R7AvPsxv4wC.jpg",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Romance"
+      ]
+    },
+    {
+      "id": "tt39283431",
+      "type": "movie",
+      "name": "Prathichaya",
+      "releaseInfo": "2026-03-23",
+      "description": "After Kerala’s Chief Minister dies in a scandal engineered by a ruthless media tycoon, his son a brilliant tech entrepreneur enters the blood-soaked arena of politics to expose the conspiracy, vindicate his father, and turn technology against those who weaponized it\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-03-23\n⭐ Rating: 3.3/10",
+      "poster": "https://image.tmdb.org/t/p/w500/4VD2H8ZwFDORWCaYS5TbhMVPdAv.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/rdLrMIUh40VA1jkRy3lUb3mDhyi.jpg",
+      "genres": [
+        "Thriller",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt37970069",
+      "type": "movie",
+      "name": "Bhishmar",
+      "releaseInfo": "2026-03-20",
+      "description": "Two men meet by chance, setting off a night of chaos with romance and action, as their paths cross and intertwine through various unexpected events.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2026-03-20\n⭐ Rating: 1.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/wkiu7ez8oL1Yme4k5cBxFz0zN4U.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/pkbJDrFuICmwSmksldZnYAjPk5M.jpg",
+      "genres": [
+        "Comedy",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt41030131",
+      "type": "movie",
+      "name": "Ponnapurathu Yakshi",
+      "releaseInfo": "2026-03-19",
+      "description": "After moving into a historic estate, a family discovers their young daughter has befriended a vengeful spirit. To save her, the father must unearth a century-old atrocity and confront the ghost with an ancient, sanctified weapon.\n\n📺 Streaming on: ManoramaMAX Amazon Channel\n📅 Release: 2026-03-19\n⭐ Rating: 1.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/2cHXC0IoGYc8ECLxCSCCnXOi7sF.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/uaX6qQjMLQtI262706qCLkj2tfj.jpg",
+      "genres": [
+        "Horror"
+      ]
+    },
+    {
+      "id": "tt8142672",
+      "type": "movie",
+      "name": "Aadu 3 Part 1",
+      "releaseInfo": "2026-03-19",
+      "description": "Shaji Pappan and Co. opens a Pandora's box of reincarnations and multiple timelines  leading to comic chaos of epic proportions.\n\n📺 Streaming on: Zee5\n📅 Release: 2026-03-19\n⭐ Rating: 6.6/10",
+      "poster": "https://image.tmdb.org/t/p/w500/3yqreNY1f4iOXX0vBAqY64ZvxiV.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/jnrv9y9CQEtcyoftIHN4WNLrxtb.jpg",
+      "genres": [
+        "Comedy",
+        "Fantasy"
+      ]
+    },
+    {
+      "id": "tt36628923",
+      "type": "movie",
+      "name": "Sambhavam Adhyayam Onnu",
+      "releaseInfo": "2026-03-06",
+      "description": "Three Kerala Police officers venture into a mysterious forest on the Kerala-Tamil Nadu border to find a missing officer. They encounter strange time-related phenomena, uncovering the hidden secrets of Velloorkkatt forest.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-03-06\n⭐ Rating: 7.1/10",
+      "poster": "https://image.tmdb.org/t/p/w500/4ASKGsPMbzChx0YX5Pqc9HFXQm3.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/rfMWciUEZkqL9AiNcTedhtXQHr0.jpg",
+      "genres": [
+        "Fantasy",
+        "Thriller",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt36187149",
+      "type": "movie",
+      "name": "Masthishka Maranam",
+      "releaseInfo": "2026-02-27",
+      "description": "Plunging into a virtual reminiscence challenge to assuage his sorrow, a heartbroken dad uncovers a shocking revelation about Frida Soman, his long-admired icon and globally beloved luminary.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-02-27\n⭐ Rating: 5.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/vJrDoDEJzx6jF71dvocT3bgCzFB.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/xaQpm2vKptcy05nxrBuYs0mjnaO.jpg",
+      "genres": [
+        "Science Fiction",
+        "Comedy",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt39028247",
+      "type": "movie",
+      "name": "Spa",
+      "releaseInfo": "2026-02-13",
+      "description": "The narrative follows the intertwined lives of people connected to La Paradise, an urban massage therapy centre. It centres on Mathan, a man struggling to distinguish between the reality of love and its fictionalised ideals. Through a sharp lens of social satire, the story explores adult themes and human behaviour within this unique urban setting.\n\n📺 Streaming on: ManoramaMAX Amazon Channel\n📅 Release: 2026-02-13\n⭐ Rating: 5.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/sZez7I5ctXVlOP73Js0G4cNgw16.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/AagsTe5J5Q2k55WOkQ44XVP5Y7x.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt34383084",
+      "type": "movie",
+      "name": "Pennum Porattum",
+      "releaseInfo": "2026-02-13",
+      "description": "When a woman and her dog face public hostility, a village's hidden tensions erupt. A stark examination of mob mentality, social judgment, and how communities can turn cruel when seeking to punish perceived wrongs.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-02-13\n⭐ Rating: 5.7/10",
+      "poster": "https://image.tmdb.org/t/p/w500/m9WNMd4pQFOB3l6GudBw2YwVsN9.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/ejvOMZ3vWAD9IYaFsHbB2Kntn3t.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt34733903",
+      "type": "movie",
+      "name": "Sukran",
+      "releaseInfo": "2026-02-06",
+      "description": "Marked by a horoscope that makes him take the blame for things he never did, Nandu grows up carrying the weight of an unfair fate. Years later, the return of his childhood love brings challenges and turning points that change his life forever.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, ManoramaMAX Amazon Channel, Amazon Prime Video with Ads\n📅 Release: 2026-02-06\n⭐ Rating: 2.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/7brL5cbKxEaYBAk0KQEyT3r3ZhE.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/b38UJmNlW4ZSWgtIgk7inlFOaup.jpg",
+      "genres": [
+        "Comedy",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt27541778",
+      "type": "movie",
+      "name": "Anomie",
+      "releaseInfo": "2026-02-06",
+      "description": "Zaara, a relentless sister seeking answers in her brother's unresolved case, confronts a police officer after days of failed investigation. As faith in the system erodes, she pursues the truth on parallel paths, leading to a haunting revelation.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-02-06\n⭐ Rating: 3.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/j0ZLUMdBimCAkblfcaBlrGzzYoq.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/pztQG3jKVQEgf8JZAVKLt885EyG.jpg",
+      "genres": [
+        "Crime",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt38772234",
+      "type": "movie",
+      "name": "Aashaan",
+      "releaseInfo": "2026-02-05",
+      "description": "Aashaan dreams of cinema until a 150-member film crew enters his life, bringing movie magic within reach. Chasing his big break, he confronts the industry's harsh realities.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2026-02-05\n⭐ Rating: 8.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/4swJKFhTwadPJLXeMzCd53vHpBh.jpg",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt35684951",
+      "type": "movie",
+      "name": "Christina",
+      "releaseInfo": "2026-01-30",
+      "description": "Four respected young men in a village face disruption and conflicts after a salesgirl's arrival.\n\n📺 Streaming on: ManoramaMAX Amazon Channel\n📅 Release: 2026-01-30\n⭐ Rating: 1.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/mnXnKqz7eqYX4f1hlXI1Cnxp8ZR.jpg",
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt37049996",
+      "type": "movie",
+      "name": "Valathu Vashathe Kallan",
+      "releaseInfo": "2026-01-30",
+      "description": "A police officer being investigated for his role in a woman’s death rushes to save his son from her vengeful father.\n\n📺 Streaming on: Amazon Prime Video, Lionsgate Play, Lionsgate Play Apple TV Channel, Lionsgate Play Amazon Channel, ManoramaMAX Amazon Channel, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel\n📅 Release: 2026-01-30\n⭐ Rating: 4.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/ko4cEKcBHcCNbGok2YxnlD4u16N.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/g5uP9JdlWktdBcaj5tZKpWbILqL.jpg",
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt36457300",
+      "type": "movie",
+      "name": "Prakambanam",
+      "releaseInfo": "2026-01-30",
+      "description": "A group of students' lives are thrown into chaos after one of them is possessed by the spirit of an elderly woman.\n\n📺 Streaming on: Zee5\n📅 Release: 2026-01-30\n⭐ Rating: 4.2/10",
+      "poster": "https://image.tmdb.org/t/p/w500/bExPPwAamQzVLtBnwEutiJ53jDZ.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/jfzGjZnDYVoID62ogWVRifMdl9m.jpg",
+      "genres": [
+        "Horror",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt35288598",
+      "type": "movie",
+      "name": "Baby Girl",
+      "releaseInfo": "2026-01-23",
+      "description": "On a Christmas night, a guilt-ridden hospital attendant and a determined rookie cop race against time to recover a kidnapped newborn, unaware that the woman who took the baby is fighting a heartbreaking battle to finally call a child her own.\n\n📺 Streaming on: Sony Liv\n📅 Release: 2026-01-23\n⭐ Rating: 4.4/10",
+      "poster": "https://image.tmdb.org/t/p/w500/nEyEFVdlmUdapDl77704aR8o59D.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/q7K1z3paBMkHAPd5WgFqBboIJee.jpg",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt36472392",
+      "type": "movie",
+      "name": "Chatha Pacha: The Ring of Rowdies",
+      "releaseInfo": "2026-01-22",
+      "description": "In the heart of Fort Kochi, three brothers and their crew of unlikely misfits stumble into the wild world of WWE-style costumed wrestling. What begins as a scrappy hustle soon explodes into a riot of masks, egos, and full-blown madness, all set against the backdrop of a city that never plays by the rules. But can their brotherhood survive when the real fight begins outside the ropes?\n\n📺 Streaming on: Netflix\n📅 Release: 2026-01-22\n⭐ Rating: 5.7/10",
+      "poster": "https://image.tmdb.org/t/p/w500/wYXy20uC7aW7ArJJDRWR5E8dDL1.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/7ocFvtRnNXwrNJLJRWa0kKVPRW0.jpg",
+      "genres": [
+        "Action",
+        "Drama",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt25052490",
+      "type": "movie",
+      "name": "Randam Mukham",
+      "releaseInfo": "2026-01-16",
+      "description": "A neglected wife flees with her young son and a seemingly kind driver, seeking a better life. But when she discovers the man's true predatory nature, she must fight to protect her son from a horrifying fate.\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2026-01-16\n⭐ Rating: 3.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/jB2Tp2uKqrNLe6Zdkb8AGdRTGoC.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/u9l6xFKa9rKmgiI07I6sOxc2MsF.jpg",
+      "genres": [
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt39373587",
+      "type": "movie",
+      "name": "Kanimangalam Kovilakam",
+      "releaseInfo": "2026-01-16",
+      "description": "A haunted cemetery draws attention away from the real supernatural force lurking in a nearby hostel, where three students become entangled with an unexplained energy.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2026-01-16\n⭐ Rating: 1.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/7iCV99rBXcrU34AU8LAeUUOudHu.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/j8eu70oQnqakpKXWNZkV4ZGhDGV.jpg",
+      "genres": [
+        "Horror",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt34383140",
+      "type": "movie",
+      "name": "Pennu Case",
+      "releaseInfo": "2026-01-10",
+      "description": "A group of men realize that they are all the victim of the same serial wedding scammer.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-01-10\n⭐ Rating: 4.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/a1otApD30B3WgoQhgCimg6gNB6n.jpg",
+      "genres": [
+        "Crime",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt11296184",
+      "type": "movie",
+      "name": "Velleppam",
+      "releaseInfo": "2026-01-09",
+      "description": "Josemon shirked responsibility while his sister Sarah gave up her dreams for the family. Artist Kaleena comes to paint the church and challenges him.\n\n📺 Streaming on: Sun Nxt, ManoramaMAX Amazon Channel\n📅 Release: 2026-01-09\n⭐ Rating: 1.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/yGhCgaMkyoR8Ja7B1AurNni844x.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt32362695",
+      "type": "movie",
+      "name": "Sarvam Maya",
+      "releaseInfo": "2025-12-25",
+      "description": "A man who loses his belief in God meets the spirit of a young woman unable to remember what happened to her.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2025-12-25\n⭐ Rating: 7.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/mgLY1aQayVX6dQ2DiylLAhjEG8w.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/6Zn4PaLwLHFJ2bw7s6B10fHiuAD.jpg",
+      "genres": [
+        "Comedy",
+        "Family"
+      ]
+    },
+    {
+      "id": "tt32104889",
+      "type": "movie",
+      "name": "Haal",
+      "releaseInfo": "2025-12-25",
+      "description": "Two young lovers from opposing social classes navigate prejudice and family expectations in modern-day society, as their forbidden romance challenges deep-rooted traditions.\n\n📺 Streaming on: Sun Nxt, ManoramaMAX Amazon Channel\n📅 Release: 2025-12-25\n⭐ Rating: 2.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/xmDQj0clWvkPiuvsl9LEwkrFjIA.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/6hxpAQE07GeTTvZN965BPFtATEd.jpg",
+      "genres": [
+        "Romance",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt21379570",
+      "type": "movie",
+      "name": "Mindiyum Paranjum",
+      "releaseInfo": "2025-12-25",
+      "description": "Sanal departs Cochin Airport in the rain, journeying through Idukki's landscapes to meet Leena and fulfil their dream, while their hearts weave through shared memories of joy and sorrow.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2025-12-25\n⭐ Rating: 3.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/2TfEGFtcYenVrydMVJ2fiPXb5dl.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/daBv4Hz3l1WzE0dByw5efexYrQp.jpg",
+      "genres": [
+        "Romance",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt28551273",
+      "type": "movie",
+      "name": "Bha. Bha. Ba.",
+      "releaseInfo": "2025-12-18",
+      "description": "After the Chief Minister of Kerala is kidnapped, a determined investigator is brought in to track down the mysterious abductor, uncovering hidden motives and secrets behind the crime.\n\n📺 Streaming on: Zee5\n📅 Release: 2025-12-18\n⭐ Rating: 3.6/10",
+      "poster": "https://image.tmdb.org/t/p/w500/vvPcXLOYbsGOybnmNTALOpAmeOT.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/fEaR0uvRZluIEEPtDuaL7CkYsCJ.jpg",
+      "genres": [
+        "Comedy",
+        "Action"
+      ]
+    },
+    {
+      "id": "tt40140026",
+      "type": "movie",
+      "name": "Sheshippu",
+      "releaseInfo": "2025-12-14",
+      "description": "A young ghostwriter finds his quiet life at a remote estate suddenly disrupted when he encounters a woman who has suffered a terrible ordeal. As they navigate the aftermath together, their shared experience creates an unexpected bond that challenges them both in profound ways. This atmospheric character drama explores how two strangers, brought together by circumstance, discover strength and connection in the face of life's darkest moments.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2025-12-14",
+      "poster": "https://image.tmdb.org/t/p/w500/nHzF7u07vUL9nLa1VSH7uUVnHl1.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/q8EgXY8ymujUYf1xl2LvxtkNRBc.jpg",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt14289230",
+      "type": "movie",
+      "name": "Ambalamukkile Visheshangal",
+      "releaseInfo": "2025-12-12",
+      "description": "In a Kerala village, jobless Pappu juggles clearing his academic backlogs, wooing his crush, and dealing with family troubles amid local mayhem\n\n📺 Streaming on: Amazon Prime Video, ManoramaMAX Amazon Channel, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel\n📅 Release: 2025-12-12\n⭐ Rating: 1.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/5KVmdjKqJpPbERP7aVQN5V38bTG.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/tG1PQHr8reELREw0Rm6nMdNbiER.jpg",
+      "genres": [
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt15516764",
+      "type": "movie",
+      "name": "Uduppu",
+      "releaseInfo": "2025-12-07",
+      "description": "A young woman's life becomes emotionally turbulent as she faces unexpected changes after getting married.\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2025-12-07",
+      "poster": "https://image.tmdb.org/t/p/w500/giRcUUARQnLDlhhFWIJrqlbdRO9.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/r28845GthwLBDLoQOmZ61xpKa4h.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt33014579",
+      "type": "movie",
+      "name": "Pongala",
+      "releaseInfo": "2025-12-05",
+      "description": "After being released from prison for a murder he did not commit, a man quickly learns that crime and injustice are still rife in his hometown.\n\n📺 Streaming on: Amazon Prime Video, Lionsgate Play Apple TV Channel, Lionsgate Play Amazon Channel, Amazon Prime Video with Ads\n📅 Release: 2025-12-05\n⭐ Rating: 3.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/kIQLFOdvrdrjHI31DazP06tp9zp.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/khgUrxxkQ9zIgMOvuQq8JOSmBEN.jpg",
+      "genres": [
+        "Action",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt33399641",
+      "type": "movie",
+      "name": "Dheeram",
+      "releaseInfo": "2025-12-05",
+      "description": "A police officer investigates pattern killings in Calicut, discovering a vengeful killer's scheme. As he unravels the truth, he faces a moral dilemma between law and justice for a bereaved parent.\n\n📺 Streaming on: Amazon Prime Video, ManoramaMAX Amazon Channel, Amazon Prime Video with Ads\n📅 Release: 2025-12-05\n⭐ Rating: 3.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/vDJLCboqnz4KEbZdk8c7MgREmeF.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/gcceqDCIgY57EUKtr7cq1hNb45y.jpg",
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt33500164",
+      "type": "movie",
+      "name": "Kalamkaval",
+      "releaseInfo": "2025-12-05",
+      "description": "Early 2010s. A routine Kerala Police inquiry in the quiet village of Kottayikonam takes an unexpected turn when a trail of seemingly minor clues unravels into a string of disturbing cases. The investigation soon crosses into Tamil Nadu, revealing unsolved mysteries that have lingered for years.\n\n📺 Streaming on: Sony Liv\n📅 Release: 2025-12-05\n⭐ Rating: 6.3/10",
+      "poster": "https://image.tmdb.org/t/p/w500/5vdogNH72GrriiZ45H8U7CPWGfO.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/iF0gpj1HFRCi7VcWnJTg90ApYBW.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt11322908",
+      "type": "movie",
+      "name": "Khajuraho Dreams",
+      "releaseInfo": "2025-12-05",
+      "description": "A group of friends set out on an impulsive journey to explore Khajuraho. Later, their original intent changes as tourists, as they come across helpless villagers of the district.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-12-05\n⭐ Rating: 1.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/eoACrE6qVzQ1lwiNgfxqp5Yf1tH.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/1QyBN3wM3nnxXofyWh4GZiBgzxh.jpg",
+      "genres": [
+        "Adventure",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt33203749",
+      "type": "movie",
+      "name": "Shades Of life",
+      "releaseInfo": "2025-11-21",
+      "description": "\"Shades of Life\" is an introspective and melancholic anthology that threads together different stories, all set against the backdrop of Indian village life\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2025-11-21",
+      "poster": "https://image.tmdb.org/t/p/w500/5ldOa2CN0wBKnSpTi6jocdiK94Y.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/14HEsr1wUNHIzzXptAiTIgiRu9R.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt36616410",
+      "type": "movie",
+      "name": "Eko",
+      "releaseInfo": "2025-11-21",
+      "description": "In the misty hills of Kaattukunnu, an aging woman and her servant boy struggle to survive the ghosts of the past, as the hunt for Kuriachan — a legendary dog breeder and outlaw — blurs the line between myth, memory, and vengeance, revealing that even in absence, he still rules the hills.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-11-21\n⭐ Rating: 7.3/10",
+      "poster": "https://image.tmdb.org/t/p/w500/tXdFEmtqLm8tewIErDJgnbTS9qs.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/1NegG8bZRn3Fc1wluAbMeR19rym.jpg",
+      "genres": [
+        "Drama",
+        "Mystery"
+      ]
+    },
+    {
+      "id": "tt38721171",
+      "type": "movie",
+      "name": "Nidhiyum Bhoothavum",
+      "releaseInfo": "2025-11-14",
+      "description": "Three young mechanics move their bike repair workshop to an isolated homestay rumoured to be haunted - only to encounter chilling, unexplained events that soon come to life and cannot be ignored.\n\n📺 Streaming on: Sun Nxt, ManoramaMAX Amazon Channel\n📅 Release: 2025-11-14\n⭐ Rating: 1.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/oS6kVSdNDmZs1KVcnJtpS9ZHjZ4.jpg",
+      "genres": [
+        "Mystery",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt38772072",
+      "type": "movie",
+      "name": "Amoz Alexander",
+      "releaseInfo": "2025-11-14",
+      "description": "True-crime hosts John and Mary meet brutal offender Amos Alexander at his isolated house, where he promises more confessions. The routine shoot spirals into a chilling face-off that unravels dark truths, forcing Mary to question justice and truth.\n\n📺 Streaming on: Sun Nxt,  AP International South Cinema Amazon Channel\n📅 Release: 2025-11-14\n⭐ Rating: 2.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/8YbxFiaad48dPqYdrpjj1RXyuZ1.jpg",
+      "genres": [
+        "Crime",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt35741279",
+      "type": "movie",
+      "name": "Athi Bheekara Kaamukan",
+      "releaseInfo": "2025-11-14",
+      "description": "On the edge of a misty hilltop in rural Kerala, a young man named Arjun prepares to end his life. It’s the day of his beloved Anu’s wedding—an unbearable moment for a heart that had loved silently and shattered quietly.\n\n📺 Streaming on: Amazon Prime Video, ManoramaMax, ManoramaMAX Amazon Channel, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel\n📅 Release: 2025-11-14\n⭐ Rating: 2.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/dKo7UDzLAuIOOdiaDV8X0KAFRoR.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/njubyJJ9u97oNLe57S8xGreNB9z.jpg",
+      "genres": [
+        "Romance",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt29668971",
+      "type": "movie",
+      "name": "Ithiri Neram",
+      "releaseInfo": "2025-11-07",
+      "description": "On his way to a long-overdue drinking party with two friends, Anish receives an unexpected call from Anjana, a past lover visiting the city. Their decision to meet sets the stage for an evening of easy banter, reopened wounds, and difficult choices.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2025-11-07\n⭐ Rating: 3.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/8NMkShpCvUVFNkBndmNKIfRm5uF.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/fJeXFpqNxatL6SU7XNaJAsIjTup.jpg",
+      "genres": [
+        "Romance",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt36302733",
+      "type": "movie",
+      "name": "Diés Iraé",
+      "releaseInfo": "2025-10-30",
+      "description": "Rohan's affluent lifestyle spirals out of control as he becomes convinced there is a supernatural entity in his home. As he starts to uncover the mystery, he is drawn into unexpected worlds and alliances, along with the horrors that lie ahead.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2025-10-30\n⭐ Rating: 6.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/123DlTiiezgLaJruVe7RiSi0RFf.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/8Fl8B1TRkcjkU9VMp9ex9mV6949.jpg",
+      "genres": [
+        "Horror",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt35099420",
+      "type": "movie",
+      "name": "Nellikkampoyil Night Riders",
+      "releaseInfo": "2025-10-24",
+      "description": "Nellikampoil, a village adjacent to Forest, is very common. Many strange events are taking place in this land full of many myths. A figure with the legs of a horse and the body of a man is filling the land with fear by hanging a chicken head in the houses and hiding it in darkness and fear.\n\n📺 Streaming on: Zee5\n📅 Release: 2025-10-24\n⭐ Rating: 5.4/10",
+      "poster": "https://image.tmdb.org/t/p/w500/fni5RRvoJ4PIQnqW3vICXamB1Uw.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/1e8NLfZpL8d3p8mSF8EGKlWeTfz.jpg",
+      "genres": [
+        "Horror",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt32607015",
+      "type": "movie",
+      "name": "Paathirathri",
+      "releaseInfo": "2025-10-17",
+      "description": "A strange incident during their routine night duty pulls SI Jancy and Hareesh into a dangerous investigation. As secrets unfold, they must face their fears and the choices that could define their futures.\n\n📺 Streaming on: Zee5\n📅 Release: 2025-10-17\n⭐ Rating: 3.7/10",
+      "poster": "https://image.tmdb.org/t/p/w500/utpxOviVGA0Qum2C4tTt0TTLTHz.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/3LdUr1Z3sSu0h2wwXPZYHaMvUgF.jpg",
+      "genres": [
+        "Thriller",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt36955309",
+      "type": "movie",
+      "name": "Theatre: The Myth of Reality",
+      "releaseInfo": "2025-10-16",
+      "description": "In a world where solitude is a choice, a mother and her daughter have built a life of peace and devotion on a secluded island. However, a fleeting moment captured online catapults them into the glaring spotlight of social media.\n\n📺 Streaming on: ManoramaMax,  AP International South Cinema Amazon Channel\n📅 Release: 2025-10-16\n⭐ Rating: 2.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/pOzGTXDADBP4NvGmV1kfpjr6TTq.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/ryfkZKMeRvQCDKzjTEz2qJJ2fFR.jpg",
+      "genres": [
+        "Drama",
+        "Mystery"
+      ]
+    },
+    {
+      "id": "tt38202962",
+      "type": "movie",
+      "name": "Avihitham",
+      "releaseInfo": "2025-10-10",
+      "description": "A drunken man's encounter sets off a chain of gossip in a town of secrets. As whispers spread, a woman's hidden past threatens to tear everything apart.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2025-10-10\n⭐ Rating: 5.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/gPHdHjoUK2Hft5XpyYQ4s7XqxrE.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/6cMXtzw9gJ9Xk2jhVpsotX90paw.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt36733421",
+      "type": "movie",
+      "name": "Feminist Fathima",
+      "releaseInfo": "2025-10-10",
+      "description": "Fathima, a housewife in the coastal town of Ponnani, lives under the strict control of her orthodox husband, Ashraf. When her son wets their old mattress, Fathima’s attempt to replace it sparks conflict. Ashraf blocks her at every turn, despite her back pain and growing frustration. Eventually, Fathima realizes the mattress represents more than just comfort it’s her chance to reclaim her independence. By finally buying it, she takes a bold stand\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2025-10-10\n⭐ Rating: 7.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/gtgBl6G6jUDNFiAzGNdJlXiB5kd.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/dBuL7rVHuGVXusdFJOjnPlpGTEd.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt38632255",
+      "type": "movie",
+      "name": "Thampachi",
+      "releaseInfo": "2025-10-05",
+      "description": "In a village where Thampachi and Komaras are believed to be the counterparts of God, everyone respects Shiva Thampachi and his daughter Shivani. Unexpectedly, a job offer comes in search of Shivani.\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2025-10-05\n⭐ Rating: 2.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/p5PBkB35AaAFTlmNKUOjD7e2290.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt38428625",
+      "type": "movie",
+      "name": "Valsala Club",
+      "releaseInfo": "2025-09-26",
+      "description": "In a village where wedding sabotage is a competitive sport, the members of the Valsala Club bet that they can get a wedding completed within a week to end the tradition\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2025-09-26\n⭐ Rating: 1.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/oA5ZR6KMKfJe0ORnLjuJZVL8LMd.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/bhTVF1OgIkNqechfM0eZZK70d5I.jpg",
+      "genres": [
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt34942608",
+      "type": "movie",
+      "name": "Balti",
+      "releaseInfo": "2025-09-26",
+      "description": "A star kabaddi player's life takes a dangerous turn when he's pulled into the criminal underworld.\n\n📺 Streaming on: Sony Liv\n📅 Release: 2025-09-26\n⭐ Rating: 5.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/tpgbGGIM76Vk44KLxTNM2UkzmLG.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/6ZZNqEJSorszn4NPuPBWE4xAwUr.jpg",
+      "genres": [
+        "Action",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt32638279",
+      "type": "movie",
+      "name": "Karam",
+      "releaseInfo": "2025-09-25",
+      "description": "Former Indian military officer Dev Mahendran and his family find themselves in a perilous situation in a foreign country, Lenarco, during an international conference.\n\n📺 Streaming on: Amazon Prime Video, ManoramaMax, ManoramaMAX Amazon Channel, Amazon Prime Video with Ads\n📅 Release: 2025-09-25\n⭐ Rating: 4.3/10",
+      "poster": "https://image.tmdb.org/t/p/w500/AjcERnQCKipC6BnylkwZr5m1GH6.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/ljwUMHd6TmAKwzmGVAhzSfdZ9eU.jpg",
+      "genres": [
+        "Action",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt38361234",
+      "type": "movie",
+      "name": "Odiyangam",
+      "releaseInfo": "2025-09-19",
+      "description": "Odiyangam traces the origin of the very first Odiyan—a figure woven into Kerala’s folklore—interweaving romance and vengeance with an immersive audiovisual experience .\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2025-09-19",
+      "poster": "https://image.tmdb.org/t/p/w500/ce2c2P02fwCTS18vjMXlAZ4hPeb.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/A45gcOaksqMLCEG15hSQa7ZHb4x.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt35019435",
+      "type": "movie",
+      "name": "Mirage",
+      "releaseInfo": "2025-09-19",
+      "description": "A woman joins forces with a journalist to investigate secrets her fiancé was keeping from her after she is informed he has died in a tragic train accident.\n\n📺 Streaming on: Sony Liv\n📅 Release: 2025-09-19\n⭐ Rating: 4.9/10",
+      "poster": "https://image.tmdb.org/t/p/w500/yLkc12tgINrE7KzSpjsFJnG0C6d.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/AwsNOpBKp1znj9UCK5AhpbQXntS.jpg",
+      "genres": [
+        "Mystery",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt37171221",
+      "type": "movie",
+      "name": "Vala: Story of a Bangle",
+      "releaseInfo": "2025-09-18",
+      "description": "Following their wedding, Purushu struggles to take an antique-style bangle off Sarla's wrist, as it leads to significant conflict and misunderstanding.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-09-18\n⭐ Rating: 6.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/m5KefviiDSpvlqlpomYR0kF3i3n.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/3UmKQ0R7EjfjQFwHFbM3wIo4vr3.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt33310930",
+      "type": "movie",
+      "name": "Maine Pyar Kiya",
+      "releaseInfo": "2025-08-29",
+      "description": "Searching for Nidhi in Madurai's streets, Aryan faces mounting danger and tension at every turn. Time runs short as he navigates growing chaos to stay alive.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, ManoramaMax, Lionsgate Play, Lionsgate Play Apple TV Channel, Lionsgate Play Amazon Channel, ManoramaMAX Amazon Channel, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel\n📅 Release: 2025-08-29\n⭐ Rating: 5.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/2eU8iygSmd7gY6K3TGVx2w3SPFh.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/bZb27et2aHq6drC4OJBywEOzz2U.jpg",
+      "genres": [
+        "Romance",
+        "Action",
+        "Drama",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt30818546",
+      "type": "movie",
+      "name": "Hridayapoorvam",
+      "releaseInfo": "2025-08-28",
+      "description": "Sandeep, a middle-aged bachelor who recently got a heart transplant, travels to Pune to attend the engagement of his heart-donor’s daughter, Haritha. Her engagement gets broken and Sandeep injures his back on the same day, forcing him to stay back in Pune for a few weeks, in his heart-donor’s house – who was an adventurous Colonel.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2025-08-28\n⭐ Rating: 6.9/10",
+      "poster": "https://image.tmdb.org/t/p/w500/j6M2odS1RqGEUPKirIvB1VZ9i6Y.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/7HATFCB88pCbTyFytbUM48aZtpy.jpg",
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Drama",
+        "Family"
+      ]
+    },
+    {
+      "id": "tt33372494",
+      "type": "movie",
+      "name": "Lokah Chapter 1: Chandra",
+      "releaseInfo": "2025-08-28",
+      "description": "The story follows Chandra, a mysterious, goth-influenced woman who has just moved to Bangalore and begins working night shifts at a café. Across the road from her apartment live Sunny and Venu, two aimless bachelors. Sunny becomes infatuated with Chandra, observing her odd routines, strange visitors, and reclusive nature. Their dynamic changes when Sunny gets a glimpse of Chandra in her act.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2025-08-28\n⭐ Rating: 7.2/10",
+      "poster": "https://image.tmdb.org/t/p/w500/nRn6is4m5sikO1rSoCoRT2rYtXB.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/tkRZ8BpIlvQIFBQWwEHuAlxczyb.jpg",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ]
+    },
+    {
+      "id": "tt22001978",
+      "type": "movie",
+      "name": "Odum Kuthira Chadum Kuthira",
+      "releaseInfo": "2025-08-28",
+      "description": "Jilted at his wedding, Aby encounters a reserved woman needing help. As they heal together, his ex returns with newfound insight into his dreams. A hidden truth leads Aby to find peace.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-08-28\n⭐ Rating: 5.3/10",
+      "poster": "https://image.tmdb.org/t/p/w500/zIEV0sb7RNcLB7ZKRqt2rx1ANbA.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/bNH7K4yJtPqLd1VHvsjZHwx4BUa.jpg",
+      "genres": [
+        "Drama",
+        "Romance",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt31721293",
+      "type": "movie",
+      "name": "Thalavara",
+      "releaseInfo": "2025-08-22",
+      "description": "Mocked for his vitiligo, Jyothish has spent years hiding from the world-until love and a daring dream to act pull him into the light. But when rejection and cruelty test him, he discovers that real victory isn't fame or approval, but the courage to stand up, unbroken, and redefine what makes him extraordinary.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-08-22\n⭐ Rating: 6.6/10",
+      "poster": "https://image.tmdb.org/t/p/w500/9pGcQOayL2EgVU9QtbxoB1OpTQh.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/yjyMlKIXT6uHJ8bs7PCca853fYX.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ]
+    },
+    {
+      "id": "tt37962349",
+      "type": "movie",
+      "name": "The Case Diary",
+      "releaseInfo": "2025-08-21",
+      "description": "CI Christy Sam goes to Tamil Nadu as part of capturing some interstate criminals, and at the end of that mission, he happens to find out the fact that his long-lost twin brother, Aju from the orphanage, had died under suspicious circumstances. Christy starts investigation to find out his brother's killer.\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2025-08-21",
+      "poster": "https://image.tmdb.org/t/p/w500/uAvdm9pTSgjZINlQ0OtnHYwB4XF.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/5VHS20Z8b6ZxDXVsbuxaxfARLhK.jpg",
+      "genres": [
+        "Crime",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt30322895",
+      "type": "movie",
+      "name": "Mehfil",
+      "releaseInfo": "2025-08-08",
+      "description": "Based on the life of Mullassery Raju, the story unfolds over a single night of music, exploring love, relationships, and the resilience of a man who hides his pain to bring joy and unity to those around him.\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2025-08-08\n⭐ Rating: 2.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/t6kfxD6hXFzI1DdPmiCTRbrozQH.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/fcUc8jSV0tLB6RtN7a8qmTE2vld.jpg",
+      "genres": [
+        "Music",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt33163858",
+      "type": "movie",
+      "name": "Sangarsha Ghadana - The Art of Warfare",
+      "releaseInfo": "2025-08-08",
+      "description": "Kodamazha Suni, a retired organised crime leader, is compelled to return to his homeland after his former gang is attacked by an unknown adversary. Haunted by his past decisions, Suni's journey mirrors the battles of ancient warriors, as he faces his greatest adversary yet. As the conflict deepens, Suni’s thought process is explored through the wisdom of an ancient Chinese text, revealing the timeless struggle between strategy, surveillance, and survival\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2025-08-08\n⭐ Rating: 5.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/n1tam4xivdEr6HylZgeoA9OXBJh.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/bncpwa5999F7csQ9Bq0PQwkBNSc.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt35613198",
+      "type": "movie",
+      "name": "Sahasam",
+      "releaseInfo": "2025-08-08",
+      "description": "A man betrays his partner and disappears with money stolen from a cartel. Later, when the loot is invested in cryptocurrency, it becomes inaccessible due to a lost password.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-08-08\n⭐ Rating: 5.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/nW2F8OAO3cTBsbvPhhd1YC0OAcw.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/3yTRTmJfHeyNQKuPKDPTRHmgH0j.jpg",
+      "genres": [
+        "Action",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt37748818",
+      "type": "movie",
+      "name": "Surabhila Sundara Swapnam",
+      "releaseInfo": "2025-08-01",
+      "description": "Surabhila Sundara Swapnam features the story of a common man leading a life with his wife and friends in a quaint town. With a dream that he needs to fulfill, the man sets out on a journey, owning a land under his name.  How he manages to achieve his dream and what challenges he faces to get there form the entire story.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2025-08-01",
+      "poster": "https://image.tmdb.org/t/p/w500/xE3qx6VwlrR6sHER2TiFk0M9maZ.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/iojAkuRTuPUiTV6E6DHDUnesJiP.jpg"
+    },
+    {
+      "id": "tt31888759",
+      "type": "movie",
+      "name": "Thayyal Machine",
+      "releaseInfo": "2025-08-01",
+      "description": "Police Officer Shiva and his family move into a rented house where they encounter a sewing machine with supernatural powers.\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2025-08-01\n⭐ Rating: 3.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/vpDgtDGdnFbzoxbDGsjxsjGVo0L.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/kheKyltmCWOORRCBUpBFe9S5hHZ.jpg",
+      "genres": [
+        "Horror"
+      ]
+    },
+    {
+      "id": "tt33037773",
+      "type": "movie",
+      "name": "Sumathi Valavu",
+      "releaseInfo": "2025-08-01",
+      "description": "A haunted curve in 1990s Kerala, named after Sumathis tragic death, draws various people into supernatural encounters. As they experience strange events, the mystery of Sumathi and the roads dark history begins to unfold.\n\n📺 Streaming on: Zee5\n📅 Release: 2025-08-01\n⭐ Rating: 5.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/3xIDlnwjMf7kCOpFq8GMmW8on95.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/lfrtpFaAFlS5ELUGa9iSpah6aNz.jpg",
+      "genres": [
+        "Horror",
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt33291804",
+      "type": "movie",
+      "name": "Meesha",
+      "releaseInfo": "2025-08-01",
+      "description": "A forest guard, Midhun, invites his old friends to a reunion in the woods. What starts as a warm get-together slowly turns into a night of tension, betrayal, and survival, as secrets unravel and friendships crack under pressure.\n\n📺 Streaming on: Amazon Prime Video, aha, Amazon Prime Video with Ads\n📅 Release: 2025-08-01\n⭐ Rating: 5.3/10",
+      "poster": "https://image.tmdb.org/t/p/w500/1SzqFfA4YSpUECHBntbz44NQj6A.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/17HPPumRKBmjLMOeCwhrN0AqBSr.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt37496515",
+      "type": "movie",
+      "name": "Oru Ronaldo Chithram",
+      "releaseInfo": "2025-07-25",
+      "description": "Ronaldo aspires to become a filmmaker and win over the love of his life, so when he hears of a filmmaking contest, he prepares to finally achieve his dreams.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-07-25\n⭐ Rating: 5.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/fK1Dltb0TbTeAC55qaJ2GSubREB.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/vLAFn0ns5TjAW3n79fZ8nCI5vwX.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt35110563",
+      "type": "movie",
+      "name": "Flask",
+      "releaseInfo": "2025-07-18",
+      "description": "The Arrogant District Judge Venkitesh Balaji and his naive Personal Security Officer Jyothi Kuttan are abducted and held hostage by a Maoist Group demanding release of their leader in prison. As both men face the impending death, their hierarchy equations change and it becomes a fight for survival.\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2025-07-18\n⭐ Rating: 5.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/sQIbvMC6j8dQE31vIhLgwchSlVs.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/qxDHSadL15AO0kEPB5CSMusYc5b.jpg",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt29633769",
+      "type": "movie",
+      "name": "Raveendra Nee Evide?",
+      "releaseInfo": "2025-07-18",
+      "description": "The life of a weather officer harbouring an obsession with certainty gets complicated when a bizarre incident concerning a neighbour incites his suspicions about his own wife.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-07-18\n⭐ Rating: 2.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/7lYvcK3rvBBqpr1vG4I7ChTC6NX.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/dbcKWj9365RIwRSxGTT4ZToN8CK.jpg",
+      "genres": [
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt23458804",
+      "type": "movie",
+      "name": "JSK - Janaki V vs State of Kerala",
+      "releaseInfo": "2025-07-17",
+      "description": "Janaki, an IT professional from Bangalore, returns to her hometown in Kerala for a quiet vacation. But her peace is shattered when she becomes the victim of a horrific incident. As she begins her fight for justice, the case takes an unexpected turn with the entry of Advocate David Abel Donovan.\n\n📺 Streaming on: Zee5\n📅 Release: 2025-07-17\n⭐ Rating: 3.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/s5aKJoOSv3D8snq3Y2N3APeK5vz.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/fKscSOfO1X95gBIDbE9of6yx9EW.jpg",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt34335405",
+      "type": "movie",
+      "name": "Soothravakyam",
+      "releaseInfo": "2025-07-11",
+      "description": "The Story revolves around Christo Xavier, a circle inspector, who mentors 11th-class students in his spare time and turns his station into a community place to benefit the kids of the town. As his regular work and tutoring go on, one day he finds a suspicious electronic device from a student’s fair exhibit model.\n\n📺 Streaming on: Amazon Prime Video, ManoramaMax, Lionsgate Play, Lionsgate Play Apple TV Channel, Lionsgate Play Amazon Channel, ManoramaMAX Amazon Channel, Amazon Prime Video with Ads, Brew, Plex, Plex Channel\n📅 Release: 2025-07-11\n⭐ Rating: 4.6/10",
+      "poster": "https://image.tmdb.org/t/p/w500/gwaOYtU5kdW1eefsvGcV74r8BBE.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/EXNPelyKWOSvgkYBbn7WhFN1sa.jpg",
+      "genres": [
+        "Mystery",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt34180853",
+      "type": "movie",
+      "name": "Apoorva Puthranmar",
+      "releaseInfo": "2025-07-11",
+      "description": "When two brothers attempt to honour their father's dying wish, their actions cause widespread chaos.\n\n📺 Streaming on: Amazon Prime Video, ManoramaMax, ManoramaMAX Amazon Channel, Amazon Prime Video with Ads\n📅 Release: 2025-07-11\n⭐ Rating: 6.3/10",
+      "poster": "https://image.tmdb.org/t/p/w500/9nCoImTw1ACcXnxH4rJRi1lZs0m.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/fZvOm2c4Q5xQhxLZDjzRSLL7fM7.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt29997427",
+      "type": "movie",
+      "name": "Dheeran",
+      "releaseInfo": "2025-07-04",
+      "description": "When news of Eldhose's death, a man once adored by the locals, reaches his village, his uncles embark on a chaotic trip in an ambulance to bring his body back home.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, ManoramaMax, ManoramaMAX Amazon Channel, Amazon Prime Video with Ads\n📅 Release: 2025-07-04\n⭐ Rating: 5.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/dnkDVUTK5MycI4ji82Il1otg1dM.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/14TuWT4Fym7sA7HjFL4YCxshcSP.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt11706552",
+      "type": "movie",
+      "name": "Moppala",
+      "releaseInfo": "2025-07-04",
+      "description": "The life of a Theyyam exponent and his grandson, who is the child of an inter-caste marriage, is topsy-turvy due to caste hierarchy and prejudices. Devanandan, the grandson who is very much passionate about Theyyam, is not allowed to perform the art by the diehard followers of caste systems. So Devanandan leaves the scene wearing the attires and makeup of Theyyam.\n\n📺 Streaming on: Plex, Plex Channel\n📅 Release: 2025-07-04",
+      "poster": "https://image.tmdb.org/t/p/w500/3l1NbEjIxfnCkT3sJqkXIN0piFj.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/aQfAhXknT6zGw3PcbB80ffoVlxh.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt32166743",
+      "type": "movie",
+      "name": "United Kingdom of Kerala",
+      "releaseInfo": "2025-06-20",
+      "description": "Tony, a hardworking Kerala student, rejects his father's wish for him to study abroad. His choice strains their relationship and sparks a youth movement across the state.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-06-20\n⭐ Rating: 2.3/10",
+      "poster": "https://image.tmdb.org/t/p/w500/6M8yucZiC3XBCtPkonuggnydhnm.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/hFkfxkib0rYpbuO8sGyecJeLI1U.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt37368207",
+      "type": "movie",
+      "name": "Aaahladam",
+      "releaseInfo": "2025-06-18",
+      "description": "Antony, Arshad, and Aswin lure Helen to a remote villa, but their plan spirals into terror when the caretaker turns captor. As revenge, trauma, and hidden truths collide, reality begins to blur.\n\n📺 Streaming on: ManoramaMAX Amazon Channel\n📅 Release: 2025-06-18\n⭐ Rating: 4.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/4iqSeODQShVu0Iwx3qDezrfgIn2.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/82zZ3QPVoLjULYlnsuTP01xYgnf.jpg",
+      "genres": [
+        "Horror",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt34623207",
+      "type": "movie",
+      "name": "Vyasanasametham Bandhumithradhikal",
+      "releaseInfo": "2025-06-13",
+      "description": "A small-town shopkeeper deals with his daughter's engagement, his mother-in-law's sudden death, and family issues, while his daughter starts to question her marriage and speaks up for herself.\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2025-06-13\n⭐ Rating: 7.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/8yOQPzxV2vqzC9p0bh6fGxtQUtx.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/9Q7NaGY4xg45IZAnQsYchWvo07v.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    }
+  ],
+  "malayalam-series": [
+    {
+      "id": "tt43639419",
+      "type": "series",
+      "name": "Land of Football",
+      "releaseInfo": "2026-07-10",
+      "description": "From the mud-slicked night tournaments to the World Cup flex-board wars, this is a deep dive into the obsessive and deep-rooted football culture of Kerala.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-07-10",
+      "poster": "https://image.tmdb.org/t/p/w500/xbkjBvwKm1sGAMMjFi0ZXYmTh6n.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/ohYuYtROMBfGJnOHgpWSkzDzPyp.jpg",
+      "genres": [
+        "Documentary"
+      ]
+    },
+    {
+      "id": "tt43592288",
+      "type": "series",
+      "name": "Muthassi",
+      "releaseInfo": "2026-07-03",
+      "description": "In a remote village haunted by ancient secrets, a mother's love is put to the ultimate test when her son becomes entangled in a terrifying supernatural curse.\n\n📺 Streaming on: ZEE5\n📅 Release: 2026-07-03",
+      "poster": "https://image.tmdb.org/t/p/w500/upghryFPaiUMjlzgmnHpwtnYJx3.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/lzXWWlIg05WXmWhe666a8TNO75P.jpg",
+      "genres": [
+        "Mystery"
+      ]
+    },
+    {
+      "id": "tt42071698",
+      "type": "series",
+      "name": "Cousins and Kalyanams",
+      "releaseInfo": "2026-05-29",
+      "description": "A 26-year tale of six cousins in Kerala whose lives and relationships revolve around seven weddings.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-05-29\n⭐ Rating: 4.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/cEfHZNS071Qa0ycrUhySEjRdXXB.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/cEfpO6QG5Ks5cTJ8bRrZJiDYKUH.jpg",
+      "genres": [
+        "Comedy",
+        "Family"
+      ]
+    },
+    {
+      "id": "tt41757212",
+      "type": "series",
+      "name": "Comedy Cooks",
+      "releaseInfo": "2026-04-18",
+      "description": "What happens when comedy meets cooking? Find out as Bhavana and Chef Nalan kick off a fun-filled contest with your favourite stars.\n\n📺 Streaming on: Jiohotstar\n📅 Release: 2026-04-18\n⭐ Rating: 7.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/eBI0fDMrrWWDgoM9E0vsJ8aXrGz.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/rLbV63MMiq7uG12nUwFmgIkIF93.jpg",
+      "genres": [
+        "Comedy",
+        "Reality"
+      ]
+    },
+    {
+      "id": "tt40431801",
+      "type": "series",
+      "name": "Kasaragod Embassy",
+      "releaseInfo": "2026-03-20",
+      "description": "Azi and Chemmu, cousins trapped in poverty in late 2000s Kasaragod, work for their cunning uncle Razak Mama, whose stationery shop hides a forgery racket.\n\n📺 Streaming on: ZEE5\n📅 Release: 2026-03-20\n⭐ Rating: 2.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/tnvYlPIstVb4elCzSPUW5f7tILH.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/9v4aDw9Sz5DFGH4gQg6mrLDXJhE.jpg",
+      "genres": [
+        "Crime"
+      ]
+    },
+    {
+      "id": "tt32105473",
+      "type": "series",
+      "name": "Secret Stories: Roslin",
+      "releaseInfo": "2026-02-27",
+      "description": "A 17-year-old girl is plagued by nightmares of a green-eyed stalker, pulling her into a spiral of fear and despair.\n\n📺 Streaming on: Jiohotstar\n📅 Release: 2026-02-27\n⭐ Rating: 4.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/pgVtjCdC5aBADQswOGx7BnTbjgH.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/6MtLPgtYbXjrUwSgReJ4wEpnjIJ.jpg",
+      "genres": [
+        "Mystery",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt29540636",
+      "type": "series",
+      "name": "Pharma",
+      "releaseInfo": "2025-12-19",
+      "description": "A young medical representative struggles against the pharma game, masters it and eventually fights against it.\n\n📺 Streaming on: Jiohotstar\n📅 Release: 2025-12-19\n⭐ Rating: 5.2/10",
+      "poster": "https://image.tmdb.org/t/p/w500/hQWT47GFQyvO1tFqx6IgCOvrrr8.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/n1qDEYpr3pq7bJ9GGaF9zVNjdNq.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt37534689",
+      "type": "series",
+      "name": "Kammattam",
+      "releaseInfo": "2025-09-05",
+      "description": "Inspector Antonio George smells foul play in the mysterious death of Samuel Umman. As his investigation leads him to Samuel's employee, Francis, Antonio realises that a much larger game is in play.\n\n📺 Streaming on: Zee5\n📅 Release: 2025-09-05\n⭐ Rating: 2.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/skJd3p6nVDaJOfrObmD58HxETcW.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/pYAETHQCraGf7CN6k0KUxIosyDf.jpg",
+      "genres": [
+        "Crime"
+      ]
+    },
+    {
+      "id": "tt30218223",
+      "type": "series",
+      "name": "The Chronicles Of 4.5 The Gang",
+      "releaseInfo": "2025-08-19",
+      "description": "A group of five slum boys dream of making it big amidst the chaotic world of crime, comedy, and survival.\n\n📺 Streaming on: Sony LIV\n📅 Release: 2025-08-19\n⭐ Rating: 8.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/8bhytwwkOOkLWGR76RubBr3IgXU.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/mfrx8ie27ljjrjSkiFrISKAui7o.jpg",
+      "genres": [
+        "Crime",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt28755900",
+      "type": "series",
+      "name": "Love Under Construction",
+      "releaseInfo": "2025-02-28",
+      "description": "Vinod is ready to build his dream house. But is he ready to face the hurdles in his path?\n\n📺 Streaming on: JioHotstar\n📅 Release: 2025-02-28\n⭐ Rating: 6.9/10",
+      "poster": "https://image.tmdb.org/t/p/w500/z7MIw0qDpN038SYQiuvrL11QS7W.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/y2vNh5Qz2oMNslunAEuDGvqJ29E.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt27540960",
+      "type": "series",
+      "name": "Jai Mahendran",
+      "releaseInfo": "2024-10-11",
+      "description": "When Mahendran, a corrupt and manipulative deputy Thasildar, believes in getting things done through powerplay and influence within the system, becomes the victim of his own plans to sabotage an entire system in an attempt to safeguard his job and restore his reputation.\n\n📺 Streaming on: Sony LIV\n📅 Release: 2024-10-11\n⭐ Rating: 8.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/i4XuRIfKepANLQO6AcPG9tfBvpg.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/jRPiWplpM9mNyazOj0Cj6rcEZit.jpg",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Family"
+      ]
+    },
+    {
+      "id": "tt33131120",
+      "type": "series",
+      "name": "1000 Babies",
+      "releaseInfo": "2024-09-27",
+      "description": "Enter a cradle of mysteries where a man with a dark past manipulates multiple lives through a series of cryptic letters and deadly games.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2024-09-27\n⭐ Rating: 5.7/10",
+      "poster": "https://image.tmdb.org/t/p/w500/j9EdxlAReZ27m29kTP0cqaQOeoe.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/50yPSUThPKxeC9FLGQxB6WoY8f2.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt15478036",
+      "type": "series",
+      "name": "Manorathangal",
+      "releaseInfo": "2024-08-15",
+      "description": "Eight legendary filmmakers collaborate with 9 superstars, breathing life into the timeless stories of author M.T. Vasudevan Nair. Based in Kerala, these stories explore the nuances of human nature.\n\n📺 Streaming on: ZEE5\n📅 Release: 2024-08-15\n⭐ Rating: 4.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/z7IzYTN5oUFX42D8N7D3QEy5eEa.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/vx9NcwSkdrH5TSZ8KSFoLi8ZIDR.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt27950365",
+      "type": "series",
+      "name": "Nagendran's Honeymoons",
+      "releaseInfo": "2024-06-19",
+      "description": "A lazy man named Nagendran, who, with his friend Soman, hatches a plan to marry multiple women to earn money from dowry to escape his village and find a better life abroad.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2024-06-19\n⭐ Rating: 5.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/mk1iphrEF1hoQeTQWeF2xPgP8Ug.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/ePTDgSFfSVm10qUSK7RKeQYyVaH.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt27349179",
+      "type": "series",
+      "name": "Perilloor Premier League",
+      "releaseInfo": "2024-01-05",
+      "description": "Malavika, who comes to the village of Perilloor to find love with her boyfriend Sreekuttan, unexpectedly ends up becoming the village Panchayat President against her will. Later, her life goes upside down along with the problems stirred by the wayward people of Perilloor Panchayath.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2024-01-05\n⭐ Rating: 6.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/zuQRHydJ1Xojty6EHhWRMNT7ooO.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/uVMFFqUWe2fKntOyC01ipgJ1k4i.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt28675376",
+      "type": "series",
+      "name": "Masterpeace",
+      "releaseInfo": "2023-10-25",
+      "description": "When marital discord becomes everyone's business and parents get way too involved in the \"peace talks,\" family drama can become family trauma.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2023-10-25\n⭐ Rating: 5.7/10",
+      "poster": "https://image.tmdb.org/t/p/w500/hUOiNi5uFmDNOYLn2hCrgtSwNPA.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/whRb5cpSALBhj23krlcSRhg8VAo.jpg",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt27128638",
+      "type": "series",
+      "name": "Kerala Crime Files",
+      "releaseInfo": "2023-06-23",
+      "description": "A sex worker's mysterious and gruesome murder in a suburban lodge called \"Grand Tourist Home\" baffles the police as the only lead they have is a fake address.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2023-06-23\n⭐ Rating: 6.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/eM2gQTFRoMAaJ3AjGiB10LZU8n6.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/axzUkZk5CAWX2xqOB69WSHOoRUT.jpg",
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt8667016",
+      "type": "series",
+      "name": "Marimayam",
+      "releaseInfo": "2011-11-05",
+      "description": "Marimayam comedians enact satirical sketches describing the typical scenarios observed at government institutions and societal trials faced by the common man.\n\n📺 Streaming on: Manorama Max\n📅 Release: 2011-11-05\n⭐ Rating: 10.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/l2JesRdOEZGFlqlsucdeNBfrThW.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/bp5QAbzapeUMo983FfKdbisgzXo.jpg",
+      "genres": [
+        "Comedy"
+      ]
+    }
+  ],
+  "tamil-movies": [
+    {
+      "id": "tt38267486",
+      "type": "movie",
+      "name": "Nooru Sami",
+      "releaseInfo": "2026-08-07",
+      "description": "📺 Streaming on: Zee5\n📅 OTT Release: 2026-08-07",
+      "poster": "https://image.tmdb.org/t/p/w500/1dKmZB9KVSOA6mq6Oa2t6HYd8E1.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/bRhPcbtPfnrfJPllQtYY7SWoLbu.jpg",
+      "genres": [
+        "Drama",
+        "Family"
+      ]
+    },
+    {
+      "id": "tt35076988",
+      "type": "movie",
+      "name": "Chinna Chinna Aasai",
+      "releaseInfo": "2026-07-28",
+      "description": "On the enchanting shores of Varanasi, two souls meet by chance. Somewhere within this unfolding chaos, an unspoken bond begins to form, slowly slipping beyond friendship.\n\n📺 Streaming on: Jiohotstar\n📅 Release: 2026-07-28",
+      "poster": "https://image.tmdb.org/t/p/w500/bPP7IWH0GeQDZ5VC9QsE6lRlijI.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/1KXnH4NcCQTAxV0pZwvIIGCepIx.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt39182439",
+      "type": "movie",
+      "name": "Con City",
+      "releaseInfo": "2026-07-24",
+      "description": "📺 Streaming on: Netflix\n📅 OTT Release: 2026-07-24",
+      "poster": "https://image.tmdb.org/t/p/w500/pJ4UwvLpek1jK8d540Ho8xI08iL.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/jzDjIHDknKz9jhTvBF9aSeoax1V.jpg",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt43202886",
+      "type": "movie",
+      "name": "Ego Raman",
+      "releaseInfo": "2026-07-24",
+      "description": "Follows the toxic relationship between a prospective civil servant and a conceited school principal, which intensifies when a Yamaha motorbike enters the narrative.\n\n📺 Streaming on: Prime Video\n📅 Release: 2026-07-24",
+      "poster": "https://image.tmdb.org/t/p/w500/rFKCzvt5uw7wjG9ZXaUXL8MMq1Y.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/7sILP5U85V5OTzX3BsRsiy8WNyJ.jpg"
+    },
+    {
+      "id": "tt42203456",
+      "type": "movie",
+      "name": "Love Oh Love",
+      "releaseInfo": "2026-07-10",
+      "description": "A couple is in love. One partner's excessive spending pushes the other into debt. When the burdened partner decides to seek a divorce, the other files a police complaint through the leader of a women's association. As they begin living together, they gradually understand each other's struggles. Eventually, they reconcile and choose to continue their life together.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-07-10",
+      "poster": "https://image.tmdb.org/t/p/w500/37svY2bwI83NSHuR6KSQeBhjgOt.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/dfoDrbAaeACqYxdMULEHFCpR9us.jpg",
+      "genres": [
+        "Romance",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt35723557",
+      "type": "movie",
+      "name": "Idhayam Murali",
+      "releaseInfo": "2026-07-10",
+      "description": "A young man navigates the complexities of unrequited love, finding that even as years pass and life takes unexpected turns, certain emotions remain deeply embedded in his heart.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-07-10\n⭐ Rating: 7.3/10",
+      "poster": "https://image.tmdb.org/t/p/w500/8gfs5OsGINENFAl0h1XZPNup9lI.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/jLncLuPE5kOascGrvN39jgQHVJT.jpg",
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt37458495",
+      "type": "movie",
+      "name": "Gatta Kusthi 2",
+      "releaseInfo": "2026-07-03",
+      "description": "Picks up after the first film, with Veera and Keerthi balancing parenthood and Keerthi's wrestling career, featuring a role reversal where Veera takes on more domestic responsibilities.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-07-03\n⭐ Rating: 4.9/10",
+      "poster": "https://image.tmdb.org/t/p/w500/5U8MWIk9XZ60NALyOTpyX7vXIR7.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/nLMUoZn09tjeqae7lzK3x9Wf84V.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt35741123",
+      "type": "movie",
+      "name": "Heartin",
+      "releaseInfo": "2026-06-26",
+      "description": "Fate tosses a couple into an unexpected situation with an ex-girlfriend in the mix.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-06-26\n⭐ Rating: 6.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/7xvMocNLZov64aOU1X3BRWawjD7.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/ufVCGoqEHOCahpXwDguGIq8CxAP.jpg",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt28259290",
+      "type": "movie",
+      "name": "Moondram Kan",
+      "releaseInfo": "2026-06-12",
+      "description": "Follows the investigation of a factory general manager's murder, where four workers—a mechanic, assistant manager, owner, and new recruit—become the primary suspects.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2026-06-12",
+      "poster": "https://image.tmdb.org/t/p/w500/zScF00DoAaZoTxysoxTQk7aUge4.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/i24a2DQNM12AAZczm4Ju04Wesdn.jpg",
+      "genres": [
+        "Thriller",
+        "Drama",
+        "Crime"
+      ]
+    },
+    {
+      "id": "tt36853497",
+      "type": "movie",
+      "name": "Double Occupancy",
+      "releaseInfo": "2026-06-12",
+      "description": "Rajini transforms between woman by day and man by night, hiding this gender swap from partners creating tangled complications.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-06-12\n⭐ Rating: 6.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/afwvI8D1SLSMqINJbq0Wi9eCBWt.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/v4Fkzv4wrlGzF3af60Xwxpb5tJk.jpg",
+      "genres": [
+        "Romance",
+        "Drama",
+        "Fantasy"
+      ]
+    },
+    {
+      "id": "tt26654655",
+      "type": "movie",
+      "name": "Charukesi",
+      "releaseInfo": "2026-06-12",
+      "description": "A Carnatic musician with Alzheimer's grapples with his prodigal son's lifestyle choices, exploring the intersection of music, memory, and family relationships.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-06-12",
+      "poster": "https://image.tmdb.org/t/p/w500/vpLFV4vrb5O56ydvnAvuA1QX6Jm.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/79kAdR7TbKI3RHAd1Dg4JzHRAxQ.jpg",
+      "genres": [
+        "Drama",
+        "Music"
+      ]
+    },
+    {
+      "id": "tt29429839",
+      "type": "movie",
+      "name": "Sannidhanam P.O.",
+      "releaseInfo": "2026-06-05",
+      "description": "A mother's search for her son who went missing when he was a child.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel\n📅 Release: 2026-06-05",
+      "poster": "https://image.tmdb.org/t/p/w500/1CHaHGqw4DaQppjxKDzOzGJCdv7.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/hskdNGEUWYoOgSGah0cAd9XmGKX.jpg",
+      "genres": [
+        "Drama",
+        "Mystery"
+      ]
+    },
+    {
+      "id": "tt39385419",
+      "type": "movie",
+      "name": "Parimala and Co",
+      "releaseInfo": "2026-06-05",
+      "description": "A dark comedy centered around a chaotic family whose tangled relationships and unpredictable situations lead to emotionally charged and absurd moments, blending humor with underlying tension and drama.\n\n📺 Streaming on: Zee5\n📅 Release: 2026-06-05\n⭐ Rating: 5.4/10",
+      "poster": "https://image.tmdb.org/t/p/w500/vN2TOTKin83av7hwYnwAKSd3EG8.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/hcQ9Kcmc34yYElii4fjFxABQYqq.jpg",
+      "genres": [
+        "Crime",
+        "Comedy",
+        "Mystery",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt37971394",
+      "type": "movie",
+      "name": "Blast",
+      "releaseInfo": "2026-05-28",
+      "description": "A seemingly ordinary family must unleash their hidden martial arts skills when they clash with a ruthless criminal gang tied to corruption and violence.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-05-28\n⭐ Rating: 7.1/10",
+      "poster": "https://image.tmdb.org/t/p/w500/lpsUpXieodUhN6DlK9ZDnjkysLk.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/xsoKAonKy1zk5XoQoUG1dUXDCKH.jpg",
+      "genres": [
+        "Action",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt40601101",
+      "type": "movie",
+      "name": "Sattendru Maarudhu Vaanilai",
+      "releaseInfo": "2026-05-15",
+      "description": "When a carefree orphan and a runaway minister's daughter marry on impulse, their love is tested by financial struggles and powerful enemies — from corrupt politicians to jealous rivals. Together, they uncover hidden truths and prove that love can survive even the darkest threats.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel\n📅 Release: 2026-05-15",
+      "poster": "https://image.tmdb.org/t/p/w500/tTgiNXkrg9LS6Qjvrnksev7ztIo.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/wWxrb1dsjSXj0LfwWCHdzljtK7J.jpg",
+      "genres": [
+        "Thriller",
+        "Drama",
+        "Comedy",
+        "Romance"
+      ]
+    },
+    {
+      "id": "tt33988385",
+      "type": "movie",
+      "name": "Karuppu",
+      "releaseInfo": "2026-05-14",
+      "description": "In a world where justice falters, guardian deity Vettai Karuppu takes the guise of a lawyer to battle a corrupt legal system preying on the powerless.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-05-14\n⭐ Rating: 6.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/lVlXWmOkBgGoJOIqjyjwDnpJjrl.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/1eAuwNBy34kkM3xkl202z4f1NiI.jpg",
+      "genres": [
+        "Action",
+        "Fantasy"
+      ]
+    },
+    {
+      "id": "tt37737315",
+      "type": "movie",
+      "name": "29",
+      "releaseInfo": "2026-05-08",
+      "description": "A quirky 29-year-old named Sathya embarks on an unexpected journey of laughter, unlikely friendships, and self-discovery. Through hilarious misadventures and chance encounters, he slowly sees life's bigger picture - its surprises, joys, and second chances.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-05-08\n⭐ Rating: 6.9/10",
+      "poster": "https://image.tmdb.org/t/p/w500/aQZ4OxzaYTN7cRN7fALi9BhPucp.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/gzOamXAMuBpWFcCitMdEoAVAjCf.jpg",
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt37458112",
+      "type": "movie",
+      "name": "Kara",
+      "releaseInfo": "2026-04-30",
+      "description": "A thief tries to go straight, but when predatory banks trap his father in debt, he returns to crime — with a determined cop closing in on his trail.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-04-30\n⭐ Rating: 5.9/10",
+      "poster": "https://image.tmdb.org/t/p/w500/uIrFdMWlJFdc1jPBP9bxeaISCDj.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/e5IdZ1OEWMYxTeu51tI67gXvfpn.jpg",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller",
+        "Action"
+      ]
+    },
+    {
+      "id": "tt34239633",
+      "type": "movie",
+      "name": "Breakfast: Accept the Reality",
+      "releaseInfo": "2026-04-24",
+      "description": "Divorcing couple Rishab and Lakshmi meet counselor Dr. Gangadevi, who recounts a film about Shantanu and heiress Janvi — on hearing that story the couple finds about an estranged person and the get to know about the relationship between them.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel\n📅 Release: 2026-04-24",
+      "poster": "https://image.tmdb.org/t/p/w500/xpFEHrivqCbeRem5XQsSmh1TMWi.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/cSRqSiw4oB638PtrgtXDbCd6YOC.jpg",
+      "genres": [
+        "Romance",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt38489752",
+      "type": "movie",
+      "name": "TN 2026",
+      "releaseInfo": "2026-04-10",
+      "description": "Set in Pollachi, the story follows a powerful landlord, Sivalingam Mandradiyar, who becomes obsessed with a rising actor, Kukanth Kumar, believing he is the next M.G.R. He pours his wealth into shaping the actor's career and political future. But as ambition and fame grow, so does the risk of downfall. Will it lead to power or ruin?\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel\n📅 Release: 2026-04-10",
+      "poster": "https://image.tmdb.org/t/p/w500/mAX1ujOROXtKsOuIg5MbJbotOyD.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/hlTs5C7zQ7TrH7REWOkSXzi67p7.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt37511189",
+      "type": "movie",
+      "name": "Manithan Deivamagalam",
+      "releaseInfo": "2026-04-10",
+      "description": "A hardworking villager and his wife hope to build a better life after starting a small roadside eatery with borrowed money. But when he dares to question local power and demand basic improvements for his neglected village, he finds himself caught in a growing conflict involving debt, politics, and the fight for dignity.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2026-04-10",
+      "poster": "https://image.tmdb.org/t/p/w500/umlG9mq5Zw8LACRpD2FQDB7WLSa.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/kfPexXh3tp3tGABSo9SBImvm0dO.jpg",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Family"
+      ]
+    },
+    {
+      "id": "tt30460421",
+      "type": "movie",
+      "name": "Love Insurance Kompany",
+      "releaseInfo": "2026-04-10",
+      "description": "In 2040, an app premised on ensuring romance for all is used widely by the population. When the voice behind the app's AI realizes its misconception to true love, he embarks on a quest to prove that love does not come from a screen.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-04-10\n⭐ Rating: 4.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/1IIUWMKzNVvI6YJX8BKE6EJ9bVd.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/woos7rldBAKG99HmcbNZNpMjwNk.jpg",
+      "genres": [
+        "Romance",
+        "Science Fiction",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt30956744",
+      "type": "movie",
+      "name": "Neelira",
+      "releaseInfo": "2026-04-03",
+      "description": "A wedding eve in 1988 Sri Lanka turns into a hostage standoff when Indian Army soldiers occupy a family's home overnight.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-04-03",
+      "poster": "https://image.tmdb.org/t/p/w500/a8HvmTThFuE4lbQ8zCdm7tySgpU.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/d7RMUGOVTxYhm3SaZITZ5YYpFNr.jpg",
+      "genres": [
+        "Thriller",
+        "War"
+      ]
+    },
+    {
+      "id": "tt38111710",
+      "type": "movie",
+      "name": "Carmeni Selvam",
+      "releaseInfo": "2026-04-03",
+      "description": "A content man's life turns chaotic when money fever strikes. His newfound greed leads to a series of amusing situations that unfold in this humorous tale.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-04-03",
+      "poster": "https://image.tmdb.org/t/p/w500/1VjWJjNt5jefOJAnxJEvC7B7ulV.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/hkxyILpj5Gws3Ak8lOLuviZW8ei.jpg",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt32741341",
+      "type": "movie",
+      "name": "Leader",
+      "releaseInfo": "2026-04-03",
+      "description": "An ordinary man becomes trapped between warring criminal factions and law enforcement, forcing him to use his wits to survive while shielding his loved ones from the deadly crossfire that threatens to consume them all.\n\n📺 Streaming on: Amazon Prime Video\n📅 Release: 2026-04-03\n⭐ Rating: 5.3/10",
+      "poster": "https://image.tmdb.org/t/p/w500/eitNeP5lMT67piVVA8h31lb5keN.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/jdfgdFeg7pIu9hV7VG6k9gHgaUh.jpg",
+      "genres": [
+        "Action",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt32873023",
+      "type": "movie",
+      "name": "Kaalidas 2",
+      "releaseInfo": "2026-04-03",
+      "description": "A dedicated Crime Branch officer, Kaalidas, investigates the disappearance of a child in an apartment complex. What begins as a routine missing-person case quickly turns dark when the child and a dog are found murdered. As more mysterious killings occur in the same building, Kaalidas uncovers hidden secrets among the residents and races against time to stop a killer before more live\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Lionsgate Play, Lionsgate Play Apple TV Channel, Lionsgate Play Amazon Channel, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel\n📅 Release: 2026-04-03\n⭐ Rating: 6.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/ApDBzqTF6aroJV7IuMgRwrCET2.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/sZHwDAtV2auwAjPD2ab4d7wRxkX.jpg",
+      "genres": [
+        "Thriller",
+        "Drama",
+        "Action"
+      ]
+    },
+    {
+      "id": "tt40720168",
+      "type": "movie",
+      "name": "Nee Forever",
+      "releaseInfo": "2026-03-27",
+      "description": "A Gen Z couple meets via dating app. Their relationship unfolds with unexpected consequences.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-03-27",
+      "poster": "https://image.tmdb.org/t/p/w500/qEYp2LgileilGofZVVLL8Juuh2G.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/odsBpm8rvmbeIGzrAxDEERCdDfM.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ]
+    },
+    {
+      "id": "tt39122419",
+      "type": "movie",
+      "name": "Happy Raj",
+      "releaseInfo": "2026-03-27",
+      "description": "A city romance meets a rural family invasion. What follows is chaos, comedy, and heartfelt moments. The story unfolds as a joyful entertainer that explores love, cultural clashes, and the importance of family bonds.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads, JioHotstar\n📅 Release: 2026-03-27\n⭐ Rating: 4.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/8hmB6KNUFFzChYJxngIp063H2YR.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/fug20H3qffP941XVDJCnpY61GVn.jpg",
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt38693803",
+      "type": "movie",
+      "name": "Satan - The Dark",
+      "releaseInfo": "2026-03-27",
+      "description": "Set in the fictional village of Asthinapuram, near Tamil Nadu–Kerala border, When Alisha and her mother desperate to escape the cursed land long belongs to colonial-era witchcraft and black magic, they find themselves spiraling into a deeper sinister. With only Alisha’s boyfriend standing by them, the trio must confront the horrors that dwell in silence… and the curse that refuses to be outrun.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-03-27\n⭐ Rating: 7.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/uFjy89xe1Us6iRfdsKAn05Y1XGX.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/zwZ5f2jJvMaFf59oX6jwKFQd8FW.jpg",
+      "genres": [
+        "Horror",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt38693888",
+      "type": "movie",
+      "name": "Youth",
+      "releaseInfo": "2026-03-19",
+      "description": "Youth follows Praveen, a 15-year-old boy who enters adolescence determined to find true love before school ends. As he goes through multiple relationships and heartbreaks, he slowly begins to understand what love truly means. Along the way, the experiences shape his growth, maturity, and outlook on life.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-03-19\n⭐ Rating: 7.2/10",
+      "poster": "https://image.tmdb.org/t/p/w500/rNzk0jlGRPnvZ26On5xhTmLaQhO.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/eaknBFnMg8fPlwlegBaPtQfhyF8.jpg",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt29377719",
+      "type": "movie",
+      "name": "Kolaiseval",
+      "releaseInfo": "2026-03-13",
+      "description": "A village located in the Thiruvannamalai district has followed a belief for over 200 years. If a woman in the village becomes pregnant, it is customary to cook Pongal and sacrifice a goat to their family deity, which is located in the middle of a large forest nearby.  Now the heroine of the story is nine months pregnant. As per the tradition, the family travels to the temple. However, the forest area surrounding the temple is known for many anti-social activities.  What happens to the family that goes to this mysterious place? Why is the temple located deep inside the forest?\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2026-03-13",
+      "poster": "https://image.tmdb.org/t/p/w500/umwo3WSWZgVEN9Cv5p8uWfizcuk.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/tsma63bcKwZ2UbhTgLW6ynfcEoi.jpg",
+      "genres": [
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt38674977",
+      "type": "movie",
+      "name": "Made in Korea",
+      "releaseInfo": "2026-03-12",
+      "description": "A woman from a small town in Tamil Nadu moves to South Korea — a place she always dreamed of — but struggles to find her footing in a foreign land.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-03-12\n⭐ Rating: 7.3/10",
+      "poster": "https://image.tmdb.org/t/p/w500/n6gCKjagOFsU4arFngUq2QqR1jv.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/5MaWBfAxdlbsqDpq8mjCBNVoLM3.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt39762179",
+      "type": "movie",
+      "name": "Oh Butterfly!",
+      "releaseInfo": "2026-03-06",
+      "description": "When a series of unfortunate coincidences involving a woman, her husband and her ex, culminates in a shocking death, her long-lost sister returns to redeem her.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2026-03-06",
+      "poster": "https://image.tmdb.org/t/p/w500/w0g0bhCuxq0VSMVgER9LLhQnil1.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/1wD0i0u7HMrNd3rH6sYvENxj10P.jpg",
+      "genres": [
+        "Thriller",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt38779833",
+      "type": "movie",
+      "name": "Kadhal Reset Repeat",
+      "releaseInfo": "2026-03-06",
+      "description": "Two people attempt to restart their romance after a major breakdown, believing that a “reset” will fix what went wrong. Just as hopeful habits begin, the shoals of memory, regret and new expectations force them to search for what they really want. A loop of love, loss and renewal takes them through familiar terrain with unfamiliar stakes.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2026-03-06",
+      "poster": "https://image.tmdb.org/t/p/w500/3xMgvXDquViX50l8rwle5SbShqm.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/hCSWwwBZUkq44ZjmsePhXmgPPiz.jpg",
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt39299630",
+      "type": "movie",
+      "name": "Vadam",
+      "releaseInfo": "2026-03-06",
+      "description": "A action packed Village Family Drama. Hero’s Extraordinary Bond with his Bull. Story based on “Vada Manju Virattu”.  Family relationship highlighted emotionally\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2026-03-06",
+      "poster": "https://image.tmdb.org/t/p/w500/yXLHQ2lhwFXsNyoaZh5OjOUfWaM.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/ei5kPCWaVZKD2BB0pH9yehBxYWP.jpg",
+      "genres": [
+        "Action"
+      ]
+    },
+    {
+      "id": "tt29004931",
+      "type": "movie",
+      "name": "Mustafa Mustafa",
+      "releaseInfo": "2026-03-06",
+      "description": "A viral social media clip ruins a man's reputation. Despite his claims it is fake, chaos ensues through white lies and misunderstandings, testing the trust of his friends and his lover.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-03-06",
+      "poster": "https://image.tmdb.org/t/p/w500/43f2rZ5GE016leKWIntH3k9CXNN.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/bo2cLoPA7snPvoXtnmp6DtV5GMd.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt35745479",
+      "type": "movie",
+      "name": "Fourth Floor",
+      "releaseInfo": "2026-02-27",
+      "description": "Drawn Back to Chennai by an Unexpected Call From His Former Lover, Dheeren Travels From Mumbai and Checks Into a Secluded Office Guest House. Soon After His Arrival, Disturbing and Inexplicable Events Begin to Unfold Within Its Walls. Night After Night, Dheeren is Plagued by Vivid Dreams—fragments of Memories That Eerily Mirror His Own Past and Unresolved Relationship.  As the Line Between Dreams and Reality Begins to Blur, Dheeren Realizes These Visions Are Not Random. Each Dream is a Clue, Slowly Pulling Him Toward a Buried Truth Connected to His Ex-lover’s Fate. Trapped Between Guilt, Fear, and the Supernatural, Dheeren Must Confront His Past to Uncover What Truly Happened to Her—before the Guest House Claims Him as Its Next Secret.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2026-02-27",
+      "poster": "https://image.tmdb.org/t/p/w500/zWvALKGFD4X8LXVvLIvwIeUfXvC.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/jIOVaEvBcQL7h6NtQk9PfI5hc4D.jpg",
+      "genres": [
+        "Thriller",
+        "Horror"
+      ]
+    },
+    {
+      "id": "tt29996704",
+      "type": "movie",
+      "name": "Mylanji",
+      "releaseInfo": "2026-02-13",
+      "description": "Surya, a National Geographic photographer who struggles with a rare speech disorder, travels to Ooty to capture a rare bird and unexpectedly meets Charu, a lively orphan trapped by a forced marriage. Desperate to escape, Charu decides to fall in love with another man, while unknowingly growing closer to Surya during their birding journeys.. On the day Kathir comes to take Charu away, fate stands still—leaving one haunting question: will love choose truth, or sacrifice?\n\n📺 Streaming on: Hungama Play\n📅 Release: 2026-02-13",
+      "poster": "https://image.tmdb.org/t/p/w500/88CE1iiFGBZWM2JgWaqta7XloXu.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/gAnlzHn9xMxh19Os4p52VHW2uFD.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ]
+    },
+    {
+      "id": "tt32864368",
+      "type": "movie",
+      "name": "My Lord",
+      "releaseInfo": "2026-02-13",
+      "description": "A man and his wife battle bureaucracy after being wrongly declared dead, while he confronts a kidney trafficking ring connected to corrupt politicians that destroyed his life.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2026-02-13\n⭐ Rating: 6.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/4KeSDSdO327dOYcjbkeQPJ9c73I.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/adPrTplMWMBbMNGvhssFgPcCDpP.jpg",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt39007449",
+      "type": "movie",
+      "name": "Red Label",
+      "releaseInfo": "2026-02-06",
+      "description": "An ex-student leader returns to campus politics to confront a bully.\n\n📺 Streaming on:  AP International South Cinema Amazon Channel\n📅 Release: 2026-02-06",
+      "poster": "https://image.tmdb.org/t/p/w500/4igrj26TQvSCQ60vgVFSEQfIqeF.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/bA4ard6P4MRRmlOaVbU9uEYLg31.jpg",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt37028716",
+      "type": "movie",
+      "name": "Yogida",
+      "releaseInfo": "2026-02-06",
+      "description": "It is story about a Honest and straightforward lady police Inspector Yogi works in Coimbatore, where she proves a textile mill owner’s “suicide” is actually a murder by his own son, leading to her transfer to the punishment area Vyasarpadi in North Chennai. There she confronts ruthless don Shekar Babu, who controls the area and its police through fear, power, and political influence, but Yogi refuses to bow down and begins taking action against his network.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-02-06",
+      "poster": "https://image.tmdb.org/t/p/w500/qG8xiHPIJJqdH9WKpZXaeOaiouk.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/yf9ntvHqZFgwB79V6DhXNHbuiKj.jpg",
+      "genres": [
+        "Thriller",
+        "Action"
+      ]
+    },
+    {
+      "id": "tt38123566",
+      "type": "movie",
+      "name": "With Love",
+      "releaseInfo": "2026-02-06",
+      "description": "Sathya reluctantly agrees to a blind date arranged by his sister and meets Monisha. They discover they attended the same school years ago. Bonding over shared memories and old crushes, they reconnect with their past and grow closer.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-02-06\n⭐ Rating: 6.6/10",
+      "poster": "https://image.tmdb.org/t/p/w500/mKVSozOhy9to5AFfIX1tsDDFrFK.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/k9GObZbUUUxOjlRjY172GVroeSJ.jpg",
+      "genres": [
+        "Romance",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt39522563",
+      "type": "movie",
+      "name": "Granny",
+      "releaseInfo": "2026-01-30",
+      "description": "Granny is an upcoming film directed by Vijaya Kumara, starring Vadivukkarasi, Dhileepan, Singampuli, Gaja Raja, Ananthu Nag, and Aparna in prominent roles.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2026-01-30",
+      "poster": "https://image.tmdb.org/t/p/w500/eaeKmjzKOKFOGmXOoURrVsLncqF.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/fKusVXla3cZ2JM40vlYJT86ft2D.jpg",
+      "genres": [
+        "Horror"
+      ]
+    },
+    {
+      "id": "tt32278140",
+      "type": "movie",
+      "name": "Lockdown",
+      "releaseInfo": "2026-01-30",
+      "description": "During a national emergency, Anita finds herself isolated at home while facing personal challenges. As she adapts to the new reality, an unexpected situation tests her resilience and changes her perspective on life.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-01-30\n⭐ Rating: 7.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/upUB6qQVrAQ3jUUSUkDFOfGFdQn.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/AvraxTlv3KAHOJDNYq5PgyVAgUM.jpg",
+      "genres": [
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt8205190",
+      "type": "movie",
+      "name": "Gandhi Talks",
+      "releaseInfo": "2026-01-30",
+      "description": "A silent black comedy, about the monetary needs of a character & how it impacts the others. A young, unemployed graduate Mahadev’s struggle to land a job through any means possible and crosses paths with a businessman and petty thief. A subject wherein silence speaks much louder than words. Although a work of fiction by the writer, all the characters in the film are sketched out to seem very real and relatable ensuring an enriching journey as well a laugh riot as the cat and mouse guffaws amongst them unfold. Gandhi Talks aims at telling a story by switching off the device of dialogue, which is not only scary but also interesting and challenging.\n\n📺 Streaming on: Amazon Prime Video, Zee5, Amazon Prime Video with Ads\n📅 Release: 2026-01-30\n⭐ Rating: 7.3/10",
+      "poster": "https://image.tmdb.org/t/p/w500/p4iQT3s97T3gQOLhTj0UplzYMOj.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/4Cqad6ZpWJRhBumGE1QwHs9pVuB.jpg",
+      "genres": [
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt33088887",
+      "type": "movie",
+      "name": "Hotspot 2 Much",
+      "releaseInfo": "2026-01-23",
+      "description": "The film is about an aspiring Director, who pitches her three different stories, that depict some pressing ideological and social issues in the society, to a producer with whom she also has an hidden agenda.\n\n📺 Streaming on: Amazon Prime Video, Lionsgate Play, Amazon Prime Video with Ads\n📅 Release: 2026-01-23\n⭐ Rating: 3.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/hyjPxlIfljrzdQes1XAABfYvOsj.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/gG1E5JG0wElxoxU73EmV4aiXS3t.jpg",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt36926733",
+      "type": "movie",
+      "name": "Thalaivar Thambi Thalaimaiyil",
+      "releaseInfo": "2026-01-15",
+      "description": "A village official attending a wedding becomes entangled in an escalating family dispute over power and old resentments, testing his leadership as he tries to contain the situation.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-01-15\n⭐ Rating: 6.4/10",
+      "poster": "https://image.tmdb.org/t/p/w500/wqofJvDrFv65QgyVmNI4loi9jZZ.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/cpOUDK8BBJyvrUuLN8YTRttXEab.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt26234108",
+      "type": "movie",
+      "name": "Vaa Vaathiyaar",
+      "releaseInfo": "2026-01-14",
+      "description": "After being raised as the reincarnation of a famous actor, a man finds himself clashing with his grandfather's expectations of him.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-01-14\n⭐ Rating: 4.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/hb1YWskm1H2YwNj2KF2BGWgLA58.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/qPNIwdR3y965KMsiweyuXdjDRXR.jpg",
+      "genres": [
+        "Comedy",
+        "Action"
+      ]
+    },
+    {
+      "id": "tt38854883",
+      "type": "movie",
+      "name": "Anantha",
+      "releaseInfo": "2026-01-13",
+      "description": "An anthology film centered on the divine grace and miracles of Sri Sathya Sai Baba, showcasing how faith transforms lives, featuring stories of a mischievous man's redemption and a village facing floods, emphasizing universal love and divinity, not a specific religion\n\n📺 Streaming on: JioHotstar,  AP International South Cinema Amazon Channel\n📅 Release: 2026-01-13\n⭐ Rating: 2.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/y1GAbomStmF8dnvrsYzUGiqBFy4.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/n5MUCtRz1iqTOprqAqx9I7lyW58.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt35019998",
+      "type": "movie",
+      "name": "Parasakthi",
+      "releaseInfo": "2026-01-09",
+      "description": "In a time of civil disobedience in the erstwhile Madras state, a ruthless intelligent officer turns up with a duty to track down rebels. Chezhian and his brother Chinndurai are of different personalities, one a hardworking fireman, the other a rebel. A deadly game of cat and mouse ensues as Chezhian is forced to abandon his peaceful ways to protect his people and takes on the mighty forces, culminating in a fierce battle for justice.\n\n📺 Streaming on: Zee5\n📅 Release: 2026-01-09\n⭐ Rating: 5.9/10",
+      "poster": "https://image.tmdb.org/t/p/w500/cpKJGYU8Z1iSXzkgDl8vhazk5EQ.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/yMgpIzfqHZXbEN8ar9EAHJvdYJj.jpg",
+      "genres": [
+        "History",
+        "Drama",
+        "Action",
+        "Romance"
+      ]
+    },
+    {
+      "id": "tt39028191",
+      "type": "movie",
+      "name": "Dear Radhi",
+      "releaseInfo": "2026-01-02",
+      "description": "Madhan goes on a one-day date with Radhi, a beautiful girl who works at a spa; the day spirals into a dangerous chase as both the police and a gang hunt for Radhi, ending in a shocking truth that reveals their connection.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2026-01-02\n⭐ Rating: 6.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/9m7Bq47NxPxbJrkzu3QaDiv1D1W.jpg",
+      "genres": [
+        "Drama",
+        "Romance",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt35684868",
+      "type": "movie",
+      "name": "Sirai",
+      "releaseInfo": "2025-12-25",
+      "description": "As he transfers a young convict from prison to court, a police officer learns about the chain of events that led to the young man's conviction for violence.\n\n📺 Streaming on: Zee5\n📅 Release: 2025-12-25\n⭐ Rating: 6.3/10",
+      "poster": "https://image.tmdb.org/t/p/w500/mltVJD7mBayiw1BubwUL0cx6T1c.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/jlX42iJ6JB1C2TqxALYyc4mIcXa.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ]
+    },
+    {
+      "id": "tt32012416",
+      "type": "movie",
+      "name": "Retta Thala",
+      "releaseInfo": "2025-12-25",
+      "description": "Kaali, a struggling Pondicherry orphan encounters his rich Goa doppelganger Malpe Upendra with criminal past, leading to identity swaps and messy consequences. Corrupt cop Thiraviyam and Upendra’s enemies soon conspire to put that to an end.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-12-25\n⭐ Rating: 2.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/zlE1oVtfr7MckzDyEMZkF4WIvGG.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/6ywskZ2n8wgyjCHFN1w0kjIXhGI.jpg",
+      "genres": [
+        "Action",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt33269301",
+      "type": "movie",
+      "name": "Kombuseevi",
+      "releaseInfo": "2025-12-19",
+      "description": "Having a miserable past of being evacuated from their homeland and losing their livelihood, Rokkapuli and Pandi are among the main people of the village who aspire to become millionaires by peddling ganja (marijuana). Can they successfully achieve their dream?\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-12-19",
+      "poster": "https://image.tmdb.org/t/p/w500/dHopJETvP974dxkowWbmrr42EKD.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/yZgTwYRXVvl1IugCunhI4e42z0G.jpg",
+      "genres": [
+        "Action",
+        "Crime"
+      ]
+    },
+    {
+      "id": "tt39007848",
+      "type": "movie",
+      "name": "Mahasenha",
+      "releaseInfo": "2025-12-12",
+      "description": "Mahasenha is a mythological jungle thriller set in the mystichills of Kurangani, where an ancient Yaali sculpture, worshipped by the tribal villagers as a divine protector, becomes the center of a high-stakes conflict. The film delivers a powerful message : Faith is not just belief-its protection.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads, JioHotstar\n📅 Release: 2025-12-12",
+      "poster": "https://image.tmdb.org/t/p/w500/kQeOxMQ1F8E5vixcLfju3vYRT0U.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/8bcqy8Y8XgZFhW8tCiPeUUWHgYC.jpg",
+      "genres": [
+        "Adventure",
+        "Action"
+      ]
+    },
+    {
+      "id": "tt38681567",
+      "type": "movie",
+      "name": "Stephen",
+      "releaseInfo": "2025-12-05",
+      "description": "A psychiatrist evaluating a self-confessed serial killer unravels a twisted web of trauma, deceit, and psychological manipulation—only to question if the killer is truly guilty or just another victim in a larger, darker game.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-12-05\n⭐ Rating: 6.6/10",
+      "poster": "https://image.tmdb.org/t/p/w500/yUURUJzeSTc47T2VeNw7nZwZ8VJ.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/7cQjb8cRbRjF5tM5gOCnqsvC0iT.jpg",
+      "genres": [
+        "Thriller",
+        "Mystery"
+      ]
+    },
+    {
+      "id": "tt33581310",
+      "type": "movie",
+      "name": "Angammal",
+      "releaseInfo": "2025-12-05",
+      "description": "In a remote, rustic mid-90s village in Tamil Nadu, An elderly widow fights to save her sense of individuality when her younger son demands that she wear a blouse to impress his prospective in-laws.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2025-12-05",
+      "poster": "https://image.tmdb.org/t/p/w500/40hCB8YcFo2XT8yPUzpFdDmDwgS.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/nGAB1y05MQSkmN22KnZO0Nl0N9x.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt26319590",
+      "type": "movie",
+      "name": "Revolver Rita",
+      "releaseInfo": "2025-11-28",
+      "description": "A woman must use her intelligence and grit to protect her family after they are unexpectedly caught in the crossfire of gang violence.\n\n📺 Streaming on: Netflix, JioHotstar\n📅 Release: 2025-11-28\n⭐ Rating: 6.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/vhllGhZ2TBbyB0f5xjgj181PP5T.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/nbV74XlKammNDGJM4SxShSupOgc.jpg",
+      "genres": [
+        "Comedy",
+        "Action",
+        "Crime"
+      ]
+    },
+    {
+      "id": "tt38938222",
+      "type": "movie",
+      "name": "Rajini Gaang",
+      "releaseInfo": "2025-11-27",
+      "description": "Rajini and Maina Elope From Their Village and End Up Hitching a Ride With a Stranger And a Petty Thief Whose Stolen Thali They Use for a Hurried Wedding. But Their New Life Takes a Bizarre Turn When Maina Becomes Possessed by the Ghost of Ponnarasi. Seeking Help From a Local Priest, Rajini Discovers That the Spirit Wants Revenge for a Past Betrayal Tied to the Thali. As Twists Unfold, Rajini and His Friends Must Uncover the Truth and Save Maina From the Vengeful Ghost’s Deception.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel\n📅 Release: 2025-11-27\n⭐ Rating: 2.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/grMIi3H6XrqJQTtJdkzmZtkoYL7.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/hWnkLYx72lbLUD100WuB1iUJhjo.jpg",
+      "genres": [
+        "Horror",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt38798360",
+      "type": "movie",
+      "name": "Yellow",
+      "releaseInfo": "2025-11-21",
+      "description": "A corporate worker's impulsive decision to leave her desk job leads to a transformative solo adventure, where strangers become friends and comfort zones fade into distant memories.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-11-21",
+      "poster": "https://image.tmdb.org/t/p/w500/zC62Ps1vXYoxfrVu7u5RDK1SmyO.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/20DmwmWoXzbEWyGLOryIG0IqY71.jpg",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Family"
+      ]
+    },
+    {
+      "id": "tt14465196",
+      "type": "movie",
+      "name": "Middle Class",
+      "releaseInfo": "2025-11-21",
+      "description": "Karl Marx, a middle-class man in his mid-forties, lives in a small housing board quarters with his mouthy wife and his two kids. As long as he can remember Karl Marx had only one dream, to buy a couple of acres of land in his native village and do farming. This middle-class man with his middle-class dream gets a reversal of fortune because of a good deed done by his father in the past. That being a cheque for an amount of one crore rupees. But fate plays a cruel trick on Karl Marx as he misplaces the cheque and struggles to find it. He has only two days to find the missing cheque and encash it. Does he find it? Does he fulfil his dream? The story that unfolds is Middle Class\n\n📺 Streaming on: Zee5\n📅 Release: 2025-11-21\n⭐ Rating: 5.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/3cn1eQq4xhax9OBLxfyraCizGAp.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/4RIL0bV1asoJny0Wl6O838dp42X.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt15380786",
+      "type": "movie",
+      "name": "Theeyavar Kulaigal Nadunga",
+      "releaseInfo": "2025-11-21",
+      "description": "An Investigative Police officer teams up with an autism school teacher to solve the mystery of a cruel murder happened in a school for autistic children.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2025-11-21",
+      "poster": "https://image.tmdb.org/t/p/w500/aAQ0I4EZUmg7dEyTwxYZi1dYB8Y.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/uoxkOkRzPP9jcnl59CObzYLn2Mq.jpg",
+      "genres": [
+        "Crime",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt38164364",
+      "type": "movie",
+      "name": "Dawood",
+      "releaseInfo": "2025-11-14",
+      "description": "An unsuspecting cab driver takes up a petty job, only to fall into the deadly trap of a ruthless gangster. Now, he must fight for surviva or accept that he was born to be hunted\n\n📺 Streaming on: Lionsgate Play, Lionsgate Play Apple TV Channel, Lionsgate Play Amazon Channel\n📅 Release: 2025-11-14",
+      "poster": "https://image.tmdb.org/t/p/w500/nq38CcUlghZjweCK14SLmF7hf4t.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/6ST5h02E3J8Vhz8cv1Y9tRrWMWV.jpg",
+      "genres": [
+        "Crime",
+        "Comedy",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt28508934",
+      "type": "movie",
+      "name": "Kaantha",
+      "releaseInfo": "2025-11-13",
+      "description": "Set in the backdrop of a film set, in the 1950’s in post colonial Madras, the film is centred around the professional rivalry between a film-maker trying to make his seminal film and the top reigning actor who the director once introduced. The rivalry spirals around the leading actress, a debutante and as the relationship between the three.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-11-13\n⭐ Rating: 6.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/a6A0CvOMUUbQNfgkRSPqf5JMpsU.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/l6ylNrKhLberlgaLQr4VQXXc6PU.jpg",
+      "genres": [
+        "History",
+        "Crime",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt37897558",
+      "type": "movie",
+      "name": "Others",
+      "releaseInfo": "2025-11-07",
+      "description": "A detective investigates alarming health issues in IVF babies, revealing a dark plot involving illegal steroids, mystery donors, and corrupt fertility clinics - all orchestrated by someone exploiting people's desire for children.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-11-07\n⭐ Rating: 7.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/2rdDxephzH5bpp3Z5aKf55evRbA.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/f3tBk0gXJuupvxFuYznyLdxswsT.jpg",
+      "genres": [
+        "Action",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt36587142",
+      "type": "movie",
+      "name": "Aaromaley",
+      "releaseInfo": "2025-11-07",
+      "description": "Ajith, a romantic dreamer faces reality when forced to work at a matchmaking agency under Anjali,a pragmatic, grounded woman, devoid of dreamy illusions. Their conflicting ideologies become the foundation of a relationship that’s as charming as it is unfiltered.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2025-11-07\n⭐ Rating: 6.7/10",
+      "poster": "https://image.tmdb.org/t/p/w500/80YOW8UVr1ublMX2Q638MCdS2Q4.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/sBkt74K37VWbsAyuNe6Rk8PBvLm.jpg",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt28434143",
+      "type": "movie",
+      "name": "Aaryan",
+      "releaseInfo": "2025-10-31",
+      "description": "A struggling writer announces he'll commit the perfect crime, sparking a tense pursuit as police try to prevent his methodically planned killing spree.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-10-31\n⭐ Rating: 5.1/10",
+      "poster": "https://image.tmdb.org/t/p/w500/rRjh3zumdW89fNMe4tdjmALB1xG.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/mRyCfbc3vZblB8slswmwovrEhTR.jpg",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ]
+    },
+    {
+      "id": "tt36388163",
+      "type": "movie",
+      "name": "Dude",
+      "releaseInfo": "2025-10-17",
+      "description": "Childhood friends Agan and Kural are inseparable. When Kural encounters romantic troubles, Agan must balance his hidden feelings for her with his desire to ensure her happiness.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-10-17\n⭐ Rating: 5.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/oLUbL4RtynlTtKd1byseeOCkIZO.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/kDRkOFPkjYjubhiIcvurBKuLSRI.jpg",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Drama",
+        "Romance"
+      ]
+    },
+    {
+      "id": "tt15097358",
+      "type": "movie",
+      "name": "Bison Kaalamaadan",
+      "releaseInfo": "2025-10-17",
+      "description": "A young man fights to overcome violence plaguing his village and succeed as a professional kabaddi player.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-10-17\n⭐ Rating: 7.3/10",
+      "poster": "https://image.tmdb.org/t/p/w500/5IPFJ2XFbYjdIw4912ZufCMolX.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/6xEk8ZbqCgmicmeICyYGospXU7R.jpg",
+      "genres": [
+        "Drama",
+        "Action"
+      ]
+    },
+    {
+      "id": "tt28252935",
+      "type": "movie",
+      "name": "Diesel",
+      "releaseInfo": "2025-10-17",
+      "description": "During the 1980s, Manoharan was a leader in the city's crude oil smuggling business. Manohar opposed Patanis dream of setting up a private port that would become a hub for the black market oil trade. He looted a large quantity of oil from the pipeline to blackmail the government into fulfilling his dream. Finally, the Vasu finds the missing oil.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2025-10-17\n⭐ Rating: 4.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/A3jv9cICPkVHx48h2NZXW4c1ZnP.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/wnNw9FnJJCtbXogcPK5Jg0AQjo2.jpg",
+      "genres": [
+        "Action",
+        "Romance",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt38573571",
+      "type": "movie",
+      "name": "Kayilan",
+      "releaseInfo": "2025-10-10",
+      "description": "The conflict between justice and the rule of law.\n\n📺 Streaming on: Lionsgate Play, Lionsgate Play Apple TV Channel, Lionsgate Play Amazon Channel,  AP International South Cinema Amazon Channel\n📅 Release: 2025-10-10",
+      "poster": "https://image.tmdb.org/t/p/w500/kL6M9mkDxZ0ofBwVYk8ubX9xTf4.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/dmN2oumUEhGU3T0PRx5N10rvAVc.jpg",
+      "genres": [
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt38573838",
+      "type": "movie",
+      "name": "Marutham",
+      "releaseInfo": "2025-10-10",
+      "description": "Kanniyappan, A Hardworking Farmer, Is Devastated When He Learns That His Ancestral Farmland Has Been Auctioned Off Due To An Unpaid Loan. Despite Being A Diligent Farmer, Kanniyappan Is Shocked Because He Never Took Out Any Loan From A Bank Or Any Financial Institution. His Peaceful Life Takes A Dark Turn As He Begins To Unravel The Truth Behind This Mysterious Auction.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2025-10-10\n⭐ Rating: 7.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/aYecxi22s9gDVFfjojhdyZiWUcp.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/cqFKO97SXxXZ1vIgQXEToEyzpJW.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt33029024",
+      "type": "movie",
+      "name": "Idli Kadai",
+      "releaseInfo": "2025-10-01",
+      "description": "A simple man's search for success leads him to rediscover his roots.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-10-01\n⭐ Rating: 6.6/10",
+      "poster": "https://image.tmdb.org/t/p/w500/9ViF6UTWMh14gx77RvFALe5R6AL.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/mXRzeWQXDdfPuT9KckNjSdiWo6Z.jpg",
+      "genres": [
+        "Action",
+        "Drama",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt35624287",
+      "type": "movie",
+      "name": "Shakthi Thirumagan",
+      "releaseInfo": "2025-09-19",
+      "description": "A tribal woman is brutally assaulted and killed. Her newborn is mercilessly abandoned in a dump yard, left to die. But fate intervenes — an old man discovers the infant and decides to raise him as his own. The child, named Kittu,After the old man’s death, Kittu is left to fend for himself,determined to confront his mother’s killer.\n\n📺 Streaming on: Amazon Prime Video, JioHotstar, Amazon Prime Video with Ads\n📅 Release: 2025-09-19\n⭐ Rating: 5.4/10",
+      "poster": "https://image.tmdb.org/t/p/w500/eKMNqfF6BJZ47O7OklrMgZ5r6T.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/A4IZqRHc1I8BshxP5OIpwsDQCTd.jpg",
+      "genres": [
+        "Action",
+        "Drama",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt27148214",
+      "type": "movie",
+      "name": "Kiss",
+      "releaseInfo": "2025-09-19",
+      "description": "A musician is gifted with the supernatural ability to see a couple's destiny whenever they kiss. But when he sees the grim fate of the woman he loves, he must use his powers to defy destiny itself.\n\n📺 Streaming on: Zee5\n📅 Release: 2025-09-19\n⭐ Rating: 8.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/rLO7zY3JuEwkNSvXDM9rTD3kGg4.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/nsa8Qwneg6yzlcr8J6Bch1kbQQk.jpg",
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Drama",
+        "Fantasy"
+      ]
+    },
+    {
+      "id": "tt26659974",
+      "type": "movie",
+      "name": "Thandakaaranyam",
+      "releaseInfo": "2025-09-19",
+      "description": "After losing his forest ranger position, a Tamil villager pursues his dream of joining the Indian Army, only to face harsh realities that challenge his idealistic vision of military service.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2025-09-19\n⭐ Rating: 10.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/enkPbejfPmM8o2bgbhnLSX4fCAV.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/oFh4iJa9DA9cEfhOD0rV55LwI7F.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt28717622",
+      "type": "movie",
+      "name": "Bomb",
+      "releaseInfo": "2025-09-12",
+      "description": "Bomb is a comedy film set in the fictional village of Kaalakammaipatty, where a man named Kathiravan dies unexpectedly but even after death, he won’t stop farting. His body becomes the center of chaos, confusion, and laughter as the villagers try to figure out the Reason.\n\n📺 Streaming on: Amazon Prime Video, aha, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel, JioHotstar\n📅 Release: 2025-09-12\n⭐ Rating: 5.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/jCS8gu2QiZDUqq3MWVe164ss966.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/ttgbCZzSBrvpIaEFkj6OARNRyHh.jpg",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt36595755",
+      "type": "movie",
+      "name": "Gandhi Kannadi",
+      "releaseInfo": "2025-09-05",
+      "description": "An ambitious young event planner named Kathir sees a big opportunity when an elderly man, Gandhi, hires him to plan his 60th wedding anniversary. As their dreams and desires intertwine, their journey becomes a moving tale of love, conflict, and hope.\n\n📺 Streaming on: Amazon Prime Video, aha, Amazon Prime Video with Ads\n📅 Release: 2025-09-05",
+      "poster": "https://image.tmdb.org/t/p/w500/1rMps2Io6aRbIuyNEMfPPPUZo6N.jpg",
+      "genres": [
+        "Drama",
+        "Action"
+      ]
+    },
+    {
+      "id": "tt35144943",
+      "type": "movie",
+      "name": "Bad Girl",
+      "releaseInfo": "2025-09-05",
+      "description": "From her journey through high school and college, then out into the wider world, Ramya’s dream of finding the perfect guy is obstructed by societal mores, strict parents, unrequited love and the untrammeled chaos of her own mind.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2025-09-05\n⭐ Rating: 6.9/10",
+      "poster": "https://image.tmdb.org/t/p/w500/1vCLv1AyDP5aeNCMJqw7RVCLkSp.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/xCOzdlaVSTlesxG9Ueiw4EUEGpk.jpg",
+      "genres": [
+        "Romance",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt28252563",
+      "type": "movie",
+      "name": "Madharaasi",
+      "releaseInfo": "2025-09-04",
+      "description": "A man with a psychological disorder overcomes trauma and confronts his nemesis in a fast-paced action film with romance and unique elements, exploring themes of resilience and redemption.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-09-04\n⭐ Rating: 6.9/10",
+      "poster": "https://image.tmdb.org/t/p/w500/dw3Dllz1gV7186m7clqNDnI9R28.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/nmPzYjRPAd3iVOgrLXlvh6HuvRN.jpg",
+      "genres": [
+        "Action",
+        "Romance",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt27441481",
+      "type": "movie",
+      "name": "Coolie",
+      "releaseInfo": "2025-08-13",
+      "description": "Deva, once living a quiet life, is shaken when his close friend dies under suspicious circumstances. Determined to uncover the truth, he infiltrates a powerful gang operating in the shadows. As he investigates, Deva becomes entangled in a dangerous web of crime, betrayal, and secrets from his own past, forcing him to confront powerful enemies while protecting the ones he loves.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-08-13\n⭐ Rating: 6.2/10",
+      "poster": "https://image.tmdb.org/t/p/w500/kr36awqmziEI5mfUElsHB0pj9zP.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/bLn0CPzrrqFLicjNTgrzaIyE0gZ.jpg",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ]
+    },
+    {
+      "id": "tt37080020",
+      "type": "movie",
+      "name": "Surrender",
+      "releaseInfo": "2025-08-01",
+      "description": "The story unfolds Five days prior during election season, where a police team and a notorious gangster are significantly affected by the election. Ultimately, the narrative leads to a decisive resolution of their conflict with many twists, turns, and emotions.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2025-08-01",
+      "poster": "https://image.tmdb.org/t/p/w500/6hO3e3dANv4diElVRZbACxFXAZA.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/bISfAPvTK1d9AJIxfzIEwfwIGMN.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt32278054",
+      "type": "movie",
+      "name": "House Mates",
+      "releaseInfo": "2025-08-01",
+      "description": "Karthick and Anu fall in love, get married and buy an old flat for their own. Many strange incidents happening in that house. They found out the reason and hand over the flat to the first owner Ramesh.\n\n📺 Streaming on: Zee5\n📅 Release: 2025-08-01\n⭐ Rating: 7.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/1HeWmcvzXKyBrUxCFdbvEni4spb.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/en6q9MmuuG6SBTEtlYmoGQPcYWh.jpg",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Fantasy",
+        "Horror"
+      ]
+    },
+    {
+      "id": "tt29383191",
+      "type": "movie",
+      "name": "Maareesan",
+      "releaseInfo": "2025-07-25",
+      "description": "A petty thief embarks on a road trip with an elderly man suffering from memory loss under deceptive pretenses. As they journey across Tamil Nadu, the promise of an easy con unravels into a quietly shifting connection, with both men hiding secrets of their own.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-07-25\n⭐ Rating: 7.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/c7JGfFgMnNuyF2Q4FSu7Kgip3mK.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/6FIdQDwTqFPueSW3RT2dPNvRxkG.jpg",
+      "genres": [
+        "Thriller",
+        "Drama",
+        "Action"
+      ]
+    },
+    {
+      "id": "tt32827713",
+      "type": "movie",
+      "name": "Thalaivan Thalaivii",
+      "releaseInfo": "2025-07-23",
+      "description": "Two headstrong lovers navigate a turbulent relationship where passion and conflict intertwine, creating an intense emotional bond through their shared journey.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-07-23\n⭐ Rating: 6.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/jfN2iQLfhvziz9YlR9WbB4VVQvk.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/pwrVIBSrjeIiutfa1KvI5e1UdAZ.jpg",
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt32469000",
+      "type": "movie",
+      "name": "Jenma Natchathiram",
+      "releaseInfo": "2025-07-18",
+      "description": "A team's treasure hunt leads them to a deserted bungalow, where they soon find themselves in a terrifying battle against paranormal dangers.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-07-18",
+      "poster": "https://image.tmdb.org/t/p/w500/slPH7HCWr6RrfGeVWjlK3nLFbMc.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/vnPFG9Mpg2bL0RrXsIxSJuBFsM2.jpg",
+      "genres": [
+        "Horror",
+        "Thriller",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt37594308",
+      "type": "movie",
+      "name": "Gevi",
+      "releaseInfo": "2025-07-18",
+      "description": "Gevi is a Tamil Survival Thriller Film That Follows Mandharai and Malaiyan's Struggle for Justice in a Rural Village Near Kodaikanal. The Film Explores Themes of Love, Survival, and Bureaucratic Apathy, Highlighting the Community's Fight Against Corruption and Adversity. A Powerful Story of Hope and Resilience\n\n📺 Streaming on: Netflix, Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-07-18",
+      "poster": "https://image.tmdb.org/t/p/w500/oHnCOMJHAOTBKQEKr2S7MV6u7En.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/h5DxrnMZcgBZeNhnyFPgLluhoPg.jpg",
+      "genres": [
+        "Action",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt31066062",
+      "type": "movie",
+      "name": "Bun Butter Jam",
+      "releaseInfo": "2025-07-18",
+      "description": "Two mothers, disillusioned by failed marriages, team up to orchestrate a master plan to unite their freshman kids, Chandru and Madhu. But things get muddied when their Gen Z kids have other plans, leading to a clash of wills and generational divide.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads, Plex, Plex Channel\n📅 Release: 2025-07-18\n⭐ Rating: 5.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/bCnVJU1HrQVpk0R68aOw93iIeKJ.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/sXCoGJmgAZZJae7JDjt1tEI8rOk.jpg",
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt35279943",
+      "type": "movie",
+      "name": "Trending",
+      "releaseInfo": "2025-07-18",
+      "description": "A vlogging couple chasing online popularity, desperately go to great lengths and does things to remain in the limelight as the “trending” pair, and their relationship begins to deteriorate.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2025-07-18",
+      "poster": "https://image.tmdb.org/t/p/w500/y6V1mmiMzoLjn4kW05LZ2Rqt3J2.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/8NTWOXNv6sazFd3eXL0OXDO8eKr.jpg",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt7852926",
+      "type": "movie",
+      "name": "Titanic",
+      "releaseInfo": "2025-07-18",
+      "description": "📺 Streaming on: Chaupal Amazon Channel\n📅 Release: 2025-07-18",
+      "poster": "https://image.tmdb.org/t/p/w500/96HzElhMpJ1FxMNwWFULRiE49kX.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/mKqBgSkWbU1TH3kYTSFJz1SGJOj.jpg",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ]
+    },
+    {
+      "id": "tt31312310",
+      "type": "movie",
+      "name": "Oho Enthan Baby",
+      "releaseInfo": "2025-07-11",
+      "description": "Ashwin goes to actor Vishnu Vishal’s office to pitch a script and ends up narrating his love story. What the actor thinks to be an interval is Ashwin’s climax, it actually is a stoic end to his romantic relationship with Meera. With Vishnu Vishal’s pursual, Ashwin must confront his former lover again, to complete his story and begin his debut directorial.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-07-11\n⭐ Rating: 5.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/ffnBY54B4Etmu0UCpMXiJNNTlRV.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/avf83LbIvRCVxTJjjpdyDwBZxB9.jpg",
+      "genres": [
+        "Romance"
+      ]
+    },
+    {
+      "id": "tt35834896",
+      "type": "movie",
+      "name": "Akkenam",
+      "releaseInfo": "2025-07-04",
+      "description": "A brave cab driver and a released convict find themselves unlikely allies as they confront a greater evil that threatens to destroy many lives.\n\n📺 Streaming on:  AP International South Cinema Amazon Channel\n📅 Release: 2025-07-04\n⭐ Rating: 10.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/1tUVshO5qTfoZZ1lv4AlPFGnTnH.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/9iI4ACDAC5cuxtl6UgNZ2vYn7l9.jpg",
+      "genres": [
+        "Thriller",
+        "Crime"
+      ]
+    },
+    {
+      "id": "tt32411272",
+      "type": "movie",
+      "name": "3BHK",
+      "releaseInfo": "2025-07-04",
+      "description": "A middle-class family battles financial hurdles and personal setbacks while pursuing their dream of owning a home in the bustling city.\n\n📺 Streaming on: Amazon Prime Video, ManoramaMAX Amazon Channel, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel, JioHotstar\n📅 Release: 2025-07-04\n⭐ Rating: 7.1/10",
+      "poster": "https://image.tmdb.org/t/p/w500/njq3p81KoTVd0lWqGeudId7WwUn.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/kCC8cxu23zctMenwXIS3EC2hJnn.jpg",
+      "genres": [
+        "Family",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt37023881",
+      "type": "movie",
+      "name": "Love Marriage",
+      "releaseInfo": "2025-06-27",
+      "description": "Ram, a 33-year-old Bachelor From Madurai, Faces Mounting Pressure to Get Married. Amidst Cultural Expectations and Comic Misadventures, He Embarks on a Journey of Self-discovery, Questioning Tradition and Seeking His Own Path to Happiness\n\n📺 Streaming on: Amazon Prime Video, aha, Amazon Prime Video with Ads\n📅 Release: 2025-06-27\n⭐ Rating: 5.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/tLYMcBROkhdvUTjrA7Cgi8GlWI3.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/9u8Qh7PY7AIw2XRgSmJ7cWeMv3M.jpg",
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Family"
+      ]
+    },
+    {
+      "id": "tt33949346",
+      "type": "movie",
+      "name": "Maargan",
+      "releaseInfo": "2025-06-27",
+      "description": "ADGP Dhruv, a seasoned high-ranking police officer haunted by a tragic past, grapples with a labyrinthine case, where every clue unearths a darker secret. As he uncovers clues linking to a mysterious swimmer, he races against time to stop a cunning serial killer driven by dark secrets.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads, JioHotstar\n📅 Release: 2025-06-27\n⭐ Rating: 6.2/10",
+      "poster": "https://image.tmdb.org/t/p/w500/sgNetedu19Ar9LkUXGNheh9NL1D.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/sTwYXYIw79TlBKRQ7Cdzev28vSQ.jpg",
+      "genres": [
+        "Crime",
+        "Action",
+        "Mystery",
+        "Thriller"
+      ]
+    },
+    {
+      "id": "tt32378056",
+      "type": "movie",
+      "name": "The Verdict",
+      "releaseInfo": "2025-06-27",
+      "description": "When Elisa, a billionaire, is found dead, her close friend and well-wisher Namrutha, who was recently added to Elisa’s will is accused of murdering her. Maya Kannappan, Nami's formidable attorney takes on the case and works through these proceedings, determined to prove Namrutha’s innocence and unmask the real killer.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-06-27",
+      "poster": "https://image.tmdb.org/t/p/w500/zDf6wYW85LUQiHFMQJe5wGJuc93.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/cSo8U5kxz3l723sFfKByQXKGAQy.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ]
+    }
+  ],
+  "tamil-series": [
+    {
+      "id": "tt13958504",
+      "type": "series",
+      "name": "Sshhh",
+      "releaseInfo": "2026-08-12",
+      "description": "SSHHH, an anthology series, Features four stories about love, choices, and personal struggles. A teacher grapples with sex education, a woman reunites with an ex, a wife waits for her missing husband, and a young man faces temptation while preparing for his future. Each story explores the impact of difficult decisions.\n\n📺 Streaming on: Aha\n📅 Release: 2026-08-12",
+      "poster": "https://image.tmdb.org/t/p/w500/eo4kcHNfXBKdmxp357vHnyBQ06o.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/gnXAKG9uHJXlpJvqhCxALcwf8qG.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt21908550",
+      "type": "series",
+      "name": "Vadhandhi: The Fable Of Velonie",
+      "releaseInfo": "2026-08-07",
+      "description": "Vivek, a diligent cop, takes charge of the investigation of the murder of a beautiful young girl, Velonie. The rumours about her that spring up post her death threatens to irrevocably damage Velonie's image, Vivek must wade through a web of half-truths and confusing leads to solve the case.\n\n📺 Streaming on: Prime Video\n📅 Release: 2026-08-07\n⭐ Rating: 6.9/10",
+      "poster": "https://image.tmdb.org/t/p/w500/2EgR5kgv4yHbJpR3GutxzbGd4rw.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/mRq7ZKtXp2eI52iQ2tLF2jWelLX.jpg",
+      "genres": [
+        "Mystery",
+        "Crime",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt31862809",
+      "type": "series",
+      "name": "Heart Beat",
+      "releaseInfo": "2026-07-30",
+      "description": "RK Multispeciality Hospital is a beacon of hope and healing. Its doctors are resilient even when they have to deal with medical and personal challenges.\n\n📺 Streaming on: Jiohotstar\n📅 Release: 2026-07-30\n⭐ Rating: 7.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/aHEr565AkKrwC7Q18u3OEjGavyj.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/t0btQjhAnL0z6I4QYB5KEPyl5Gb.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt38856253",
+      "type": "series",
+      "name": "Exam",
+      "releaseInfo": "2026-07-15",
+      "description": "A determined young woman with a mysterious past enters the dangerous world of the Regional Public Service Exam (RPSE) scam to expose a powerful paper-leak network. But as she digs deeper, she uncovers a corruption chain embedded deep within the education system-and must bring it down before it destroys the dreams of an entire generation.\n\n📺 Streaming on: Prime Video\n📅 Release: 2026-07-15\n⭐ Rating: 7.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/9jt62J8sfq8pFFovZhEQmxjUqhb.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/w8jWzyz0NiaHPhdrw9ALm1wB3e1.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt39216476",
+      "type": "series",
+      "name": "Second Love",
+      "releaseInfo": "2026-07-13",
+      "description": "📺 Streaming on: JioHotstar\n📅 Release: 2026-07-13"
+    },
+    {
+      "id": "tt31924038",
+      "type": "series",
+      "name": "Lingam",
+      "releaseInfo": "2026-06-26",
+      "description": "Framed for a crime he didn't commit, a kabaddi hero gets pushed into a world he never wanted and ultimately becomes a feared name.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-06-26",
+      "poster": "https://image.tmdb.org/t/p/w500/l5utMuTzwMUpypOTOSLQLg5WY57.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/4hU24wP2A1Vq72aHhXaRBRB247B.jpg",
+      "genres": [
+        "Crime"
+      ]
+    },
+    {
+      "id": "tt41962673",
+      "type": "series",
+      "name": "Brothers and Sisters",
+      "releaseInfo": "2026-05-27",
+      "description": "Bound by love and unspoken truths, Shanmuga Sundaram and his devoted family's lives revolve around shared rituals... till hidden cracks begin to surface.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-05-27\n⭐ Rating: 8.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/dUmJyNe5UT301KwVWrxctpP2sqU.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/vOXCP8gDeChnUyDVro0jUaT7Acr.jpg",
+      "genres": [
+        "Family",
+        "Drama",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt42446103",
+      "type": "series",
+      "name": "Warrant",
+      "releaseInfo": "2026-05-22",
+      "description": "A bullied and vulnerable small‑town constable transforms into a brutal force while solving forgotten warrant cases, until a custodial death forces the law to judge the man he has become.\n\n📺 Streaming on: ZEE5\n📅 Release: 2026-05-22\n⭐ Rating: 7.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/gG1jPwTsy9UkSdKL7shYT21WnDz.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/mRVKrB2DS1ySDHe1DpDffaQ6KuG.jpg",
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt41100531",
+      "type": "series",
+      "name": "Kaakee Circus",
+      "releaseInfo": "2026-04-10",
+      "description": "A small town in Tamil Nadu wakes up to chaos when a temple donation box is stolen from the sub-jail. Soon, the investigation led by two eccentric policemen unravels secrets more than they can handle.\n\n📺 Streaming on: Zee5\n📅 Release: 2026-04-10",
+      "poster": "https://image.tmdb.org/t/p/w500/8WOTcd5qCrJoQEp874D9pKu7akP.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/qSHqZtkLs7dIjtbzQex9WFoAtKo.jpg",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Mystery"
+      ]
+    },
+    {
+      "id": "tt39151086",
+      "type": "series",
+      "name": "Muthu Engira Kaattaan",
+      "releaseInfo": "2026-03-27",
+      "description": "A story of an man who becomes a legend, a Monster, and a Miracle, depending on the Storyteller.\n\n📺 Streaming on: Jiohotstar\n📅 Release: 2026-03-27\n⭐ Rating: 6.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/nOxTfnDo0tOKWKBsoTmJHYjOrme.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/iCZBpc0mW23XbkEI75KP5G5dgvK.jpg",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Action & Adventure"
+      ]
+    },
+    {
+      "id": "tt40494646",
+      "type": "series",
+      "name": "Local Times",
+      "releaseInfo": "2026-03-13",
+      "description": "What happens when four friends try to save a dying newspaper with nothing but blind ambition, street smarts, and each other? Local times is a heartfelt comedy of misadventures, where the real headline is the friendship that keeps them going-even when nothing else does.\n\n📺 Streaming on: Prime Video\n📅 Release: 2026-03-13",
+      "poster": "https://image.tmdb.org/t/p/w500/nEaXAXs8dPKnFTbNM2bumQDlZge.jpg",
+      "genres": [
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt40184918",
+      "type": "series",
+      "name": "Resort",
+      "releaseInfo": "2026-03-12",
+      "description": "A debt-ridden room service boy rises to challenge a ruthless kitchen at a luxurious beachside haven.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-03-12",
+      "poster": "https://image.tmdb.org/t/p/w500/cL7iOwqapRRb7eKKlXI4FDaP6rh.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/wQ1cpJW9uxfKmO8msAF5z4edK63.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt39989131",
+      "type": "series",
+      "name": "Thadayam",
+      "releaseInfo": "2026-02-27",
+      "description": "In 1999, a string of brutal midnight murders terrifies tamil nadu's border villages but when a sharp new officer arrives, he uncovers a chilling pattern.\n\n📺 Streaming on: ZEE5\n📅 Release: 2026-02-27",
+      "poster": "https://image.tmdb.org/t/p/w500/Qw6NDY418wB7jpHSLGEhrqxLM1.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/4AdaGRRz3XtpTtjjRg1NHRZ7mhY.jpg"
+    },
+    {
+      "id": "tt39182415",
+      "type": "series",
+      "name": "LBW: Love Beyond Wicket",
+      "releaseInfo": "2026-01-01",
+      "description": "A washed-up PT teacher, a legendary coach and a generation of misfit students come together to save a legacy.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-01-01\n⭐ Rating: 7.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/tC5K8MkLipwV9bIdJV9SQcCzgUF.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/bMxAWOQN8Y0USoCrGSywQ0K2Sfb.jpg",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt29625288",
+      "type": "series",
+      "name": "Akka",
+      "releaseInfo": "2025-11-01",
+      "description": "A gritty, violent story revolving around two women and a bloody revenge.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-11-01",
+      "poster": "https://image.tmdb.org/t/p/w500/dcBkOqk5TzYip1sfqtCmYZpoh3j.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/cVUKFfws4upCB4ytz5uGIONIiRc.jpg",
+      "genres": [
+        "Action & Adventure",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt33702419",
+      "type": "series",
+      "name": "Good Wife",
+      "releaseInfo": "2025-07-04",
+      "description": "Lawyer-turned-homemaker Tharunika's 16 Years of marriage life and her peaceful world is shattered and is forced to return to the courtroom after her husband, becomes embroiled in a high–profile sex and political corruption scandal.\n\n📺 Streaming on: Jiohotstar\n📅 Release: 2025-07-04",
+      "poster": "https://image.tmdb.org/t/p/w500/7Z6yxgUaiIsOcIrVeuAbDvwIYej.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/mdZ0JGxbuOX02Agvlg8uZ035JV4.jpg",
+      "genres": [
+        "Family",
+        "Mystery",
+        "Crime"
+      ]
+    },
+    {
+      "id": "tt20873118",
+      "type": "series",
+      "name": "Suzhal: The Vortex",
+      "releaseInfo": "2025-02-28",
+      "description": "A minor girl goes missing in a small town in Tamilnadu and an investigation follows. A sub inspector investigating a missing girl's case in a uncovers some shocking revelations and dirty truths those threaten to shake up the cultural societal fabric.\n\n📺 Streaming on: Prime Video\n📅 Release: 2025-02-28\n⭐ Rating: 6.9/10",
+      "poster": "https://image.tmdb.org/t/p/w500/z6IJi7xmAMmKdbzSnwguIXLIVjN.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/hEFbJLsoFhEcf3OtFgptrllxBxI.jpg",
+      "genres": [
+        "Crime",
+        "Mystery"
+      ]
+    },
+    {
+      "id": "tt21325070",
+      "type": "series",
+      "name": "Paper Rocket",
+      "releaseInfo": "2022-07-29",
+      "description": "Six strangers go on a road trip across Tamil Nadu to get closure on their personal challenges. In the trip, each one wants to fulfil a major wish in their bucket list. But it's a bumpy ride. Will they be able to fulfil their wishes?\n\n📺 Streaming on: ZEE5\n📅 Release: 2022-07-29",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
+    }
+  ],
+  "builtAt": "2026-08-17T06:30:42.222Z"
+}
