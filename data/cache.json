@@ -1,19 +1,6 @@
 {
   "malayalam-movies": [
     {
-      "id": "tt37510017",
-      "type": "movie",
-      "name": "Thudakkam",
-      "releaseInfo": "2026-08-07",
-      "description": "When danger strikes, a young woman fights to survive through courage and determination.\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2026-08-07\n⭐ Rating: 3.0/10",
-      "poster": "https://image.tmdb.org/t/p/w500/A8Y0QLNqaFvsergQe80tC6Nfa2k.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/xcvPY9Wk2TzZWQRynWSwHEhnK2j.jpg",
-      "genres": [
-        "Action",
-        "Drama"
-      ]
-    },
-    {
       "id": "tt35254624",
       "type": "movie",
       "name": "Balan - The Boy",
