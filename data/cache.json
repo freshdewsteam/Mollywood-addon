@@ -806,6 +806,20 @@
   ],
   "tamil-movies": [
     {
+      "id": "tt39260895",
+      "type": "movie",
+      "name": "Pyaar Prema Kalyanam",
+      "releaseInfo": "2026-08-21",
+      "description": "When a bride refuses to leave her family home after marriage, her husband must find out if he can adjust to life under his in-laws' roof.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-08-21\n⭐ Rating: 7.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/AjaNAeMXOrK9n0YqGqX0Lz5qxYu.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/jgsptBYJbuO7omWLOj1HNsqvgLM.jpg",
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ]
+    },
+    {
       "id": "tt38267486",
       "type": "movie",
       "name": "Nooru Sami",
@@ -981,7 +995,7 @@
       "type": "movie",
       "name": "Blast",
       "releaseInfo": "2026-05-28",
-      "description": "A seemingly ordinary family must unleash their hidden martial arts skills when they clash with a ruthless criminal gang tied to corruption and violence.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-05-28\n⭐ Rating: 7.2/10",
+      "description": "A seemingly ordinary family must unleash their hidden martial arts skills when they clash with a ruthless criminal gang tied to corruption and violence.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-05-28\n⭐ Rating: 7.3/10",
       "poster": "https://image.tmdb.org/t/p/w500/lpsUpXieodUhN6DlK9ZDnjkysLk.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/xsoKAonKy1zk5XoQoUG1dUXDCKH.jpg",
       "genres": [
@@ -1084,20 +1098,6 @@
         "Crime",
         "Drama",
         "Family"
-      ]
-    },
-    {
-      "id": "tt30460421",
-      "type": "movie",
-      "name": "Love Insurance Kompany",
-      "releaseInfo": "2026-04-10",
-      "description": "In 2040, an app premised on ensuring romance for all is used widely by the population. When the voice behind the app's AI realizes its misconception to true love, he embarks on a quest to prove that love does not come from a screen.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-04-10\n⭐ Rating: 4.5/10",
-      "poster": "https://image.tmdb.org/t/p/w500/1IIUWMKzNVvI6YJX8BKE6EJ9bVd.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/woos7rldBAKG99HmcbNZNpMjwNk.jpg",
-      "genres": [
-        "Romance",
-        "Science Fiction",
-        "Comedy"
       ]
     },
     {
@@ -1789,5 +1789,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-23T13:09:54.032Z"
+  "builtAt": "2026-08-23T19:18:27.027Z"
 }
