@@ -393,6 +393,18 @@
       ]
     },
     {
+      "id": "tt25052490",
+      "type": "movie",
+      "name": "Randam Mukham",
+      "releaseInfo": "2026-01-16",
+      "description": "A neglected wife flees with her young son and a seemingly kind driver, seeking a better life. But when she discovers the man's true predatory nature, she must fight to protect her son from a horrifying fate.\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2026-01-16\n⭐ Rating: 3.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/jB2Tp2uKqrNLe6Zdkb8AGdRTGoC.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/u9l6xFKa9rKmgiI07I6sOxc2MsF.jpg",
+      "genres": [
+        "Thriller"
+      ]
+    },
+    {
       "id": "tt32362695",
       "type": "movie",
       "name": "Sarvam Maya",
@@ -1803,5 +1815,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-25T14:54:00.618Z"
+  "builtAt": "2026-08-25T19:26:17.171Z"
 }
