@@ -279,7 +279,7 @@
       "type": "movie",
       "name": "Sambhavam Adhyayam Onnu",
       "releaseInfo": "2026-03-06",
-      "description": "Three Kerala Police officers venture into a mysterious forest on the Kerala-Tamil Nadu border to find a missing officer. They encounter strange time-related phenomena, uncovering the hidden secrets of Velloorkkatt forest.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-03-06\n⭐ Rating: 7.1/10",
+      "description": "Three Kerala Police officers venture into a mysterious forest on the Kerala-Tamil Nadu border to find a missing officer. They encounter strange time-related phenomena, uncovering the hidden secrets of Velloorkkatt forest.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-03-06\n⭐ Rating: 7.0/10",
       "poster": "https://image.tmdb.org/t/p/w500/4ASKGsPMbzChx0YX5Pqc9HFXQm3.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/rfMWciUEZkqL9AiNcTedhtXQHr0.jpg",
       "genres": [
@@ -378,18 +378,6 @@
         "Action",
         "Drama",
         "Comedy"
-      ]
-    },
-    {
-      "id": "tt25052490",
-      "type": "movie",
-      "name": "Randam Mukham",
-      "releaseInfo": "2026-01-16",
-      "description": "A neglected wife flees with her young son and a seemingly kind driver, seeking a better life. But when she discovers the man's true predatory nature, she must fight to protect her son from a horrifying fate.\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2026-01-16\n⭐ Rating: 3.0/10",
-      "poster": "https://image.tmdb.org/t/p/w500/jB2Tp2uKqrNLe6Zdkb8AGdRTGoC.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/u9l6xFKa9rKmgiI07I6sOxc2MsF.jpg",
-      "genres": [
-        "Thriller"
       ]
     },
     {
@@ -822,7 +810,7 @@
       "type": "movie",
       "name": "Pyaar Prema Kalyanam",
       "releaseInfo": "2026-08-21",
-      "description": "When a bride refuses to leave her family home after marriage, her husband must find out if he can adjust to life under his in-laws' roof.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-08-21\n⭐ Rating: 7.0/10",
+      "description": "When a bride refuses to leave her family home after marriage, her husband must find out if he can adjust to life under his in-laws' roof.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-08-21\n⭐ Rating: 8.5/10",
       "poster": "https://image.tmdb.org/t/p/w500/AjaNAeMXOrK9n0YqGqX0Lz5qxYu.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/jgsptBYJbuO7omWLOj1HNsqvgLM.jpg",
       "genres": [
@@ -884,7 +872,7 @@
       "type": "movie",
       "name": "Love Oh Love",
       "releaseInfo": "2026-07-10",
-      "description": "A couple is in love. One partner's excessive spending pushes the other into debt. When the burdened partner decides to seek a divorce, the other files a police complaint through the leader of a women's association. As they begin living together, they gradually understand each other's struggles. Eventually, they reconcile and choose to continue their life together.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-07-10",
+      "description": "A couple is in love. One partner's excessive spending pushes the other into debt. When the burdened partner decides to seek a divorce, the other files a police complaint through the leader of a women's association. As they begin living together, they gradually understand each other's struggles. Eventually, they reconcile and choose to continue their life together.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-07-10\n⭐ Rating: 8.0/10",
       "poster": "https://image.tmdb.org/t/p/w500/37svY2bwI83NSHuR6KSQeBhjgOt.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/fEUJSGa6MZFEl32Gx83UXwEy98L.jpg",
       "genres": [
@@ -1007,7 +995,7 @@
       "type": "movie",
       "name": "Blast",
       "releaseInfo": "2026-05-28",
-      "description": "A seemingly ordinary family must unleash their hidden martial arts skills when they clash with a ruthless criminal gang tied to corruption and violence.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-05-28\n⭐ Rating: 7.4/10",
+      "description": "A seemingly ordinary family must unleash their hidden martial arts skills when they clash with a ruthless criminal gang tied to corruption and violence.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-05-28\n⭐ Rating: 7.6/10",
       "poster": "https://image.tmdb.org/t/p/w500/lpsUpXieodUhN6DlK9ZDnjkysLk.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/xsoKAonKy1zk5XoQoUG1dUXDCKH.jpg",
       "genres": [
@@ -1815,5 +1803,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-25T19:26:17.171Z"
+  "builtAt": "2026-08-26T02:48:00.252Z"
 }
