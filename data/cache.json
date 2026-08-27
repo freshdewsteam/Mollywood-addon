@@ -14,6 +14,19 @@
       ]
     },
     {
+      "id": "tt41944664",
+      "type": "movie",
+      "name": "Secret of Kalinga",
+      "releaseInfo": "2026-07-24",
+      "description": "📺 Streaming on: SunNxt\n📅 OTT Release: 2026-07-24",
+      "poster": "https://image.tmdb.org/t/p/w500/fIDU3LSWigWq9ges3Dw5KvGn3Av.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/1gCAMqd8SKeQEzbgKRwTwzvrxgX.jpg",
+      "genres": [
+        "Horror",
+        "Comedy"
+      ]
+    },
+    {
       "id": "tt10515398",
       "type": "movie",
       "name": "Pallichattambi",
@@ -24,19 +37,6 @@
       "genres": [
         "Action",
         "Drama"
-      ]
-    },
-    {
-      "id": "tt41944664",
-      "type": "movie",
-      "name": "Secret of Kalinga",
-      "releaseInfo": "2026-07-24",
-      "description": "A college sits on ancient Kalinga kingdom land. Behind it, a forest well holds a princess's spirit, imprisoned centuries ago. Students accidentally break the seal on New Year's Eve, triggering comedic chaos.\n\n📺 Streaming on: SunNxt\n📅 Release: 2026-07-24\n⭐ Rating: 7.0/10",
-      "poster": "https://image.tmdb.org/t/p/w500/fIDU3LSWigWq9ges3Dw5KvGn3Av.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/1gCAMqd8SKeQEzbgKRwTwzvrxgX.jpg",
-      "genres": [
-        "Horror",
-        "Comedy"
       ]
     },
     {
@@ -557,18 +557,6 @@
       "background": "https://image.tmdb.org/t/p/w1280/kheKyltmCWOORRCBUpBFe9S5hHZ.jpg",
       "genres": [
         "Horror"
-      ]
-    },
-    {
-      "id": "tt32166743",
-      "type": "movie",
-      "name": "United Kingdom of Kerala",
-      "releaseInfo": "2025-06-20",
-      "description": "Tony, a hardworking Kerala student, rejects his father's wish for him to study abroad. His choice strains their relationship and sparks a youth movement across the state.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2025-06-20\n⭐ Rating: 2.3/10",
-      "poster": "https://image.tmdb.org/t/p/w500/6M8yucZiC3XBCtPkonuggnydhnm.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/hFkfxkib0rYpbuO8sGyecJeLI1U.jpg",
-      "genres": [
-        "Drama"
       ]
     }
   ],
@@ -1803,5 +1791,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-27T18:06:33.680Z"
+  "builtAt": "2026-08-27T22:27:54.982Z"
 }
