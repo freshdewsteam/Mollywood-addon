@@ -414,7 +414,7 @@ async function jwGraphql(operationName, sortBy, filter) {
   const payload = JSON.stringify({
     operationName,
     query: jwQuery(operationName, sortBy),
-    variables: { country: 'in', language: 'en', first: 100, filter }
+    variables: { country: 'IN', language: 'en', first: 100, filter }
   });
   const text = await postJson(JW_GRAPHQL_URL, payload);
   const data = JSON.parse(text);
@@ -430,7 +430,7 @@ async function introspectJwSchema() {
     const text = await postJson(JW_GRAPHQL_URL, JSON.stringify({ query: JW_INTROSPECTION_QUERY }));
     const data = JSON.parse(text);
     const tf = data.data && data.data.titleFilter;
-    const sb = data.data && data.data.sortBy;
+        const sb = data.data && data.data.sorting;
     console.log('[JustWatch SCHEMA] Valid TitleFilter fields: ' +
       (tf && tf.inputFields ? tf.inputFields.map(f => f.name).join(', ') : 'unavailable'));
     console.log('[JustWatch SCHEMA] Valid TitleSortBy values: ' +
@@ -446,12 +446,11 @@ async function fetchJustWatch(lang) {
 
   // Attempt cascade: richest filter first → simplest. Fixes applied from the
   // verified working client: explicit operationName + lowercase country code.
-  const attempts = [
-    { label: 'Jw1', sortBy: 'NEWEST',  filter: { objectTypes: ['MOVIE'], originalLanguages: [langCode], monetizationTypes: ['FLATRATE', 'FREE', 'ADS'] }, langFiltered: true  },
-    { label: 'Jw2', sortBy: 'NEWEST',  filter: { objectTypes: ['MOVIE'], originalLanguages: [langCode] },                                langFiltered: true  },
-    { label: 'Jw3', sortBy: 'NEWEST',  filter: { objectTypes: ['MOVIE'] },                                                              langFiltered: false },
-    { label: 'Jw4', sortBy: 'POPULAR', filter: { objectTypes: ['MOVIE'] },                                                              langFiltered: false },
-  ];
+  const JW_INTROSPECTION_QUERY = `
+query SchemaPeek {
+  titleFilter: __type(name: "TitleFilter") { inputFields { name } }
+  sorting:     __type(name: "PopularTitlesSorting") { enumValues { name } }
+}`;
 
   let contents = null;
   let lastErr  = null;
