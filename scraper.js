@@ -369,98 +369,125 @@ async function fetchSheetContent(filterLang, filterType) {
   }
 }
 
-// ── JUSTWATCH (DAY-0 OTT DETECTION) ───────────────────────────────────────────
-// NOTE: JustWatch's API locale format has changed over the years.
-// We try the current format first (en_IN), then fall back to legacy (es_IN).
-const JW_ENDPOINTS = [
-  'https://apis.justwatch.com/content/titles/en_IN/popular',  // current format
-  'https://apis.justwatch.com/content/titles/es_IN/popular',  // legacy format
-];
+// ── JUSTWATCH (DAY-0 OTT DETECTION — GraphQL API) ─────────────────────────────
+// JustWatch retired the old REST API (apis.justwatch.com → 404).
+// Their website now uses GraphQL at graph.justwatch.com — so do we.
+const JW_GRAPHQL_URL = 'https://graph.justwatch.com/graphql';
 
-let jwWorkingEndpoint = null; // remember which endpoint worked this run
+const JW_QUERY_FULL = `
+  query GetPopularTitles($country: Country!, $first: Int!, $filter: TitleFilter!, $language: Language!, $sortBy: TitleSortBy!) {
+    popularTitles(country: $country, first: $first, filter: $filter, sortBy: $sortBy) {
+      totalCount
+      edges {
+        node {
+          id
+          objectId
+          contentTypes
+          title
+          originalReleaseYear
+          originalLanguage
+          shortDescription
+          posterUrl(profile: S337, format: JPG)
+          externalIds { imdbId }
+          offers(country: $country, platform: WEB) {
+            monetizationType
+            package { clearName shortName }
+          }
+        }
+      }
+    }
+  }
+`;
 
-function jwBody(contentType, langCodes) {
+// Minimal fallback — used if the full query errors (e.g. schema drift)
+const JW_QUERY_MINIMAL = `
+  query GetPopularTitles($country: Country!, $first: Int!, $filter: TitleFilter!, $language: Language!, $sortBy: TitleSortBy!) {
+    popularTitles(country: $country, first: $first, filter: $filter, sortBy: $sortBy) {
+      totalCount
+      edges {
+        node {
+          id
+          objectId
+          title
+          originalReleaseYear
+          originalLanguage
+          offers(country: $country, platform: WEB) {
+            monetizationType
+            package { clearName shortName }
+          }
+        }
+      }
+    }
+  }
+`;
+
+async function jwGraphqlRequest(query, variables) {
+  const text = await postJson(JW_GRAPHQL_URL, JSON.stringify({ query, variables }));
+  const data = JSON.parse(text);
+  if (data.errors && data.errors.length) {
+    throw new Error('GraphQL: ' + data.errors.map(e => e.message).join(' | '));
+  }
+  if (!data.data || !data.data.popularTitles) throw new Error('GraphQL: empty popularTitles');
+  return data.data.popularTitles;
+}
+
+// Convert GraphQL node → the REST-style shape the rest of the scraper expects
+function normalizeJwNode(node) {
+  if (!node) return null;
+  const offers = (node.offers || []).map(o => ({
+    monetization_type: (o.monetizationType || '').toLowerCase(),
+    package: { clear_name: o.package && o.package.clearName, short_name: o.package && o.package.shortName },
+  }));
   return {
-    age_certifications: null,
-    content_types: [contentType],
-    presentation_types: null,
-    providers: null,
-    genres: null,
-    languages: langCodes,     // ISO 639-3: mal / tam
-    release_year_from: null,
-    release_year_until: null,
-    min_imdb_rating: null,
-    max_imdb_rating: null,
-    min_imdb_vote_count: null,
-    max_imdb_vote_count: null,
-    monetization_types: ['flatrate', 'free', 'ads'],
-    min_price: null,
-    max_price: null,
-    nationality: null,
-    exclude_genres: null,
-    video_types: [contentType],
-    tags: null,
-    scoring_filter_types: null,
-    exclude_production_countries: null,
-    facet_include_unknown_providers: false,
-    sorting_by: 'newest'
+    id: node.objectId || node.id,
+    title: node.title || '',
+    original_release_year: node.originalReleaseYear || null,
+    original_language: node.originalLanguage ? String(node.originalLanguage).toLowerCase() : null,
+    short_description: node.shortDescription || '',
+    poster: node.posterUrl || null, // full URL already (no {profile} template)
+    external_ids: node.externalIds && node.externalIds.imdbId ? { imdb_id: node.externalIds.imdbId } : null,
+    offers,
   };
 }
 
-async function fetchJustWatchPage(contentType, langCodes, page) {
-  const qs   = '?language=en&page_size=50&page=' + page;
-  const body = jwBody(contentType, langCodes);
-
-  // If we already found a working endpoint this run, use only that one
-  const endpoints = jwWorkingEndpoint ? [jwWorkingEndpoint] : JW_ENDPOINTS;
-  let lastErr = null;
-
-  // Attempt 1: POST with JSON body (modern style)
-  for (const base of endpoints) {
-    try {
-      const text = await postJson(base + qs, body);
-      jwWorkingEndpoint = base;
-      return JSON.parse(text);
-    } catch (e) {
-      lastErr = e;
-      console.warn('[JustWatch] POST failed on ' + base + ' (' + e.message + ')');
-    }
-  }
-
-  // Attempt 2: GET with URL-encoded body param (legacy style)
-  for (const base of endpoints) {
-    try {
-      const bodyParam = encodeURIComponent(JSON.stringify(body));
-      const text = await fetchUrl(base + qs + '&body=' + bodyParam);
-      const data = JSON.parse(text);
-      jwWorkingEndpoint = base;
-      console.log('[JustWatch] GET fallback worked on: ' + base);
-      return data;
-    } catch (e) {
-      lastErr = e;
-      console.warn('[JustWatch] GET failed on ' + base + ' (' + e.message + ')');
-    }
-  }
-
-  throw lastErr || new Error('All JustWatch endpoints failed');
-}
-
 async function fetchJustWatch(contentType, langCodes, maxPages) {
-  const results = [];
-  for (let page = 1; page <= maxPages; page++) {
-    try {
-      const data  = await fetchJustWatchPage(contentType, langCodes, page);
-      const items = data.items || [];
-      console.log('[JustWatch] ' + contentType + ' page ' + page + ': ' + items.length + ' titles');
-      results.push(...items);
-      if (!items.length || page >= (data.total_pages || 1)) break;
-    } catch (e) {
-      console.warn('[JustWatch] Page ' + page + ' failed: ' + e.message);
-      await sendAlert('JustWatch fetch failed: ' + e.message);
-      break;
-    }
+  const variables = {
+    country: 'IN',
+    language: 'EN',
+    first: 100,
+    sortBy: 'NEWEST',
+    filter: {
+      contentTypes: [contentType === 'series' ? 'SHOW' : 'MOVIE'],
+      originalLanguages: langCodes, // ['MAL'] / ['TAM']
+      monetizationTypes: ['FLATRATE', 'FREE', 'ADS'],
+    },
+  };
+
+  // Attempt 1: full query, language filter baked in
+  try {
+    const titles = await jwGraphqlRequest(JW_QUERY_FULL, variables);
+    const items  = (titles.edges || []).map(e => normalizeJwNode(e.node)).filter(Boolean);
+    console.log('[JustWatch] GraphQL OK (full): ' + items.length + ' ' + contentType + ' titles');
+    return items;
+  } catch (e) {
+    console.warn('[JustWatch] Full query failed: ' + e.message);
   }
-  return results;
+
+  // Attempt 2: minimal query WITHOUT language filter → filter client-side
+  try {
+    const minimalVars = JSON.parse(JSON.stringify(variables));
+    delete minimalVars.filter.originalLanguages;
+    const titles    = await jwGraphqlRequest(JW_QUERY_MINIMAL, minimalVars);
+    const wanted    = langCodes.map(c => c.toLowerCase());
+    const allItems  = (titles.edges || []).map(e => normalizeJwNode(e.node)).filter(Boolean);
+    const items     = allItems.filter(it => it.original_language && wanted.includes(it.original_language));
+    console.log('[JustWatch] GraphQL OK (minimal): ' + allItems.length + ' total, ' + items.length + ' matching language');
+    return items;
+  } catch (e) {
+    console.warn('[JustWatch] Minimal query also failed: ' + e.message);
+    await sendAlert('JustWatch GraphQL failed: ' + e.message);
+    return [];
+  }
 }
 function jwPosterUrl(posterPath) {
   if (!posterPath) return undefined;
