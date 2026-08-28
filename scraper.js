@@ -1,15 +1,22 @@
 /**
  * scraper.js — South Streams
  *
- * Movies  → TMDB Auto-Discover (primary) + Google Sheet (fallback/patching)
+ * Movies  → JustWatch (day-0 OTT detection) → TMDB Auto-Discover (foundation)
+ *           → Google Sheet (patching + gap fill)
  * Series  → Google Sheet CSV (manually maintained, primary)
  * Enrichment → TMDB / OMDb API (posters, descriptions, IMDb IDs)
  *
+ * Pipeline (movies):
+ *   1. JustWatch  — newest OTT additions in India, same-day. Resolves IMDb IDs
+ *                   via TMDB title+year search. OTT date stamped as discovery date.
+ *   2. TMDB Discover — catches anything JustWatch missed (30d window, 730d first run).
+ *   3. Google Sheet — patches OTT dates/platforms + adds anything both missed.
+ *   All three share one dedup set — zero duplicates.
+ *
  * Key principles:
- * - TMDB finds movies automatically. The Sheet adds missed movies & patches OTT dates.
  * - If an item has an IMDb ID → use it directly, never title-search-fallback
  * - If no poster found → omit it entirely so Cinemeta/AIO Metadata can fill it
- * - Failed title searches retry after 3 days (not 14) since the Sheet is manually curated
+ * - Failed title searches retry after 3 days (not 14) since sources are fresh
  */
 
 const https = require('https');
@@ -23,6 +30,9 @@ const SHEET_URL   = process.env.GOOGLE_SHEET_URL || '';
 const WEBHOOK_URL = process.env.WEBHOOK_URL      || '';
 const BASE        = 'https://api.themoviedb.org/3';
 const IMG         = 'https://image.tmdb.org/t/p/';
+
+const JW_URL = 'https://apis.justwatch.com/content/titles/es_IN/popular';
+const JW_PAGES = 2; // 2 pages x 50 = 100 newest OTT titles per language
 
 const MOVIE_CACHE_FILE  = path.join(__dirname, '..', 'data', 'movies-cache.json');
 const SERIES_CACHE_FILE = path.join(__dirname, '..', 'data', 'series-cache.json');
@@ -137,6 +147,37 @@ function fetchUrl(url) {
     });
     req.on('error', reject);
     req.setTimeout(20000, function() { this.destroy(); reject(new Error('Timeout')); });
+  });
+}
+
+function postJson(url, payload) {
+  return new Promise((resolve, reject) => {
+    const body = JSON.stringify(payload);
+    const u    = new URL(url);
+    const req  = https.request({
+      hostname: u.hostname,
+      path:     u.pathname + u.search,
+      method:   'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Content-Length': Buffer.byteLength(body),
+        'User-Agent': 'SouthStreams/2.0'
+      }
+    }, (res) => {
+      if (res.statusCode !== 200) return reject(new Error('HTTP ' + res.statusCode));
+      let s = res;
+      const enc = res.headers['content-encoding'];
+      if (enc === 'gzip') s = res.pipe(zlib.createGunzip());
+      if (enc === 'br')   s = res.pipe(zlib.createBrotliDecompress());
+      const c = [];
+      s.on('data', d => c.push(d));
+      s.on('end', () => resolve(Buffer.concat(c).toString('utf8')));
+      s.on('error', reject);
+    });
+    req.on('error', reject);
+    req.setTimeout(20000, function() { this.destroy(); reject(new Error('Timeout')); });
+    req.write(body); req.end();
   });
 }
 
@@ -255,9 +296,6 @@ function buildMeta({ imdbId, type, title, platform, releaseDate, overview,
   if (releaseDate) desc += '\n📅 Release: ' + releaseDate;
   if (rating)      desc += '\n⭐ Rating: ' + Number(rating).toFixed(1) + '/10';
 
-  // If we don't have a poster, omit it entirely.
-  // Stremio's metadata addons (Cinemeta, AIO Metadata) will provide the
-  // correct poster when the user clicks the title.
   let poster   = posterUrl || (posterPath   ? IMG + 'w500'  + posterPath   : undefined);
   let backdrop = backdropUrl || (backdropPath ? IMG + 'w1280' + backdropPath : undefined);
 
@@ -331,7 +369,208 @@ async function fetchSheetContent(filterLang, filterType) {
   }
 }
 
-// ── MOVIES (TMDB AUTO-DISCOVER FIRST, SHEET AS FALLBACK/PATCH) ────────────────
+// ── JUSTWATCH (DAY-0 OTT DETECTION) ───────────────────────────────────────────
+function jwBody(contentType, langCodes) {
+  return {
+    age_certifications: null,
+    content_types: [contentType],
+    presentation_types: null,
+    providers: null,          // all providers (Hotstar, Prime, SonyLIV, Zee5, SunNXT, JioCinema...)
+    genres: null,
+    languages: langCodes,     // ISO 639-3: mal / tam
+    release_year_from: null,
+    release_year_until: null,
+    min_imdb_rating: null,
+    max_imdb_rating: null,
+    min_imdb_vote_count: null,
+    max_imdb_vote_count: null,
+    monetization_types: ['flatrate', 'free', 'ads'],
+    min_price: null,
+    max_price: null,
+    nationality: null,
+    exclude_genres: null,
+    video_types: [contentType],
+    tags: null,
+    scoring_filter_types: null,
+    exclude_production_countries: null,
+    facet_include_unknown_providers: false,
+    sorting_by: 'newest'
+  };
+}
+
+async function fetchJustWatchPage(contentType, langCodes, page) {
+  const qs = '?language=en&page_size=50&page=' + page;
+  // Primary: POST with JSON body
+  try {
+    const text = await postJson(JW_URL + qs, jwBody(contentType, langCodes));
+    return JSON.parse(text);
+  } catch (postErr) {
+    // Fallback: GET with URL-encoded body param (older endpoint style)
+    console.warn('[JustWatch] POST failed (' + postErr.message + ') — trying GET fallback');
+    const bodyParam = encodeURIComponent(JSON.stringify(jwBody(contentType, langCodes)));
+    const text = await fetchUrl(JW_URL + qs + '&body=' + bodyParam);
+    return JSON.parse(text);
+  }
+}
+
+async function fetchJustWatch(contentType, langCodes, maxPages) {
+  const results = [];
+  for (let page = 1; page <= maxPages; page++) {
+    try {
+      const data  = await fetchJustWatchPage(contentType, langCodes, page);
+      const items = data.items || [];
+      console.log('[JustWatch] ' + contentType + ' page ' + page + ': ' + items.length + ' titles');
+      results.push(...items);
+      if (!items.length || page >= (data.total_pages || 1)) break;
+    } catch (e) {
+      console.warn('[JustWatch] Page ' + page + ' failed: ' + e.message);
+      await sendAlert('JustWatch fetch failed: ' + e.message);
+      break;
+    }
+  }
+  return results;
+}
+
+function jwPosterUrl(posterPath) {
+  if (!posterPath) return undefined;
+  return 'https://images.justwatch.com' + posterPath.replace('{profile}', 's337');
+}
+
+function jwPlatforms(item) {
+  const seen = new Set();
+  const names = [];
+  for (const o of (item.offers || [])) {
+    if (!['flatrate', 'free', 'ads'].includes(o.monetization_type)) continue;
+    const name = o.package && (o.package.clear_name || o.package.short_name);
+    if (!name) continue;
+    const key = name.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    names.push(name);
+  }
+  return names.join(', ');
+}
+
+async function processJustWatchItem(item, lang, processedImdbIds) {
+  const jwKey = 'jw_' + lang + '_' + item.id;
+  const cached = readCacheEntry(movieCache[jwKey]);
+
+  if (cached === 'skip')  return null;
+  if (cached === 'retry') { /* fall through — TMDB may have indexed it by now */ }
+  else if (cached) {
+    // Already resolved in a previous run — no API calls needed
+    if (cached.id && processedImdbIds.has(cached.id)) return null;
+    if (cached.id) processedImdbIds.add(cached.id);
+    return cached;
+  }
+
+  try {
+    const jwTitle = (item.title || '').trim();
+    const year    = item.original_release_year || null;
+    if (!jwTitle) { setSkip(movieCache, jwKey); return null; }
+
+    // ── Step 1: JustWatch sometimes provides the IMDb ID directly ──
+    let imdbId = (item.external_ids && item.external_ids.imdb_id) ? item.external_ids.imdb_id : null;
+    let tmdbMovieId = null;
+
+    // ── Step 2: Otherwise resolve via TMDB title + year search (very reliable) ──
+    if (!imdbId) {
+      const yearParam = year ? '&primary_release_year=' + year : '';
+      try {
+        const data = await tmdb('/search/movie?query=' + encodeURIComponent(jwTitle) + '&language=en-US&page=1' + yearParam);
+        let best = null, bestScore = -1;
+        for (const r of (data.results || [])) {
+          let sc = 0;
+          const rt = (r.title || '').toLowerCase(), vl = jwTitle.toLowerCase();
+          if (rt === vl)              sc += 100;
+          else if (rt.includes(vl))   sc += 40;
+          else if (vl.includes(rt))   sc += 40;
+          if (r.original_language === lang)                                      sc += 50;
+          if (Array.isArray(r.origin_country) && r.origin_country.includes('IN')) sc += 30;
+          if (r.original_language !== lang && r.original_language !== 'en')      sc -= 50;
+          if (year && r.release_date && r.release_date.startsWith(String(year))) sc += 20;
+          if (year && r.release_date && !r.release_date.startsWith(String(year))) sc -= 40;
+          if (sc > bestScore) { bestScore = sc; best = r; }
+        }
+        if (best && bestScore >= 70 &&
+            (best.original_language === lang || (Array.isArray(best.origin_country) && best.origin_country.includes('IN')))) {
+          tmdbMovieId = best.id;
+          console.log('[JustWatch] "' + jwTitle + '" -> TMDB ' + tmdbMovieId + ' (score ' + bestScore + ')');
+        }
+      } catch(e) { console.warn('[JustWatch] Search failed for "' + jwTitle + '": ' + e.message); }
+    }
+
+    // ── Step 3: Nothing resolvable yet → retry in 3 days ──
+    if (!imdbId && !tmdbMovieId) {
+      console.log('[JustWatch] "' + jwTitle + '" not yet on TMDB — will retry');
+      setRetry(movieCache, jwKey);
+      return null;
+    }
+
+    // ── Step 4: Fetch TMDB details + resolve IMDb ID ──
+    if (!tmdbMovieId && imdbId) {
+      try {
+        const data = await tmdb('/find/' + imdbId + '?external_source=imdb_id');
+        const movie = (data.movie_results || [])[0];
+        if (movie) tmdbMovieId = movie.id;
+      } catch(e) {}
+    }
+
+    let detail = {};
+    if (tmdbMovieId) {
+      try { detail = await tmdb('/movie/' + tmdbMovieId + '?language=en-US'); } catch(e) {}
+      if (!imdbId) {
+        try {
+          const ext = await tmdb('/movie/' + tmdbMovieId + '/external_ids');
+          imdbId = ext.imdb_id || null;
+        } catch(e) {}
+      }
+    }
+
+    if (!imdbId) {
+      console.log('[JustWatch] "' + jwTitle + '" has no IMDb ID — skip');
+      setSkip(movieCache, jwKey);
+      return null;
+    }
+
+    // ── Step 5: Already added by another source? Cache & skip ──
+    if (processedImdbIds.has(imdbId)) {
+      setSkip(movieCache, jwKey);
+      return null;
+    }
+
+    // ── Step 6: Build meta ──
+    // JustWatch detects titles on day 0 of their OTT release, so today = the OTT date.
+    // The Sheet patch can still overwrite this with the exact date if you know it.
+    const platform = jwPlatforms(item);
+    const ottDate  = today();
+
+    const meta = buildMeta({
+      imdbId:      imdbId,
+      type:        'movie',
+      title:       (detail.title || jwTitle),
+      platform,
+      releaseDate: ottDate,
+      overview:    detail.overview || item.short_description || '',
+      rating:      detail.vote_average || null,
+      posterUrl:   (detail.poster_path ? IMG + 'w500' + detail.poster_path : jwPosterUrl(item.poster)),
+      backdropUrl: detail.backdrop_path ? IMG + 'w1280' + detail.backdrop_path : undefined,
+      genres:      (detail.genres || []).map(g => g.name),
+    });
+
+    movieCache[jwKey] = meta;
+    cacheDirty = true;
+    processedImdbIds.add(imdbId);
+    console.log('[JustWatch OK] ' + meta.name + ' -> ' + imdbId + ' on ' + platform);
+    return meta;
+  } catch (e) {
+    console.warn('[JustWatch] Failed for "' + (item.title || '?') + '": ' + e.message);
+    setRetry(movieCache, jwKey);
+    return null;
+  }
+}
+
+// ── MOVIES: TMDB DISCOVER (FOUNDATION) ────────────────────────────────────────
 
 async function discoverMovies(lang, lookbackDays) {
   const dateFrom = daysAgo(lookbackDays);
@@ -530,31 +769,43 @@ async function enrichMovie(imdbId, title, lang) {
   }
 }
 
+// ── MOVIES ORCHESTRATOR (JustWatch → TMDB → Sheet, zero duplicates) ──────────
 async function scrapeMovies(lang) {
   const langLabel = lang === 'ml' ? 'Malayalam' : 'Tamil';
   const metas = [];
   const processedImdbIds = new Set();
 
-  // --- STEP 1: TMDB AUTO-DISCOVER ---
+  // --- STEP 1: JUSTWATCH (Day-0 OTT detection) ---
+  const jwLangCodes = lang === 'ml' ? ['mal'] : ['tam'];
+  console.log('\n[Movies] Fetching ' + langLabel + ' from JustWatch (day-0 detection)...');
+  const jwItems = await fetchJustWatch('movie', jwLangCodes, JW_PAGES);
+  for (const jwItem of jwItems) {
+    const meta = await processJustWatchItem(jwItem, lang, processedImdbIds);
+    if (meta && meta.id && !metas.some(m => m.id === meta.id)) metas.push(meta);
+    await new Promise(r => setTimeout(r, 100));
+  }
+  console.log('[Movies] ' + metas.length + ' after JustWatch');
+
+  // --- STEP 2: TMDB AUTO-DISCOVER (Foundation) ---
   const key      = lang + '_movie';
   const isFirst  = !seen[key];
   const lookback = isFirst ? MOVIE_FIRST_RUN : MOVIE_LOOKBACK;
-  console.log('\n[Movies] ' + lang + ' | lookback: ' + lookback + 'd' + (isFirst ? ' (FIRST RUN)' : ''));
+  console.log('\n[Movies] ' + lang + ' TMDB | lookback: ' + lookback + 'd' + (isFirst ? ' (FIRST RUN)' : ''));
 
   const tmdbItems = await discoverMovies(lang, lookback);
 
   for (let i = 0; i < tmdbItems.length; i++) {
     const meta = await processMovie(tmdbItems[i], lang);
-    if (meta && meta.id) {
+    if (meta && meta.id && !processedImdbIds.has(meta.id)) {
       metas.push(meta);
       processedImdbIds.add(meta.id);
     }
     if ((i+1) % 10 === 0) await new Promise(r => setTimeout(r, 300));
   }
   seen[key] = true;
-  console.log('[Movies] ' + metas.length + ' found via TMDB');
+  console.log('[Movies] ' + metas.length + ' after TMDB Discover');
 
-  // --- STEP 2: GOOGLE SHEET (Patching OTT dates & filling gaps) ---
+  // --- STEP 3: GOOGLE SHEET (Patching OTT dates & filling gaps) ---
   console.log('\n[Movies] Checking ' + langLabel + ' Sheet for OTT date patches and missing movies...');
   const sheetItems = await fetchSheetContent(langLabel, 'movie');
 
@@ -573,16 +824,14 @@ async function scrapeMovies(lang) {
       }
     }
 
-    // SMART PATCH: TMDB found it, BUT the Sheet has a more accurate OTT date!
+    // SMART PATCH: already added by JustWatch/TMDB, BUT the Sheet has a more accurate OTT date!
     if (checkId && processedImdbIds.has(checkId)) {
       const existingIndex = metas.findIndex(m => m.id === checkId);
       if (existingIndex !== -1) {
         const existingMeta = metas[existingIndex];
 
-        // Overwrite the old theatre date with the new OTT date from the Sheet
         existingMeta.releaseInfo = item.date;
 
-        // Rebuild the description to feature the OTT platform and accurate date
         let desc = existingMeta.overview || '';
         if (desc) desc += '\n\n';
         if (item.platform) desc += '📺 Streaming on: ' + item.platform;
@@ -595,7 +844,7 @@ async function scrapeMovies(lang) {
       continue;
     }
 
-    // TMDB missed it entirely, process it from scratch using enrichMovie
+    // TMDB & JustWatch both missed it — process from scratch
     const tmdbData    = await enrichMovie(item.imdbId, item.title, lang);
     const finalImdbId = item.imdbId || (tmdbData && tmdbData.imdbId) || checkId || null;
 
@@ -619,13 +868,13 @@ async function scrapeMovies(lang) {
 
     metas.push(meta);
     processedImdbIds.add(finalImdbId);
-    console.log('[Sheet OK] ' + item.title + ' -> ' + finalImdbId + ' (TMDB missed it)');
+    console.log('[Sheet OK] ' + item.title + ' -> ' + finalImdbId + ' (missed by JustWatch & TMDB)');
     await new Promise(r => setTimeout(r, 100));
   }
 
-  // Final Sort (Sorts by the patched OTT dates!)
+  // Final Sort
   metas.sort((a, b) => (b.releaseInfo || '').localeCompare(a.releaseInfo || ''));
-  const finalResult = metas.slice(0, 100);
+  const finalResult = metas.slice(0, 120);
 
   console.log('[Movies] ' + lang + ': ' + finalResult.length + ' total in catalogue');
   return finalResult;
