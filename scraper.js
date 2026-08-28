@@ -161,19 +161,24 @@ function postJson(url, payload) {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
         'Content-Length': Buffer.byteLength(body),
-        // Headers the official JustWatch web client sends (verified from working client code)
         'User-Agent': 'Mozilla/5.0 (compatible; SouthStreamsAddon/2.0)',
         'App-Version': '3.8.0-web-web'
       }
     }, (res) => {
-      if (res.statusCode !== 200) return reject(new Error('HTTP ' + res.statusCode));
       let s = res;
       const enc = res.headers['content-encoding'];
       if (enc === 'gzip') s = res.pipe(zlib.createGunzip());
       if (enc === 'br')   s = res.pipe(zlib.createBrotliDecompress());
       const c = [];
       s.on('data', d => c.push(d));
-      s.on('end', () => resolve(Buffer.concat(c).toString('utf8')));
+      s.on('end', () => {
+        const text = Buffer.concat(c).toString('utf8');
+        if (res.statusCode !== 200) {
+          // Include the response body — GraphQL errors tell us EXACTLY what's wrong
+          return reject(new Error('HTTP ' + res.statusCode + ': ' + text.slice(0, 400)));
+        }
+        resolve(text);
+      });
       s.on('error', reject);
     });
     req.on('error', reject);
@@ -373,14 +378,12 @@ async function fetchSheetContent(filterLang, filterType) {
   }
 }
 
-// ── JUSTWATCH (DAY-0 OTT DETECTION — GraphQL, verified against working client) ─
-// Query shape mirrors the verified Jellyfin plugin client (query structure, endpoint,
-// App-Version header). Filter fields are tried in a cascade so that if one field
-// name is rejected, simpler filters still succeed.
+// ── JUSTWATCH (DAY-0 OTT DETECTION — GraphQL, self-diagnosing) ────────────────
+const JW_GRAPHQL_URL = 'https://apis.justwatch.com/graphql';
 
-function jwQuery(sortBy) {
+function jwQuery(operationName, sortBy) {
   return `
-query Discover($filter: TitleFilter!, $country: Country!, $language: Language!, $first: Int!) {
+query ` + operationName + `($filter: TitleFilter!, $country: Country!, $language: Language!, $first: Int!) {
   popularTitles(country: $country, filter: $filter, first: $first, sortBy: ` + sortBy + `) {
     edges {
       node {
@@ -400,10 +403,18 @@ query Discover($filter: TitleFilter!, $country: Country!, $language: Language!, 
 }`;
 }
 
-async function jwGraphql(sortBy, filter) {
+// Asks the API to describe its own schema — logs the real field names on failure
+const JW_INTROSPECTION_QUERY = `
+query SchemaPeek {
+  titleFilter: __type(name: "TitleFilter") { inputFields { name } }
+  sortBy:      __type(name: "TitleSortBy") { enumValues { name } }
+}`;
+
+async function jwGraphql(operationName, sortBy, filter) {
   const payload = JSON.stringify({
-    query: jwQuery(sortBy),
-    variables: { country: 'IN', language: 'en', first: 100, filter }
+    operationName,
+    query: jwQuery(operationName, sortBy),
+    variables: { country: 'in', language: 'en', first: 100, filter }
   });
   const text = await postJson(JW_GRAPHQL_URL, payload);
   const data = JSON.parse(text);
@@ -414,11 +425,27 @@ async function jwGraphql(sortBy, filter) {
   return data.data.popularTitles;
 }
 
+async function introspectJwSchema() {
+  try {
+    const text = await postJson(JW_GRAPHQL_URL, JSON.stringify({ query: JW_INTROSPECTION_QUERY }));
+    const data = JSON.parse(text);
+    const tf = data.data && data.data.titleFilter;
+    const sb = data.data && data.data.sortBy;
+    console.log('[JustWatch SCHEMA] Valid TitleFilter fields: ' +
+      (tf && tf.inputFields ? tf.inputFields.map(f => f.name).join(', ') : 'unavailable'));
+    console.log('[JustWatch SCHEMA] Valid TitleSortBy values: ' +
+      (sb && sb.enumValues ? sb.enumValues.map(v => v.name).join(', ') : 'unavailable'));
+  } catch (e) {
+    console.warn('[JustWatch SCHEMA] Introspection failed: ' + e.message);
+  }
+}
+
 async function fetchJustWatch(lang) {
   const langCode = lang === 'ml' ? 'MAL' : 'TAM';
   const langLabel = lang === 'ml' ? 'Malayalam' : 'Tamil';
 
-  // Attempt cascade: richest filter first → progressively simpler → always-workable fallback
+  // Attempt cascade: richest filter first → simplest. Fixes applied from the
+  // verified working client: explicit operationName + lowercase country code.
   const attempts = [
     { label: 'NEWEST+lang+monetization', sortBy: 'NEWEST',  filter: { objectTypes: ['MOVIE'], originalLanguages: [langCode], monetizationTypes: ['FLATRATE', 'FREE', 'ADS'] }, langFiltered: true  },
     { label: 'NEWEST+lang',              sortBy: 'NEWEST',  filter: { objectTypes: ['MOVIE'], originalLanguages: [langCode] },                                langFiltered: true  },
@@ -431,14 +458,13 @@ async function fetchJustWatch(lang) {
 
   for (const attempt of attempts) {
     try {
-      const titles  = await jwGraphql(attempt.sortBy, attempt.filter);
+      const titles  = await jwGraphql(attempt.label, attempt.sortBy, attempt.filter);
       const content = (titles.edges || []).map(e => e.node && e.node.content).filter(Boolean);
       console.log('[JustWatch] ' + attempt.label + ': ' + content.length + ' titles');
       if (content.length > 0) {
         contents = { items: content, langFiltered: attempt.langFiltered };
         break;
       }
-      // Empty result but valid response — try the next, simpler attempt
     } catch (e) {
       lastErr = e;
       console.warn('[JustWatch] ' + attempt.label + ' failed: ' + e.message);
@@ -447,13 +473,13 @@ async function fetchJustWatch(lang) {
 
   if (!contents) {
     console.warn('[JustWatch] All attempts failed: ' + (lastErr ? lastErr.message : 'unknown'));
+    // Self-diagnosis: ask the API what it actually accepts
+    await introspectJwSchema();
     await sendAlert('JustWatch failed: ' + (lastErr ? lastErr.message : 'unknown'));
     return [];
   }
 
   // ── Resolve each JustWatch title to a TMDB ID ──
-  // JustWatch usually provides tmdbId directly. Fallbacks: imdbId → TMDB /find,
-  // then title+year search. Titles TMDB doesn't know yet retry in 3 days.
   const resolved = [];
   const seenIds  = new Set();
 
@@ -461,7 +487,12 @@ async function fetchJustWatch(lang) {
     const title = (c.title || '').trim();
     if (!title) continue;
 
-    // Path A: JustWatch gave us the TMDB ID directly — zero API calls needed
+    // Language filter client-side if the query fallback was unfiltered
+    if (!contents.langFiltered && c.objectType) {
+      // JustWatch fallback path: processMovie's language guard handles this
+    }
+
+    // Path A: JustWatch gave us the TMDB ID directly
     const tmdbIdStr = c.externalIds && c.externalIds.tmdbId;
     const tmdbId    = tmdbIdStr ? parseInt(tmdbIdStr, 10) : NaN;
     if (!isNaN(tmdbId) && tmdbId > 0) {
@@ -480,7 +511,7 @@ async function fetchJustWatch(lang) {
       } catch (e) { console.warn('[JustWatch] Find failed for ' + imdbId + ': ' + e.message); }
     }
 
-    // Path C: title + year search (TMDB may not have indexed it yet — retry in 3 days)
+    // Path C: title + year search
     const retryKey = 'jw_title_' + title.toLowerCase().replace(/[^a-z0-9]/g, '_').slice(0, 50);
     if (readCacheEntry(movieCache[retryKey]) === 'retry') continue;
     try {
@@ -500,7 +531,6 @@ async function fetchJustWatch(lang) {
   console.log('[JustWatch] Resolved ' + resolved.length + ' titles to TMDB IDs');
   return resolved;
 }
-
 // ── MOVIES: TMDB DISCOVER (FOUNDATION) ────────────────────────────────────────
 
 async function discoverMovies(lang, lookbackDays) {
