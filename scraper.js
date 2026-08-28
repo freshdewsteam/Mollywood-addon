@@ -370,12 +370,21 @@ async function fetchSheetContent(filterLang, filterType) {
 }
 
 // ── JUSTWATCH (DAY-0 OTT DETECTION) ───────────────────────────────────────────
+// NOTE: JustWatch's API locale format has changed over the years.
+// We try the current format first (en_IN), then fall back to legacy (es_IN).
+const JW_ENDPOINTS = [
+  'https://apis.justwatch.com/content/titles/en_IN/popular',  // current format
+  'https://apis.justwatch.com/content/titles/es_IN/popular',  // legacy format
+];
+
+let jwWorkingEndpoint = null; // remember which endpoint worked this run
+
 function jwBody(contentType, langCodes) {
   return {
     age_certifications: null,
     content_types: [contentType],
     presentation_types: null,
-    providers: null,          // all providers (Hotstar, Prime, SonyLIV, Zee5, SunNXT, JioCinema...)
+    providers: null,
     genres: null,
     languages: langCodes,     // ISO 639-3: mal / tam
     release_year_from: null,
@@ -399,18 +408,41 @@ function jwBody(contentType, langCodes) {
 }
 
 async function fetchJustWatchPage(contentType, langCodes, page) {
-  const qs = '?language=en&page_size=50&page=' + page;
-  // Primary: POST with JSON body
-  try {
-    const text = await postJson(JW_URL + qs, jwBody(contentType, langCodes));
-    return JSON.parse(text);
-  } catch (postErr) {
-    // Fallback: GET with URL-encoded body param (older endpoint style)
-    console.warn('[JustWatch] POST failed (' + postErr.message + ') — trying GET fallback');
-    const bodyParam = encodeURIComponent(JSON.stringify(jwBody(contentType, langCodes)));
-    const text = await fetchUrl(JW_URL + qs + '&body=' + bodyParam);
-    return JSON.parse(text);
+  const qs   = '?language=en&page_size=50&page=' + page;
+  const body = jwBody(contentType, langCodes);
+
+  // If we already found a working endpoint this run, use only that one
+  const endpoints = jwWorkingEndpoint ? [jwWorkingEndpoint] : JW_ENDPOINTS;
+  let lastErr = null;
+
+  // Attempt 1: POST with JSON body (modern style)
+  for (const base of endpoints) {
+    try {
+      const text = await postJson(base + qs, body);
+      jwWorkingEndpoint = base;
+      return JSON.parse(text);
+    } catch (e) {
+      lastErr = e;
+      console.warn('[JustWatch] POST failed on ' + base + ' (' + e.message + ')');
+    }
   }
+
+  // Attempt 2: GET with URL-encoded body param (legacy style)
+  for (const base of endpoints) {
+    try {
+      const bodyParam = encodeURIComponent(JSON.stringify(body));
+      const text = await fetchUrl(base + qs + '&body=' + bodyParam);
+      const data = JSON.parse(text);
+      jwWorkingEndpoint = base;
+      console.log('[JustWatch] GET fallback worked on: ' + base);
+      return data;
+    } catch (e) {
+      lastErr = e;
+      console.warn('[JustWatch] GET failed on ' + base + ' (' + e.message + ')');
+    }
+  }
+
+  throw lastErr || new Error('All JustWatch endpoints failed');
 }
 
 async function fetchJustWatch(contentType, langCodes, maxPages) {
@@ -430,7 +462,6 @@ async function fetchJustWatch(contentType, langCodes, maxPages) {
   }
   return results;
 }
-
 function jwPosterUrl(posterPath) {
   if (!posterPath) return undefined;
   return 'https://images.justwatch.com' + posterPath.replace('{profile}', 's337');
