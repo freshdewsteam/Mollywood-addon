@@ -28,6 +28,18 @@
       ]
     },
     {
+      "id": "tt36670542",
+      "type": "movie",
+      "name": "Lurk",
+      "releaseInfo": "2026-08-24",
+      "description": "Man-animal conflict, exploring who the real predator is, man or animal, with inspiration from real incidents and forest life.\n\n📺 Streaming on: ETV\n📅 Release: 2026-08-24",
+      "poster": "https://image.tmdb.org/t/p/w500/a8YUKtD4zNRGY5OpZVg1M2gLlMW.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/9rF3CfdH7tXyeaiWp5POgfOpctU.jpg",
+      "genres": [
+        "Thriller"
+      ]
+    },
+    {
       "id": "tt37510017",
       "type": "movie",
       "name": "Thudakkam",
@@ -2999,5 +3011,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-28T10:57:46.226Z"
+  "builtAt": "2026-08-28T11:14:14.302Z"
 }
