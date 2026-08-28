@@ -1,6 +1,46 @@
 {
   "malayalam-movies": [
     {
+      "id": "tt26445387",
+      "type": "movie",
+      "name": "I, Nobody",
+      "releaseInfo": "2026-08-25",
+      "description": "Rajeevan, an ordinary government employee, witnesses something he was never meant to see and is thrust into the centre of a serious crime. Branded a troublemaker and hunted by the system, he must protect his family while fighting to survive against forces far beyond his control.\n\n📺 Streaming on: Jiohotstar\n📅 Release: 2026-08-25\n⭐ Rating: 6.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/qFJl3w9KpVXpfZ3rpmv7p0UYZkP.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/zNvSWIvca6aA0eq63JqzVvagqLI.jpg",
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt36580813",
+      "type": "movie",
+      "name": "Pluto",
+      "releaseInfo": "2026-08-24",
+      "description": "Follows the unexpected arrival of an extraterrestrial visitor in a quiet Kerala village, which turns everyday life completely upside down.\n\n📺 Streaming on: Saina Play\n📅 Release: 2026-08-24",
+      "poster": "https://image.tmdb.org/t/p/w500/pPxsw4KnZbsklyHUCTKSCHKaC8F.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/cSiQqEN2IbNxWXNZ2YLd32DSVrK.jpg",
+      "genres": [
+        "Science Fiction",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt37510017",
+      "type": "movie",
+      "name": "Thudakkam",
+      "releaseInfo": "2026-08-07",
+      "description": "When danger strikes, a young woman fights to survive through courage and determination.\n\n📺 Streaming on: ManoramaMax, ManoramaMAX Amazon Channel\n📅 Release: 2026-08-07\n⭐ Rating: 3.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/A8Y0QLNqaFvsergQe80tC6Nfa2k.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/xcvPY9Wk2TzZWQRynWSwHEhnK2j.jpg",
+      "genres": [
+        "Action",
+        "Drama"
+      ]
+    },
+    {
       "id": "tt35254624",
       "type": "movie",
       "name": "Balan - The Boy",
@@ -1459,6 +1499,19 @@
       "genres": [
         "Romance",
         "Comedy",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt33379543",
+      "type": "movie",
+      "name": "Jana nayagan",
+      "releaseInfo": "2026-08-21",
+      "description": "A clash of ideologies. One stands for the people, the other feeds on control. Their paths collided once before. Years later, a child’s silent fear ignites the past, drawing a former police officer into a battle far bigger than personal revenge.\n\n📺 Streaming on: Zee5\n📅 Release: 2026-08-21\n⭐ Rating: 5.4/10",
+      "poster": "https://image.tmdb.org/t/p/w500/jt8pfSIdi47YpFMMWVRr8w5u2S0.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/v3lNH2gCojWYXVuXcT9FZLBxcSq.jpg",
+      "genres": [
+        "Action",
         "Drama"
       ]
     },
@@ -2946,5 +2999,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-28T10:46:41.504Z"
+  "builtAt": "2026-08-28T10:57:46.226Z"
 }
