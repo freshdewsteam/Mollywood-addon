@@ -161,6 +161,7 @@ function postJson(url, payload) {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
         'Content-Length': Buffer.byteLength(body),
+        // Headers the official JustWatch web client sends (verified from working client code)
         'User-Agent': 'Mozilla/5.0 (compatible; SouthStreamsAddon/2.0)',
         'App-Version': '3.8.0-web-web'
       }
@@ -379,7 +380,6 @@ async function fetchSheetContent(filterLang, filterType) {
 }
 
 // ── JUSTWATCH (DAY-0 OTT DETECTION — GraphQL, self-diagnosing) ────────────────
-const JW_GRAPHQL_URL = 'https://apis.justwatch.com/graphql';
 
 function jwQuery(operationName, sortBy) {
   return `
@@ -441,16 +441,16 @@ async function introspectJwSchema() {
 }
 
 async function fetchJustWatch(lang) {
-  const langCode = lang === 'ml' ? 'MAL' : 'TAM';
+  const langCode  = lang === 'ml' ? 'MAL' : 'TAM';
   const langLabel = lang === 'ml' ? 'Malayalam' : 'Tamil';
 
   // Attempt cascade: richest filter first → simplest. Fixes applied from the
   // verified working client: explicit operationName + lowercase country code.
   const attempts = [
-    { label: 'NEWEST+lang+monetization', sortBy: 'NEWEST',  filter: { objectTypes: ['MOVIE'], originalLanguages: [langCode], monetizationTypes: ['FLATRATE', 'FREE', 'ADS'] }, langFiltered: true  },
-    { label: 'NEWEST+lang',              sortBy: 'NEWEST',  filter: { objectTypes: ['MOVIE'], originalLanguages: [langCode] },                                langFiltered: true  },
-    { label: 'NEWEST (client lang filter)', sortBy: 'NEWEST', filter: { objectTypes: ['MOVIE'] },                                                             langFiltered: false },
-    { label: 'POPULAR (client lang filter)', sortBy: 'POPULAR', filter: { objectTypes: ['MOVIE'] },                                                            langFiltered: false },
+    { label: 'Jw1', sortBy: 'NEWEST',  filter: { objectTypes: ['MOVIE'], originalLanguages: [langCode], monetizationTypes: ['FLATRATE', 'FREE', 'ADS'] }, langFiltered: true  },
+    { label: 'Jw2', sortBy: 'NEWEST',  filter: { objectTypes: ['MOVIE'], originalLanguages: [langCode] },                                langFiltered: true  },
+    { label: 'Jw3', sortBy: 'NEWEST',  filter: { objectTypes: ['MOVIE'] },                                                              langFiltered: false },
+    { label: 'Jw4', sortBy: 'POPULAR', filter: { objectTypes: ['MOVIE'] },                                                              langFiltered: false },
   ];
 
   let contents = null;
@@ -460,7 +460,7 @@ async function fetchJustWatch(lang) {
     try {
       const titles  = await jwGraphql(attempt.label, attempt.sortBy, attempt.filter);
       const content = (titles.edges || []).map(e => e.node && e.node.content).filter(Boolean);
-      console.log('[JustWatch] ' + attempt.label + ': ' + content.length + ' titles');
+      console.log('[JustWatch] ' + attempt.label + ' (' + attempt.sortBy + '): ' + content.length + ' titles');
       if (content.length > 0) {
         contents = { items: content, langFiltered: attempt.langFiltered };
         break;
@@ -480,6 +480,8 @@ async function fetchJustWatch(lang) {
   }
 
   // ── Resolve each JustWatch title to a TMDB ID ──
+  // JustWatch usually provides tmdbId directly. Fallbacks: imdbId → TMDB /find,
+  // then title+year search. Titles TMDB doesn't know yet retry in 3 days.
   const resolved = [];
   const seenIds  = new Set();
 
@@ -487,12 +489,7 @@ async function fetchJustWatch(lang) {
     const title = (c.title || '').trim();
     if (!title) continue;
 
-    // Language filter client-side if the query fallback was unfiltered
-    if (!contents.langFiltered && c.objectType) {
-      // JustWatch fallback path: processMovie's language guard handles this
-    }
-
-    // Path A: JustWatch gave us the TMDB ID directly
+    // Path A: JustWatch gave us the TMDB ID directly — zero API calls needed
     const tmdbIdStr = c.externalIds && c.externalIds.tmdbId;
     const tmdbId    = tmdbIdStr ? parseInt(tmdbIdStr, 10) : NaN;
     if (!isNaN(tmdbId) && tmdbId > 0) {
@@ -531,6 +528,7 @@ async function fetchJustWatch(lang) {
   console.log('[JustWatch] Resolved ' + resolved.length + ' titles to TMDB IDs');
   return resolved;
 }
+
 // ── MOVIES: TMDB DISCOVER (FOUNDATION) ────────────────────────────────────────
 
 async function discoverMovies(lang, lookbackDays) {
