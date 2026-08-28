@@ -434,6 +434,9 @@ async function introspectJwSchema() {
 async function fetchJustWatch(lang) {
   const langCode  = lang === 'ml' ? 'MAL' : 'TAM';
   const langLabel = lang === 'ml' ? 'Malayalam' : 'Tamil';
+    // Log the real schema every run — this reveals the correct language-filter
+  // field name straight from JustWatch (one cheap request).
+  await introspectJwSchema();
 
   // Attempt cascade: richest filter first → simplest.
   // POPULAR + objectTypes are the only combos verified working so far;
@@ -572,8 +575,9 @@ async function processMovie(item, lang, expectedLang) {
     }
 
     // Language guard for unfiltered JustWatch fallback results
-    if (expectedLang && detail.original_language &&
-        detail.original_language !== expectedLang && detail.original_language !== 'en') {
+     if (expectedLang && detail.original_language &&
+        detail.original_language !== expectedLang &&
+        (!strictLang || detail.original_language !== 'en')) {
       setSkip(movieCache, cacheKey);
       console.log('[Skip] Wrong language (' + detail.original_language + '): ' + (detail.title || ''));
       return null;
@@ -744,7 +748,7 @@ async function scrapeMovies(lang) {
     const cachedEntry    = readCacheEntry(movieCache[cacheKey]);
     const isNewDiscovery = cachedEntry === undefined || cachedEntry === 'retry';
 
-    const meta = await processMovie(jwItem, lang, lang);
+        const meta = await processMovie(jwItem, lang, lang, true);
     if (meta && meta.id && !processedImdbIds.has(meta.id) && !metas.some(m => m.id === meta.id)) {
       if (isNewDiscovery) {
         // Day-0 OTT stamp: JustWatch detected it streaming today → that IS its
