@@ -6,9 +6,10 @@
  * Enrichment → TMDB / OMDb API (posters, descriptions, IMDb IDs)
  *
  * Key principles:
- * - TMDB finds movies automatically. The Sheet manually adds missed movies & patches OTT dates.
- * - If a series has an IMDb ID → use it directly, never title-search-fallback
+ * - TMDB finds movies automatically. The Sheet adds missed movies & patches OTT dates.
+ * - If an item has an IMDb ID → use it directly, never title-search-fallback
  * - If no poster found → omit it entirely so Cinemeta/AIO Metadata can fill it
+ * - Failed title searches retry after 3 days (not 14) since the Sheet is manually curated
  */
 
 const https = require('https');
@@ -42,7 +43,7 @@ function loadCache() {
     if (fs.existsSync(MOVIE_CACHE_FILE)) {
       const raw   = JSON.parse(fs.readFileSync(MOVIE_CACHE_FILE, 'utf8'));
       movieCache  = raw._data || {};
-      seen        = raw._seen || {}; 
+      seen        = raw._seen || {};
       console.log('[Cache] Movies: ' + Object.keys(movieCache).length + ' entries');
     }
     if (fs.existsSync(SERIES_CACHE_FILE)) {
@@ -70,6 +71,7 @@ function saveCache() {
   }
 }
 
+// Read a cache entry — handles both old string format and new timed object format
 function readCacheEntry(entry) {
   if (entry === undefined) return undefined;
   if (entry === 'skip')  return 'skip';
@@ -77,8 +79,8 @@ function readCacheEntry(entry) {
   if (entry && typeof entry === 'object' && entry._status) {
     const age = Date.now() - (entry._at || 0);
     const ttl = entry._status === 'skip' ? SKIP_TTL : RETRY_TTL;
-    if (age < ttl) return entry._status;
-    return undefined;
+    if (age < ttl) return entry._status; // still within TTL
+    return undefined; // expired — treat as not cached, retry
   }
   if (entry && typeof entry === 'object' && entry.id) return entry;
   return undefined;
@@ -253,6 +255,9 @@ function buildMeta({ imdbId, type, title, platform, releaseDate, overview,
   if (releaseDate) desc += '\n📅 Release: ' + releaseDate;
   if (rating)      desc += '\n⭐ Rating: ' + Number(rating).toFixed(1) + '/10';
 
+  // If we don't have a poster, omit it entirely.
+  // Stremio's metadata addons (Cinemeta, AIO Metadata) will provide the
+  // correct poster when the user clicks the title.
   let poster   = posterUrl || (posterPath   ? IMG + 'w500'  + posterPath   : undefined);
   let backdrop = backdropUrl || (backdropPath ? IMG + 'w1280' + backdropPath : undefined);
 
@@ -299,12 +304,12 @@ async function fetchSheetContent(filterLang, filterType) {
     for (let i = 1; i < lines.length; i++) {
       if (!lines[i].trim()) continue;
       const row      = parseCSVRow(lines[i]);
-      const type     = (row[0] || '').toLowerCase().trim();   // Column A
-      const title    = (row[1] || '').trim();                 // Column B
-      const lang     = (row[2] || '').toLowerCase().trim();   // Column C
-      const platform = (row[3] || '').trim();                 // Column D
-      const dateRaw  = (row[4] || '').trim();                 // Column E
-      const imdbId   = (row[5] || '').trim();                 // Column F
+      const type     = (row[0] || '').toLowerCase().trim();   // Column A: type
+      const title    = (row[1] || '').trim();                 // Column B: title
+      const lang     = (row[2] || '').toLowerCase().trim();   // Column C: lang
+      const platform = (row[3] || '').trim();                 // Column D: platform
+      const dateRaw  = (row[4] || '').trim();                 // Column E: date
+      const imdbId   = (row[5] || '').trim();                 // Column F: imdbId
 
       if (!title) continue;
       if (!lang.includes(filterLang.toLowerCase())) continue;
@@ -384,26 +389,6 @@ async function processMovie(item, lang) {
       return null;
     }
 
-    // ── VERIFY DIGITAL RELEASE ──────────────────────────────────────────────
-    // Sometimes TMDB adds an OTT provider before the actual digital launch.
-    // We verify that India actually has a 'Digital' (Type 4) or 'TV' (Type 6) release date.
-    // If it only has a Theatrical (Type 3) date, we skip it as premature.
-    try {
-      const releaseData = await tmdb('/movie/' + item.id + '/release_dates');
-      const inReleases = (releaseData.results || []).find(r => r.iso_3166_1 === 'IN');
-      if (inReleases) {
-        const hasDigitalRelease = inReleases.release_dates.some(rd => rd.type === 4 || rd.type === 6);
-        if (!hasDigitalRelease) {
-          setSkip(movieCache, cacheKey);
-          console.log('[Skip] Premature OTT tag (Only Theatrical Date): ' + (detail.title || ''));
-          return null;
-        }
-      }
-    } catch(e) {
-      console.warn('[Release Dates] Failed for ' + item.id + ': ' + e.message);
-      // If the API call fails, we let the movie pass to avoid blocking valid movies on network errors
-    }
-
     const seenP    = new Set();
     const platform = all
       .filter(p => { if (seenP.has(p.provider_id)) return false; seenP.add(p.provider_id); return true; })
@@ -432,6 +417,7 @@ async function processMovie(item, lang) {
     return null;
   }
 }
+
 async function enrichMovie(imdbId, title, lang) {
   const cacheKey = imdbId && imdbId.startsWith('tt') ? imdbId : 'title_' + title.toLowerCase().replace(/[^a-z0-9]/g, '_').slice(0, 50);
   const cached   = readCacheEntry(movieCache[cacheKey]);
@@ -502,7 +488,7 @@ async function enrichMovie(imdbId, title, lang) {
         console.log('[Search] Matched: ' + best.title + ' (score: ' + bestScore + ')');
       } else {
         console.log('[Search] No confident match for movie: ' + title);
-        setSkip(movieCache, cacheKey);
+        setRetry(movieCache, cacheKey); // Retry in 3 days — TMDB may index it soon
         return null;
       }
     }
@@ -556,7 +542,7 @@ async function scrapeMovies(lang) {
   console.log('\n[Movies] ' + lang + ' | lookback: ' + lookback + 'd' + (isFirst ? ' (FIRST RUN)' : ''));
 
   const tmdbItems = await discoverMovies(lang, lookback);
-  
+
   for (let i = 0; i < tmdbItems.length; i++) {
     const meta = await processMovie(tmdbItems[i], lang);
     if (meta && meta.id) {
@@ -571,7 +557,7 @@ async function scrapeMovies(lang) {
   // --- STEP 2: GOOGLE SHEET (Patching OTT dates & filling gaps) ---
   console.log('\n[Movies] Checking ' + langLabel + ' Sheet for OTT date patches and missing movies...');
   const sheetItems = await fetchSheetContent(langLabel, 'movie');
-  
+
   for (const item of sheetItems.slice(0, 50)) {
     let checkId = item.imdbId || null;
 
@@ -592,10 +578,10 @@ async function scrapeMovies(lang) {
       const existingIndex = metas.findIndex(m => m.id === checkId);
       if (existingIndex !== -1) {
         const existingMeta = metas[existingIndex];
-        
+
         // Overwrite the old theatre date with the new OTT date from the Sheet
-        existingMeta.releaseInfo = item.date; 
-        
+        existingMeta.releaseInfo = item.date;
+
         // Rebuild the description to feature the OTT platform and accurate date
         let desc = existingMeta.overview || '';
         if (desc) desc += '\n\n';
@@ -603,10 +589,10 @@ async function scrapeMovies(lang) {
         desc += '\n📅 OTT Release: ' + item.date;
         if (existingMeta.rating) desc += '\n⭐ Rating: ' + Number(existingMeta.rating).toFixed(1) + '/10';
         existingMeta.description = desc.trim();
-        
+
         console.log('[Sheet Patch] ✅ Updated OTT date for ' + item.title + ' to ' + item.date);
       }
-      continue; 
+      continue;
     }
 
     // TMDB missed it entirely, process it from scratch using enrichMovie
@@ -637,7 +623,7 @@ async function scrapeMovies(lang) {
     await new Promise(r => setTimeout(r, 100));
   }
 
-  // Final Sort (Now correctly sorts by the patched OTT dates!)
+  // Final Sort (Sorts by the patched OTT dates!)
   metas.sort((a, b) => (b.releaseInfo || '').localeCompare(a.releaseInfo || ''));
   const finalResult = metas.slice(0, 100);
 
@@ -716,7 +702,7 @@ async function enrichSeries(imdbId, title, lang) {
         console.log('[Search] Matched: ' + best.name + ' (score: ' + bestScore + ')');
       } else {
         console.log('[Search] No confident match for series: ' + title);
-        setSkip(seriesCache, cacheKey);
+        setRetry(seriesCache, cacheKey); // Retry in 3 days — TMDB may index it soon
         return null;
       }
     }
