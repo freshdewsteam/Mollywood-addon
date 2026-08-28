@@ -571,7 +571,7 @@ async function processMovie(item, lang, expectedLang, strictLang) {
     // Language guard for JustWatch-sourced results
     if (expectedLang && detail.original_language &&
         detail.original_language !== expectedLang &&
-        (!strictLang || detail.original_language !== 'en')) {
+        (strictLang || detail.original_language !== 'en')) {
       setSkip(movieCache, cacheKey);
       console.log('[Skip] Wrong language (' + detail.original_language + '): ' + (detail.title || ''));
       return null;
