@@ -151,7 +151,7 @@ function fetchUrl(url) {
 
 function postJson(url, payload) {
   return new Promise((resolve, reject) => {
-    const body = JSON.stringify(payload);
+    const body = (typeof payload === 'string') ? payload : JSON.stringify(payload);
     const u    = new URL(url);
     const req  = https.request({
       hostname: u.hostname,
