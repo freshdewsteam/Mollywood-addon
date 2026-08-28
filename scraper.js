@@ -6,12 +6,6 @@
  * Series  → Google Sheet CSV (manually maintained, primary)
  * Enrichment → TMDB / OMDb API (posters, descriptions, IMDb IDs)
  *
- * Movie pipeline (all three share one dedup set — zero duplicates):
- *   1. JustWatch — newest OTT movies in India. Usually provides tmdbId/imdbId directly.
- *      New discoveries get today's date stamped as their OTT release date.
- *   2. TMDB Discover — catches anything JustWatch missed (30d window, 730d first run).
- *   3. Google Sheet — patches OTT dates/platforms + adds anything both sources missed.
- *
  * Key principles:
  * - If an item has an IMDb ID → use it directly, never title-search-fallback
  * - If no poster found → omit it entirely so Cinemeta/AIO Metadata can fill it
@@ -30,7 +24,7 @@ const WEBHOOK_URL = process.env.WEBHOOK_URL      || '';
 const BASE        = 'https://api.themoviedb.org/3';
 const IMG         = 'https://image.tmdb.org/t/p/';
 
-// JustWatch GraphQL — endpoint + App-Version header verified from a working client
+// JustWatch GraphQL — endpoint + headers verified from a working client
 const JW_GRAPHQL_URL = 'https://apis.justwatch.com/graphql';
 
 const MOVIE_CACHE_FILE  = path.join(__dirname, '..', 'data', 'movies-cache.json');
@@ -44,7 +38,7 @@ const RETRY_TTL       =  3 * 24 * 60 * 60 * 1000; //  3 days
 // ── CACHE ─────────────────────────────────────────────────────────────────────
 let movieCache  = {};
 let seriesCache = {};
-let seen        = {}; // Used for the 730-day first run logic
+let seen        = {};
 let cacheDirty  = false;
 
 function loadCache() {
@@ -80,7 +74,6 @@ function saveCache() {
   }
 }
 
-// Read a cache entry — handles both old string format and new timed object format
 function readCacheEntry(entry) {
   if (entry === undefined) return undefined;
   if (entry === 'skip')  return 'skip';
@@ -88,8 +81,8 @@ function readCacheEntry(entry) {
   if (entry && typeof entry === 'object' && entry._status) {
     const age = Date.now() - (entry._at || 0);
     const ttl = entry._status === 'skip' ? SKIP_TTL : RETRY_TTL;
-    if (age < ttl) return entry._status; // still within TTL
-    return undefined; // expired — treat as not cached, retry
+    if (age < ttl) return entry._status;
+    return undefined;
   }
   if (entry && typeof entry === 'object' && entry.id) return entry;
   return undefined;
@@ -151,6 +144,7 @@ function fetchUrl(url) {
 
 function postJson(url, payload) {
   return new Promise((resolve, reject) => {
+    // Defensive: accept a pre-encoded string OR an object (prevents double-encoding)
     const body = (typeof payload === 'string') ? payload : JSON.stringify(payload);
     const u    = new URL(url);
     const req  = https.request({
@@ -303,9 +297,6 @@ function buildMeta({ imdbId, type, title, platform, releaseDate, overview,
   if (releaseDate) desc += '\n📅 Release: ' + releaseDate;
   if (rating)      desc += '\n⭐ Rating: ' + Number(rating).toFixed(1) + '/10';
 
-  // If we don't have a poster, omit it entirely.
-  // Stremio's metadata addons (Cinemeta, AIO Metadata) will provide the
-  // correct poster when the user clicks the title.
   let poster   = posterUrl || (posterPath   ? IMG + 'w500'  + posterPath   : undefined);
   let backdrop = backdropUrl || (backdropPath ? IMG + 'w1280' + backdropPath : undefined);
 
@@ -407,7 +398,7 @@ query ` + operationName + `($filter: TitleFilter!, $country: Country!, $language
 const JW_INTROSPECTION_QUERY = `
 query SchemaPeek {
   titleFilter: __type(name: "TitleFilter") { inputFields { name } }
-  sortBy:      __type(name: "TitleSortBy") { enumValues { name } }
+  sorting:     __type(name: "PopularTitlesSorting") { enumValues { name } }
 }`;
 
 async function jwGraphql(operationName, sortBy, filter) {
@@ -430,10 +421,10 @@ async function introspectJwSchema() {
     const text = await postJson(JW_GRAPHQL_URL, JSON.stringify({ query: JW_INTROSPECTION_QUERY }));
     const data = JSON.parse(text);
     const tf = data.data && data.data.titleFilter;
-        const sb = data.data && data.data.sorting;
+    const sb = data.data && data.data.sorting;
     console.log('[JustWatch SCHEMA] Valid TitleFilter fields: ' +
       (tf && tf.inputFields ? tf.inputFields.map(f => f.name).join(', ') : 'unavailable'));
-    console.log('[JustWatch SCHEMA] Valid TitleSortBy values: ' +
+    console.log('[JustWatch SCHEMA] Valid PopularTitlesSorting values: ' +
       (sb && sb.enumValues ? sb.enumValues.map(v => v.name).join(', ') : 'unavailable'));
   } catch (e) {
     console.warn('[JustWatch SCHEMA] Introspection failed: ' + e.message);
@@ -444,13 +435,15 @@ async function fetchJustWatch(lang) {
   const langCode  = lang === 'ml' ? 'MAL' : 'TAM';
   const langLabel = lang === 'ml' ? 'Malayalam' : 'Tamil';
 
-  // Attempt cascade: richest filter first → simplest. Fixes applied from the
-  // verified working client: explicit operationName + lowercase country code.
-  const JW_INTROSPECTION_QUERY = `
-query SchemaPeek {
-  titleFilter: __type(name: "TitleFilter") { inputFields { name } }
-  sorting:     __type(name: "PopularTitlesSorting") { enumValues { name } }
-}`;
+  // Attempt cascade: richest filter first → simplest.
+  // POPULAR + objectTypes are the only combos verified working so far;
+  // NEW is our best guess for "newest" sorting.
+  const attempts = [
+    { label: 'Jw1', sortBy: 'NEW',     filter: { objectTypes: ['MOVIE'], originalLanguages: [langCode], monetizationTypes: ['FLATRATE', 'FREE', 'ADS'] }, langFiltered: true  },
+    { label: 'Jw2', sortBy: 'NEW',     filter: { objectTypes: ['MOVIE'], originalLanguages: [langCode] },                                langFiltered: true  },
+    { label: 'Jw3', sortBy: 'POPULAR', filter: { objectTypes: ['MOVIE'], originalLanguages: [langCode] },                                langFiltered: true  },
+    { label: 'Jw4', sortBy: 'POPULAR', filter: { objectTypes: ['MOVIE'] },                                                              langFiltered: false },
+  ];
 
   let contents = null;
   let lastErr  = null;
@@ -472,15 +465,12 @@ query SchemaPeek {
 
   if (!contents) {
     console.warn('[JustWatch] All attempts failed: ' + (lastErr ? lastErr.message : 'unknown'));
-    // Self-diagnosis: ask the API what it actually accepts
     await introspectJwSchema();
     await sendAlert('JustWatch failed: ' + (lastErr ? lastErr.message : 'unknown'));
     return [];
   }
 
   // ── Resolve each JustWatch title to a TMDB ID ──
-  // JustWatch usually provides tmdbId directly. Fallbacks: imdbId → TMDB /find,
-  // then title+year search. Titles TMDB doesn't know yet retry in 3 days.
   const resolved = [];
   const seenIds  = new Set();
 
@@ -748,7 +738,7 @@ async function scrapeMovies(lang) {
   console.log('\n[Movies] Fetching ' + langLabel + ' from JustWatch (day-0 detection)...');
   const jwItems = await fetchJustWatch(lang);
   for (const jwItem of jwItems) {
-    // Reuse processMovie — it handles providers, platform, poster, cache & IMDb ID.
+    // Reuse processMovie — handles providers, platform, poster, cache & IMDb ID.
     // Pass lang as expectedLang to guard against unfiltered JustWatch fallback results.
     const cacheKey = lang + '_' + jwItem.id;
     const cachedEntry    = readCacheEntry(movieCache[cacheKey]);
@@ -757,9 +747,8 @@ async function scrapeMovies(lang) {
     const meta = await processMovie(jwItem, lang, lang);
     if (meta && meta.id && !processedImdbIds.has(meta.id) && !metas.some(m => m.id === meta.id)) {
       if (isNewDiscovery) {
-        // Day-0 OTT stamp: JustWatch detected it streaming today → that IS its OTT
-        // date. Fixes the "old theatrical date" sorting problem automatically.
-        // The Sheet patch can still overwrite this with the exact date if known.
+        // Day-0 OTT stamp: JustWatch detected it streaming today → that IS its
+        // OTT date. The Sheet patch can still overwrite it with the exact date.
         meta.releaseInfo = today();
         movieCache[cacheKey] = meta;
         cacheDirty = true;
