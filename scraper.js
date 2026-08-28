@@ -1,17 +1,16 @@
 /**
  * scraper.js — South Streams
  *
- * Movies  → JustWatch (day-0 OTT detection) → TMDB Auto-Discover (foundation)
+ * Movies  → JustWatch GraphQL (day-0 OTT detection) → TMDB Auto-Discover (foundation)
  *           → Google Sheet (patching + gap fill)
  * Series  → Google Sheet CSV (manually maintained, primary)
  * Enrichment → TMDB / OMDb API (posters, descriptions, IMDb IDs)
  *
- * Pipeline (movies):
- *   1. JustWatch  — newest OTT additions in India, same-day. Resolves IMDb IDs
- *                   via TMDB title+year search. OTT date stamped as discovery date.
+ * Movie pipeline (all three share one dedup set — zero duplicates):
+ *   1. JustWatch — newest OTT movies in India. Usually provides tmdbId/imdbId directly.
+ *      New discoveries get today's date stamped as their OTT release date.
  *   2. TMDB Discover — catches anything JustWatch missed (30d window, 730d first run).
- *   3. Google Sheet — patches OTT dates/platforms + adds anything both missed.
- *   All three share one dedup set — zero duplicates.
+ *   3. Google Sheet — patches OTT dates/platforms + adds anything both sources missed.
  *
  * Key principles:
  * - If an item has an IMDb ID → use it directly, never title-search-fallback
@@ -31,8 +30,8 @@ const WEBHOOK_URL = process.env.WEBHOOK_URL      || '';
 const BASE        = 'https://api.themoviedb.org/3';
 const IMG         = 'https://image.tmdb.org/t/p/';
 
-const JW_URL = 'https://apis.justwatch.com/content/titles/es_IN/popular';
-const JW_PAGES = 2; // 2 pages x 50 = 100 newest OTT titles per language
+// JustWatch GraphQL — endpoint + App-Version header verified from a working client
+const JW_GRAPHQL_URL = 'https://apis.justwatch.com/graphql';
 
 const MOVIE_CACHE_FILE  = path.join(__dirname, '..', 'data', 'movies-cache.json');
 const SERIES_CACHE_FILE = path.join(__dirname, '..', 'data', 'series-cache.json');
@@ -162,7 +161,9 @@ function postJson(url, payload) {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
         'Content-Length': Buffer.byteLength(body),
-        'User-Agent': 'SouthStreams/2.0'
+        // Headers the official JustWatch web client sends (verified from working client code)
+        'User-Agent': 'Mozilla/5.0 (compatible; SouthStreamsAddon/2.0)',
+        'App-Version': '3.8.0-web-web'
       }
     }, (res) => {
       if (res.statusCode !== 200) return reject(new Error('HTTP ' + res.statusCode));
@@ -296,6 +297,9 @@ function buildMeta({ imdbId, type, title, platform, releaseDate, overview,
   if (releaseDate) desc += '\n📅 Release: ' + releaseDate;
   if (rating)      desc += '\n⭐ Rating: ' + Number(rating).toFixed(1) + '/10';
 
+  // If we don't have a poster, omit it entirely.
+  // Stremio's metadata addons (Cinemeta, AIO Metadata) will provide the
+  // correct poster when the user clicks the title.
   let poster   = posterUrl || (posterPath   ? IMG + 'w500'  + posterPath   : undefined);
   let backdrop = backdropUrl || (backdropPath ? IMG + 'w1280' + backdropPath : undefined);
 
@@ -369,60 +373,39 @@ async function fetchSheetContent(filterLang, filterType) {
   }
 }
 
-// ── JUSTWATCH (DAY-0 OTT DETECTION — GraphQL API) ─────────────────────────────
-// JustWatch retired the old REST API (apis.justwatch.com → 404).
-// Their website now uses GraphQL at graph.justwatch.com — so do we.
-const JW_GRAPHQL_URL = 'https://graph.justwatch.com/graphql';
+// ── JUSTWATCH (DAY-0 OTT DETECTION — GraphQL, verified against working client) ─
+// Query shape mirrors the verified Jellyfin plugin client (query structure, endpoint,
+// App-Version header). Filter fields are tried in a cascade so that if one field
+// name is rejected, simpler filters still succeed.
 
-const JW_QUERY_FULL = `
-  query GetPopularTitles($country: Country!, $first: Int!, $filter: TitleFilter!, $language: Language!, $sortBy: TitleSortBy!) {
-    popularTitles(country: $country, first: $first, filter: $filter, sortBy: $sortBy) {
-      totalCount
-      edges {
-        node {
-          id
-          objectId
-          contentTypes
-          title
-          originalReleaseYear
-          originalLanguage
-          shortDescription
-          posterUrl(profile: S337, format: JPG)
-          externalIds { imdbId }
-          offers(country: $country, platform: WEB) {
-            monetizationType
-            package { clearName shortName }
+function jwQuery(sortBy) {
+  return `
+query Discover($filter: TitleFilter!, $country: Country!, $language: Language!, $first: Int!) {
+  popularTitles(country: $country, filter: $filter, first: $first, sortBy: ` + sortBy + `) {
+    edges {
+      node {
+        __typename
+        ... on MovieOrShow {
+          objectType
+          content(country: $country, language: $language) {
+            title
+            originalReleaseYear
+            fullPath
+            externalIds { imdbId tmdbId }
           }
         }
       }
     }
   }
-`;
+}`;
+}
 
-// Minimal fallback — used if the full query errors (e.g. schema drift)
-const JW_QUERY_MINIMAL = `
-  query GetPopularTitles($country: Country!, $first: Int!, $filter: TitleFilter!, $language: Language!, $sortBy: TitleSortBy!) {
-    popularTitles(country: $country, first: $first, filter: $filter, sortBy: $sortBy) {
-      totalCount
-      edges {
-        node {
-          id
-          objectId
-          title
-          originalReleaseYear
-          originalLanguage
-          offers(country: $country, platform: WEB) {
-            monetizationType
-            package { clearName shortName }
-          }
-        }
-      }
-    }
-  }
-`;
-
-async function jwGraphqlRequest(query, variables) {
-  const text = await postJson(JW_GRAPHQL_URL, JSON.stringify({ query, variables }));
+async function jwGraphql(sortBy, filter) {
+  const payload = JSON.stringify({
+    query: jwQuery(sortBy),
+    variables: { country: 'IN', language: 'en', first: 100, filter }
+  });
+  const text = await postJson(JW_GRAPHQL_URL, payload);
   const data = JSON.parse(text);
   if (data.errors && data.errors.length) {
     throw new Error('GraphQL: ' + data.errors.map(e => e.message).join(' | '));
@@ -431,201 +414,91 @@ async function jwGraphqlRequest(query, variables) {
   return data.data.popularTitles;
 }
 
-// Convert GraphQL node → the REST-style shape the rest of the scraper expects
-function normalizeJwNode(node) {
-  if (!node) return null;
-  const offers = (node.offers || []).map(o => ({
-    monetization_type: (o.monetizationType || '').toLowerCase(),
-    package: { clear_name: o.package && o.package.clearName, short_name: o.package && o.package.shortName },
-  }));
-  return {
-    id: node.objectId || node.id,
-    title: node.title || '',
-    original_release_year: node.originalReleaseYear || null,
-    original_language: node.originalLanguage ? String(node.originalLanguage).toLowerCase() : null,
-    short_description: node.shortDescription || '',
-    poster: node.posterUrl || null, // full URL already (no {profile} template)
-    external_ids: node.externalIds && node.externalIds.imdbId ? { imdb_id: node.externalIds.imdbId } : null,
-    offers,
-  };
-}
+async function fetchJustWatch(lang) {
+  const langCode = lang === 'ml' ? 'MAL' : 'TAM';
+  const langLabel = lang === 'ml' ? 'Malayalam' : 'Tamil';
 
-async function fetchJustWatch(contentType, langCodes, maxPages) {
-  const variables = {
-    country: 'IN',
-    language: 'EN',
-    first: 100,
-    sortBy: 'NEWEST',
-    filter: {
-      contentTypes: [contentType === 'series' ? 'SHOW' : 'MOVIE'],
-      originalLanguages: langCodes, // ['MAL'] / ['TAM']
-      monetizationTypes: ['FLATRATE', 'FREE', 'ADS'],
-    },
-  };
+  // Attempt cascade: richest filter first → progressively simpler → always-workable fallback
+  const attempts = [
+    { label: 'NEWEST+lang+monetization', sortBy: 'NEWEST',  filter: { objectTypes: ['MOVIE'], originalLanguages: [langCode], monetizationTypes: ['FLATRATE', 'FREE', 'ADS'] }, langFiltered: true  },
+    { label: 'NEWEST+lang',              sortBy: 'NEWEST',  filter: { objectTypes: ['MOVIE'], originalLanguages: [langCode] },                                langFiltered: true  },
+    { label: 'NEWEST (client lang filter)', sortBy: 'NEWEST', filter: { objectTypes: ['MOVIE'] },                                                             langFiltered: false },
+    { label: 'POPULAR (client lang filter)', sortBy: 'POPULAR', filter: { objectTypes: ['MOVIE'] },                                                            langFiltered: false },
+  ];
 
-  // Attempt 1: full query, language filter baked in
-  try {
-    const titles = await jwGraphqlRequest(JW_QUERY_FULL, variables);
-    const items  = (titles.edges || []).map(e => normalizeJwNode(e.node)).filter(Boolean);
-    console.log('[JustWatch] GraphQL OK (full): ' + items.length + ' ' + contentType + ' titles');
-    return items;
-  } catch (e) {
-    console.warn('[JustWatch] Full query failed: ' + e.message);
+  let contents = null;
+  let lastErr  = null;
+
+  for (const attempt of attempts) {
+    try {
+      const titles  = await jwGraphql(attempt.sortBy, attempt.filter);
+      const content = (titles.edges || []).map(e => e.node && e.node.content).filter(Boolean);
+      console.log('[JustWatch] ' + attempt.label + ': ' + content.length + ' titles');
+      if (content.length > 0) {
+        contents = { items: content, langFiltered: attempt.langFiltered };
+        break;
+      }
+      // Empty result but valid response — try the next, simpler attempt
+    } catch (e) {
+      lastErr = e;
+      console.warn('[JustWatch] ' + attempt.label + ' failed: ' + e.message);
+    }
   }
 
-  // Attempt 2: minimal query WITHOUT language filter → filter client-side
-  try {
-    const minimalVars = JSON.parse(JSON.stringify(variables));
-    delete minimalVars.filter.originalLanguages;
-    const titles    = await jwGraphqlRequest(JW_QUERY_MINIMAL, minimalVars);
-    const wanted    = langCodes.map(c => c.toLowerCase());
-    const allItems  = (titles.edges || []).map(e => normalizeJwNode(e.node)).filter(Boolean);
-    const items     = allItems.filter(it => it.original_language && wanted.includes(it.original_language));
-    console.log('[JustWatch] GraphQL OK (minimal): ' + allItems.length + ' total, ' + items.length + ' matching language');
-    return items;
-  } catch (e) {
-    console.warn('[JustWatch] Minimal query also failed: ' + e.message);
-    await sendAlert('JustWatch GraphQL failed: ' + e.message);
+  if (!contents) {
+    console.warn('[JustWatch] All attempts failed: ' + (lastErr ? lastErr.message : 'unknown'));
+    await sendAlert('JustWatch failed: ' + (lastErr ? lastErr.message : 'unknown'));
     return [];
   }
-}
-function jwPosterUrl(posterPath) {
-  if (!posterPath) return undefined;
-  return 'https://images.justwatch.com' + posterPath.replace('{profile}', 's337');
-}
 
-function jwPlatforms(item) {
-  const seen = new Set();
-  const names = [];
-  for (const o of (item.offers || [])) {
-    if (!['flatrate', 'free', 'ads'].includes(o.monetization_type)) continue;
-    const name = o.package && (o.package.clear_name || o.package.short_name);
-    if (!name) continue;
-    const key = name.toLowerCase();
-    if (seen.has(key)) continue;
-    seen.add(key);
-    names.push(name);
-  }
-  return names.join(', ');
-}
+  // ── Resolve each JustWatch title to a TMDB ID ──
+  // JustWatch usually provides tmdbId directly. Fallbacks: imdbId → TMDB /find,
+  // then title+year search. Titles TMDB doesn't know yet retry in 3 days.
+  const resolved = [];
+  const seenIds  = new Set();
 
-async function processJustWatchItem(item, lang, processedImdbIds) {
-  const jwKey = 'jw_' + lang + '_' + item.id;
-  const cached = readCacheEntry(movieCache[jwKey]);
+  for (const c of contents.items) {
+    const title = (c.title || '').trim();
+    if (!title) continue;
 
-  if (cached === 'skip')  return null;
-  if (cached === 'retry') { /* fall through — TMDB may have indexed it by now */ }
-  else if (cached) {
-    // Already resolved in a previous run — no API calls needed
-    if (cached.id && processedImdbIds.has(cached.id)) return null;
-    if (cached.id) processedImdbIds.add(cached.id);
-    return cached;
-  }
-
-  try {
-    const jwTitle = (item.title || '').trim();
-    const year    = item.original_release_year || null;
-    if (!jwTitle) { setSkip(movieCache, jwKey); return null; }
-
-    // ── Step 1: JustWatch sometimes provides the IMDb ID directly ──
-    let imdbId = (item.external_ids && item.external_ids.imdb_id) ? item.external_ids.imdb_id : null;
-    let tmdbMovieId = null;
-
-    // ── Step 2: Otherwise resolve via TMDB title + year search (very reliable) ──
-    if (!imdbId) {
-      const yearParam = year ? '&primary_release_year=' + year : '';
-      try {
-        const data = await tmdb('/search/movie?query=' + encodeURIComponent(jwTitle) + '&language=en-US&page=1' + yearParam);
-        let best = null, bestScore = -1;
-        for (const r of (data.results || [])) {
-          let sc = 0;
-          const rt = (r.title || '').toLowerCase(), vl = jwTitle.toLowerCase();
-          if (rt === vl)              sc += 100;
-          else if (rt.includes(vl))   sc += 40;
-          else if (vl.includes(rt))   sc += 40;
-          if (r.original_language === lang)                                      sc += 50;
-          if (Array.isArray(r.origin_country) && r.origin_country.includes('IN')) sc += 30;
-          if (r.original_language !== lang && r.original_language !== 'en')      sc -= 50;
-          if (year && r.release_date && r.release_date.startsWith(String(year))) sc += 20;
-          if (year && r.release_date && !r.release_date.startsWith(String(year))) sc -= 40;
-          if (sc > bestScore) { bestScore = sc; best = r; }
-        }
-        if (best && bestScore >= 70 &&
-            (best.original_language === lang || (Array.isArray(best.origin_country) && best.origin_country.includes('IN')))) {
-          tmdbMovieId = best.id;
-          console.log('[JustWatch] "' + jwTitle + '" -> TMDB ' + tmdbMovieId + ' (score ' + bestScore + ')');
-        }
-      } catch(e) { console.warn('[JustWatch] Search failed for "' + jwTitle + '": ' + e.message); }
+    // Path A: JustWatch gave us the TMDB ID directly — zero API calls needed
+    const tmdbIdStr = c.externalIds && c.externalIds.tmdbId;
+    const tmdbId    = tmdbIdStr ? parseInt(tmdbIdStr, 10) : NaN;
+    if (!isNaN(tmdbId) && tmdbId > 0) {
+      if (!seenIds.has(tmdbId)) { seenIds.add(tmdbId); resolved.push({ id: tmdbId }); }
+      continue;
     }
 
-    // ── Step 3: Nothing resolvable yet → retry in 3 days ──
-    if (!imdbId && !tmdbMovieId) {
-      console.log('[JustWatch] "' + jwTitle + '" not yet on TMDB — will retry');
-      setRetry(movieCache, jwKey);
-      return null;
-    }
-
-    // ── Step 4: Fetch TMDB details + resolve IMDb ID ──
-    if (!tmdbMovieId && imdbId) {
+    // Path B: IMDb ID → TMDB /find
+    const imdbId = c.externalIds && c.externalIds.imdbId;
+    if (imdbId) {
       try {
-        const data = await tmdb('/find/' + imdbId + '?external_source=imdb_id');
+        const data  = await tmdb('/find/' + imdbId + '?external_source=imdb_id');
         const movie = (data.movie_results || [])[0];
-        if (movie) tmdbMovieId = movie.id;
-      } catch(e) {}
+        if (movie && !seenIds.has(movie.id)) { seenIds.add(movie.id); resolved.push({ id: movie.id }); }
+        continue;
+      } catch (e) { console.warn('[JustWatch] Find failed for ' + imdbId + ': ' + e.message); }
     }
 
-    let detail = {};
-    if (tmdbMovieId) {
-      try { detail = await tmdb('/movie/' + tmdbMovieId + '?language=en-US'); } catch(e) {}
-      if (!imdbId) {
-        try {
-          const ext = await tmdb('/movie/' + tmdbMovieId + '/external_ids');
-          imdbId = ext.imdb_id || null;
-        } catch(e) {}
+    // Path C: title + year search (TMDB may not have indexed it yet — retry in 3 days)
+    const retryKey = 'jw_title_' + title.toLowerCase().replace(/[^a-z0-9]/g, '_').slice(0, 50);
+    if (readCacheEntry(movieCache[retryKey]) === 'retry') continue;
+    try {
+      const yearParam = c.originalReleaseYear ? '&primary_release_year=' + c.originalReleaseYear : '';
+      const data = await tmdb('/search/movie?query=' + encodeURIComponent(title) + '&language=en-US&page=1' + yearParam);
+      const r    = (data.results || [])[0];
+      if (r && !seenIds.has(r.id)) { seenIds.add(r.id); resolved.push({ id: r.id }); }
+      else {
+        console.log('[JustWatch] "' + title + '" not on TMDB yet — will retry');
+        setRetry(movieCache, retryKey);
       }
-    }
+    } catch (e) { console.warn('[JustWatch] Search failed for "' + title + '": ' + e.message); }
 
-    if (!imdbId) {
-      console.log('[JustWatch] "' + jwTitle + '" has no IMDb ID — skip');
-      setSkip(movieCache, jwKey);
-      return null;
-    }
-
-    // ── Step 5: Already added by another source? Cache & skip ──
-    if (processedImdbIds.has(imdbId)) {
-      setSkip(movieCache, jwKey);
-      return null;
-    }
-
-    // ── Step 6: Build meta ──
-    // JustWatch detects titles on day 0 of their OTT release, so today = the OTT date.
-    // The Sheet patch can still overwrite this with the exact date if you know it.
-    const platform = jwPlatforms(item);
-    const ottDate  = today();
-
-    const meta = buildMeta({
-      imdbId:      imdbId,
-      type:        'movie',
-      title:       (detail.title || jwTitle),
-      platform,
-      releaseDate: ottDate,
-      overview:    detail.overview || item.short_description || '',
-      rating:      detail.vote_average || null,
-      posterUrl:   (detail.poster_path ? IMG + 'w500' + detail.poster_path : jwPosterUrl(item.poster)),
-      backdropUrl: detail.backdrop_path ? IMG + 'w1280' + detail.backdrop_path : undefined,
-      genres:      (detail.genres || []).map(g => g.name),
-    });
-
-    movieCache[jwKey] = meta;
-    cacheDirty = true;
-    processedImdbIds.add(imdbId);
-    console.log('[JustWatch OK] ' + meta.name + ' -> ' + imdbId + ' on ' + platform);
-    return meta;
-  } catch (e) {
-    console.warn('[JustWatch] Failed for "' + (item.title || '?') + '": ' + e.message);
-    setRetry(movieCache, jwKey);
-    return null;
+    await new Promise(r => setTimeout(r, 100));
   }
+
+  console.log('[JustWatch] Resolved ' + resolved.length + ' titles to TMDB IDs');
+  return resolved;
 }
 
 // ── MOVIES: TMDB DISCOVER (FOUNDATION) ────────────────────────────────────────
@@ -660,7 +533,10 @@ async function discoverMovies(lang, lookbackDays) {
   return results;
 }
 
-async function processMovie(item, lang) {
+// expectedLang (optional): when set, rejects movies whose TMDB original_language
+// doesn't match. Used by the JustWatch path when its fallback query isn't
+// language-filtered. Discover path doesn't pass it (it pre-filters already).
+async function processMovie(item, lang, expectedLang) {
   const langPfx  = lang + '_';
   const cacheKey = langPfx + item.id;
   const cached   = readCacheEntry(movieCache[cacheKey]);
@@ -675,6 +551,14 @@ async function processMovie(item, lang) {
     if (!detail.imdb_id) {
       setSkip(movieCache, cacheKey);
       console.log('[Skip] No IMDb ID: ' + (detail.title || ''));
+      return null;
+    }
+
+    // Language guard for unfiltered JustWatch fallback results
+    if (expectedLang && detail.original_language &&
+        detail.original_language !== expectedLang && detail.original_language !== 'en') {
+      setSkip(movieCache, cacheKey);
+      console.log('[Skip] Wrong language (' + detail.original_language + '): ' + (detail.title || ''));
       return null;
     }
 
@@ -834,12 +718,28 @@ async function scrapeMovies(lang) {
   const processedImdbIds = new Set();
 
   // --- STEP 1: JUSTWATCH (Day-0 OTT detection) ---
-  const jwLangCodes = lang === 'ml' ? ['mal'] : ['tam'];
   console.log('\n[Movies] Fetching ' + langLabel + ' from JustWatch (day-0 detection)...');
-  const jwItems = await fetchJustWatch('movie', jwLangCodes, JW_PAGES);
+  const jwItems = await fetchJustWatch(lang);
   for (const jwItem of jwItems) {
-    const meta = await processJustWatchItem(jwItem, lang, processedImdbIds);
-    if (meta && meta.id && !metas.some(m => m.id === meta.id)) metas.push(meta);
+    // Reuse processMovie — it handles providers, platform, poster, cache & IMDb ID.
+    // Pass lang as expectedLang to guard against unfiltered JustWatch fallback results.
+    const cacheKey = lang + '_' + jwItem.id;
+    const cachedEntry    = readCacheEntry(movieCache[cacheKey]);
+    const isNewDiscovery = cachedEntry === undefined || cachedEntry === 'retry';
+
+    const meta = await processMovie(jwItem, lang, lang);
+    if (meta && meta.id && !processedImdbIds.has(meta.id) && !metas.some(m => m.id === meta.id)) {
+      if (isNewDiscovery) {
+        // Day-0 OTT stamp: JustWatch detected it streaming today → that IS its OTT
+        // date. Fixes the "old theatrical date" sorting problem automatically.
+        // The Sheet patch can still overwrite this with the exact date if known.
+        meta.releaseInfo = today();
+        movieCache[cacheKey] = meta;
+        cacheDirty = true;
+      }
+      metas.push(meta);
+      processedImdbIds.add(meta.id);
+    }
     await new Promise(r => setTimeout(r, 100));
   }
   console.log('[Movies] ' + metas.length + ' after JustWatch');
@@ -882,7 +782,8 @@ async function scrapeMovies(lang) {
       }
     }
 
-    // SMART PATCH: already added by JustWatch/TMDB, BUT the Sheet has a more accurate OTT date!
+    // SMART PATCH: already added by JustWatch/TMDB, BUT the Sheet has a more
+    // accurate OTT date! Overwrite the date, keep the rest of the metadata.
     if (checkId && processedImdbIds.has(checkId)) {
       const existingIndex = metas.findIndex(m => m.id === checkId);
       if (existingIndex !== -1) {
@@ -902,7 +803,7 @@ async function scrapeMovies(lang) {
       continue;
     }
 
-    // TMDB & JustWatch both missed it — process from scratch
+    // JustWatch & TMDB both missed it — process from scratch
     const tmdbData    = await enrichMovie(item.imdbId, item.title, lang);
     const finalImdbId = item.imdbId || (tmdbData && tmdbData.imdbId) || checkId || null;
 
