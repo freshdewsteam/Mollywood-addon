@@ -1309,7 +1309,7 @@
       "type": "series",
       "name": "Cousins and Kalyanams",
       "releaseInfo": "2026-05-29",
-      "description": "A 26-year tale of six cousins in Kerala whose lives and relationships revolve around seven weddings.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-05-29\n⭐ Rating: 4.0/10",
+      "description": "A 26-year tale of six cousins in Kerala whose lives and relationships revolve around seven weddings.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-05-29\n⭐ Rating: 5.0/10",
       "poster": "https://image.tmdb.org/t/p/w500/cEfHZNS071Qa0ycrUhySEjRdXXB.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/cEfpO6QG5Ks5cTJ8bRrZJiDYKUH.jpg",
       "genres": [
@@ -2848,11 +2848,12 @@
       "type": "series",
       "name": "Heart Beat",
       "releaseInfo": "2026-07-30",
-      "description": "RK Multispeciality Hospital is a beacon of hope and healing. Its doctors are resilient even when they have to deal with medical and personal challenges.\n\n📺 Streaming on: Jiohotstar\n📅 Release: 2026-07-30\n⭐ Rating: 7.8/10",
+      "description": "RK Multispeciality Hospital is a beacon of hope and healing. Its doctors are resilient even when they have to deal with medical and personal challenges.\n\n📺 Streaming on: Jiohotstar\n📅 Release: 2026-07-30\n⭐ Rating: 8.2/10",
       "poster": "https://image.tmdb.org/t/p/w500/aHEr565AkKrwC7Q18u3OEjGavyj.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/t0btQjhAnL0z6I4QYB5KEPyl5Gb.jpg",
       "genres": [
-        "Drama"
+        "Drama",
+        "Comedy"
       ]
     },
     {
@@ -2892,7 +2893,7 @@
       "type": "series",
       "name": "Brothers and Sisters",
       "releaseInfo": "2026-05-27",
-      "description": "Bound by love and unspoken truths, Shanmuga Sundaram and his devoted family's lives revolve around shared rituals... till hidden cracks begin to surface.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-05-27\n⭐ Rating: 8.0/10",
+      "description": "Bound by love and unspoken truths, Shanmuga Sundaram and his devoted family's lives revolve around shared rituals... till hidden cracks begin to surface.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-05-27\n⭐ Rating: 9.0/10",
       "poster": "https://image.tmdb.org/t/p/w500/dUmJyNe5UT301KwVWrxctpP2sqU.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/vOXCP8gDeChnUyDVro0jUaT7Acr.jpg",
       "genres": [
@@ -2959,7 +2960,7 @@
       "type": "series",
       "name": "Resort",
       "releaseInfo": "2026-03-12",
-      "description": "A debt-ridden room service boy rises to challenge a ruthless kitchen at a luxurious beachside haven.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-03-12",
+      "description": "A debt-ridden room service boy rises to challenge a ruthless kitchen at a luxurious beachside haven.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-03-12\n⭐ Rating: 10.0/10",
       "poster": "https://image.tmdb.org/t/p/w500/cL7iOwqapRRb7eKKlXI4FDaP6rh.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/wQ1cpJW9uxfKmO8msAF5z4edK63.jpg",
       "genres": [
@@ -3037,5 +3038,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-29T01:57:54.655Z"
+  "builtAt": "2026-08-29T08:09:43.943Z"
 }
