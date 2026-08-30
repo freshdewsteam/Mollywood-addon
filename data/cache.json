@@ -1,6 +1,17 @@
 {
   "malayalam-movies": [
     {
+      "id": "tt12140194",
+      "type": "movie",
+      "name": "Kenjira",
+      "releaseInfo": "2026-08-29",
+      "description": "Kenjira, a Paniya tribal girl in Wayanad, Kerala, lives amid poverty and caste discrimination. Her community endures bonded labor under landlords, lacking basic needs like education and healthcare.\n\n📺 Streaming on: ManoramaMAX Amazon Channel\n📅 Release: 2019-11-21",
+      "poster": "https://image.tmdb.org/t/p/w500/gB4hO3Qm5iLhX3EYdd3KAFAbJo0.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
       "id": "tt35815094",
       "type": "movie",
       "name": "Angam Attahasam",
@@ -1043,7 +1054,7 @@
       "type": "movie",
       "name": "Lokah Chapter 1: Chandra",
       "releaseInfo": "2025-08-28",
-      "description": "The story follows Chandra, a mysterious, goth-influenced woman who has just moved to Bangalore and begins working night shifts at a café. Across the road from her apartment live Sunny and Venu, two aimless bachelors. Sunny becomes infatuated with Chandra, observing her odd routines, strange visitors, and reclusive nature. Their dynamic changes when Sunny gets a glimpse of Chandra in her act.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2025-08-28\n⭐ Rating: 7.2/10",
+      "description": "The story follows Chandra, a mysterious, goth-influenced woman who has just moved to Bangalore and begins working night shifts at a café. Across the road from her apartment live Sunny and Venu, two aimless bachelors. Sunny becomes infatuated with Chandra, observing her odd routines, strange visitors, and reclusive nature. Their dynamic changes when Sunny gets a glimpse of Chandra in her act.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2025-08-28\n⭐ Rating: 7.3/10",
       "poster": "https://image.tmdb.org/t/p/w500/nRn6is4m5sikO1rSoCoRT2rYtXB.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/tkRZ8BpIlvQIFBQWwEHuAlxczyb.jpg",
       "genres": [
@@ -1546,7 +1557,7 @@
       "type": "movie",
       "name": "Jana nayagan",
       "releaseInfo": "2026-08-21",
-      "description": "A clash of ideologies. One stands for the people, the other feeds on control. Their paths collided once before. Years later, a child’s silent fear ignites the past, drawing a former police officer into a battle far bigger than personal revenge.\n\n📺 Streaming on: Zee5\n📅 Release: 2026-08-21\n⭐ Rating: 5.4/10",
+      "description": "A clash of ideologies. One stands for the people, the other feeds on control. Their paths collided once before. Years later, a child’s silent fear ignites the past, drawing a former police officer into a battle far bigger than personal revenge.\n\n📺 Streaming on: Zee5\n📅 Release: 2026-08-21\n⭐ Rating: 5.3/10",
       "poster": "https://image.tmdb.org/t/p/w500/jt8pfSIdi47YpFMMWVRr8w5u2S0.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/v3lNH2gCojWYXVuXcT9FZLBxcSq.jpg",
       "genres": [
@@ -2510,7 +2521,7 @@
       "type": "movie",
       "name": "Idli Kadai",
       "releaseInfo": "2025-10-01",
-      "description": "A simple man's search for success leads him to rediscover his roots.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-10-01\n⭐ Rating: 6.6/10",
+      "description": "A simple man's search for success leads him to rediscover his roots.\n\n📺 Streaming on: Netflix\n📅 Release: 2025-10-01\n⭐ Rating: 6.7/10",
       "poster": "https://image.tmdb.org/t/p/w500/9ViF6UTWMh14gx77RvFALe5R6AL.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/mXRzeWQXDdfPuT9KckNjSdiWo6Z.jpg",
       "genres": [
@@ -3078,5 +3089,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-30T12:37:20.067Z"
+  "builtAt": "2026-08-30T16:53:37.196Z"
 }
