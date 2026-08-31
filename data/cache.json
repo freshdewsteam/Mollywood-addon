@@ -12,19 +12,6 @@
       ]
     },
     {
-      "id": "tt35815094",
-      "type": "movie",
-      "name": "Angam Attahasam",
-      "releaseInfo": "2026-08-28",
-      "description": "Caught in the city's violent underworld, 24-year-old Ajay Chandran struggles between loyalty to his past and the will to survive. As enemies close in and allies betray, he fights to save his soul from the darkness consuming him.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2026-05-08",
-      "poster": "https://image.tmdb.org/t/p/w500/tloV12eg6pSgA3wrWx6q6dvdY8O.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/fC5mSVCH15GTKxreFck37x2FKcO.jpg",
-      "genres": [
-        "Action",
-        "Drama"
-      ]
-    },
-    {
       "id": "tt26445387",
       "type": "movie",
       "name": "I, Nobody",
@@ -239,6 +226,19 @@
       "releaseInfo": "2026-05-08",
       "description": "A famous mentalist predicts four future deaths on live TV and kills himself on live TV. Now, as each date nears, the world waits in fear. Are they coincidences, or is someone carrying out his deadly revenge?\n\n📺 Streaming on: ManoramaMAX Amazon Channel\n📅 Release: 2026-05-08",
       "poster": "https://image.tmdb.org/t/p/w500/8ZTUn7mnL0qnJTBgJdHXZkEpUEi.jpg"
+    },
+    {
+      "id": "tt35815094",
+      "type": "movie",
+      "name": "Angam Attahasam",
+      "releaseInfo": "2026-05-08",
+      "description": "Caught in the city's violent underworld, 24-year-old Ajay Chandran struggles between loyalty to his past and the will to survive. As enemies close in and allies betray, he fights to save his soul from the darkness consuming him.\n\n📺 Streaming on: Sun Nxt\n📅 Release: 2026-05-08",
+      "poster": "https://image.tmdb.org/t/p/w500/tloV12eg6pSgA3wrWx6q6dvdY8O.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/fC5mSVCH15GTKxreFck37x2FKcO.jpg",
+      "genres": [
+        "Action",
+        "Drama"
+      ]
     },
     {
       "id": "tt32065745",
@@ -1308,7 +1308,7 @@
       "type": "series",
       "name": "Cousins and Kalyanams",
       "releaseInfo": "2026-05-29",
-      "description": "📺 Streaming on: JioHotstar\n📅 OTT Release: 2026-05-29",
+      "description": "A 26-year tale of six cousins in Kerala whose lives and relationships revolve around seven weddings.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-05-29\n⭐ Rating: 5.0/10",
       "poster": "https://image.tmdb.org/t/p/w500/cEfHZNS071Qa0ycrUhySEjRdXXB.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/cEfpO6QG5Ks5cTJ8bRrZJiDYKUH.jpg",
       "genres": [
@@ -1525,25 +1525,11 @@
       ]
     },
     {
-      "id": "tt0984177",
-      "type": "movie",
-      "name": "Amarkalam",
-      "releaseInfo": "2026-08-28",
-      "description": "Vasu is a tough street crook who lives at a movie theater. One day while transporting the reels of a new film, he clashes with a music student Mohana. Mohana is the daughter of the Police Commissioner, who Tulsidas an ex-gang leader released from jail has an old grudge against. He tells Vasu to kidnap Mohana for two days in order to ruin the family's honor. While being held captive by Vasu, Mohana falls in love with him after hearing him sing. Vasu rejects her love, but on learning of it, Tulsidas pays him to pretend to be in love with her. By the time Tulsidas learns that his enmity with the police commissioner is false and tells Vasu to stay away from Mohana it is too late, Vasu's love has become real.\n\n📺 Streaming on: Sun Nxt, VI movies and tv, Eros Now Select Apple TV channel,  AP International South Cinema Amazon Channel, JioHotstar\n📅 Release: 1999-08-25\n⭐ Rating: 6.6/10",
-      "poster": "https://image.tmdb.org/t/p/w500/m811mOJFIGSmf2vGbPRhwhgngaZ.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/uZPUYG1bpXxgH4VeM5vbaiZkxFm.jpg",
-      "genres": [
-        "Action",
-        "Romance",
-        "Drama"
-      ]
-    },
-    {
       "id": "tt39260895",
       "type": "movie",
       "name": "Pyaar Prema Kalyanam",
       "releaseInfo": "2026-08-21",
-      "description": "When a bride refuses to leave her family home after marriage, her husband must find out if he can adjust to life under his in-laws' roof.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-08-21\n⭐ Rating: 7.3/10",
+      "description": "When a bride refuses to leave her family home after marriage, her husband must find out if he can adjust to life under his in-laws' roof.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-08-21\n⭐ Rating: 6.9/10",
       "poster": "https://image.tmdb.org/t/p/w500/AjaNAeMXOrK9n0YqGqX0Lz5qxYu.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/jgsptBYJbuO7omWLOj1HNsqvgLM.jpg",
       "genres": [
@@ -1741,7 +1727,7 @@
       "type": "movie",
       "name": "Blast",
       "releaseInfo": "2026-05-28",
-      "description": "A seemingly ordinary family must unleash their hidden martial arts skills when they clash with a ruthless criminal gang tied to corruption and violence.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-05-28\n⭐ Rating: 7.6/10",
+      "description": "A seemingly ordinary family must unleash their hidden martial arts skills when they clash with a ruthless criminal gang tied to corruption and violence.\n\n📺 Streaming on: Netflix\n📅 Release: 2026-05-28\n⭐ Rating: 7.7/10",
       "poster": "https://image.tmdb.org/t/p/w500/lpsUpXieodUhN6DlK9ZDnjkysLk.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/xsoKAonKy1zk5XoQoUG1dUXDCKH.jpg",
       "genres": [
@@ -2833,8 +2819,8 @@
       "id": "tt44265707",
       "type": "series",
       "name": "Bigg Boss The Common Man",
-      "releaseInfo": "2026-08-30",
-      "description": "From ordinary lives to extraordinary drama. Aspiring contestants fight to earn a spot in the Bigg Boss house.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-08-30",
+      "releaseInfo": "2026-08-31",
+      "description": "From ordinary lives to extraordinary drama. Aspiring contestants fight to earn a spot in the Bigg Boss house.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-08-31",
       "poster": "https://image.tmdb.org/t/p/w500/bQDWORa2JTBawIStjMLzOJIMcPN.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/hnzTQjhhEo67VHneHdHTQjTPzab.jpg",
       "genres": [
@@ -2845,26 +2831,13 @@
       "id": "tt13464516",
       "type": "series",
       "name": "Cooku with Comali",
-      "releaseInfo": "2026-08-30",
-      "description": "Cooku with Comali, also known by the acronym CWC, is an Indian Tamil-language comedy-based cooking competition show aired on Star Vijay and streams on Disney+ Hotstar where the contestants are paired each week with comedians (comalis) who are amateur cooks. The first season premiered on 16 November 2019 and ended on 23 February 2020. The second season was premiered on 14 November 2020 and ended on 14 April 2021. The third season was premiered on 22 January 2022 and ended on 24 July 2022. The contestants along with their comalis are challenged every week and judged by Chef Damu and Chef Venkatesh Bhat.\n\n📺 Streaming on: JioHotstar, VI movies and tv\n📅 Release: 2026-08-30\n⭐ Rating: 8.4/10",
+      "releaseInfo": "2026-08-31",
+      "description": "Cooku with Comali, also known by the acronym CWC, is an Indian Tamil-language comedy-based cooking competition show aired on Star Vijay and streams on Disney+ Hotstar where the contestants are paired each week with comedians (comalis) who are amateur cooks. The first season premiered on 16 November 2019 and ended on 23 February 2020. The second season was premiered on 14 November 2020 and ended on 14 April 2021. The third season was premiered on 22 January 2022 and ended on 24 July 2022. The contestants along with their comalis are challenged every week and judged by Chef Damu and Chef Venkatesh Bhat.\n\n📺 Streaming on: JioHotstar, VI movies and tv\n📅 Release: 2026-08-31\n⭐ Rating: 8.4/10",
       "poster": "https://image.tmdb.org/t/p/w500/iuPhRaSQNj1K6fo1g1dVEQx1Q5d.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/xjg35ysPaaC8tlmlH2tD5J038l3.jpg",
       "genres": [
         "Reality",
         "Comedy"
-      ]
-    },
-    {
-      "id": "tt13562824",
-      "type": "series",
-      "name": "Neethane Enthan Ponvasantham",
-      "releaseInfo": "2026-08-28",
-      "description": "Anu is a bright, young girl from a middle-class family while Surya Prakash is a business tycoon and a single, middle-aged man. Anu starts working for Surya Prakash. Will love blossom between the two?\n\n📺 Streaming on: VI movies and tv, JioHotstar, Zee5\n📅 Release: 2026-08-28",
-      "poster": "https://image.tmdb.org/t/p/w500/2rezkh3gzwfMpBc0803mztcGA3J.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/bgCq3muBz1Vu62esnQOEoFyDihJ.jpg",
-      "genres": [
-        "Drama",
-        "Soap"
       ]
     },
     {
@@ -3010,7 +2983,7 @@
       "type": "series",
       "name": "Resort",
       "releaseInfo": "2026-03-12",
-      "description": "📺 Streaming on: JioHotstar\n📅 OTT Release: 2026-03-12",
+      "description": "A debt-ridden room service boy rises to challenge a ruthless kitchen at a luxurious beachside haven.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2026-03-12\n⭐ Rating: 10.0/10",
       "poster": "https://image.tmdb.org/t/p/w500/cL7iOwqapRRb7eKKlXI4FDaP6rh.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/wQ1cpJW9uxfKmO8msAF5z4edK63.jpg",
       "genres": [
@@ -3089,5 +3062,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-08-30T21:48:48.922Z"
+  "builtAt": "2026-08-31T07:22:59.673Z"
 }
