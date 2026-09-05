@@ -36,11 +36,12 @@ jobs:
           [ -f data/series-cache.json ] || echo '{"_data":{}}' > data/series-cache.json
 
       - name: Run scraper
-        env:
+              env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
           GOOGLE_SHEET_URL: ${{ secrets.GOOGLE_SHEET_URL }}
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          MON_API_KEY: ${{ secrets.MON_API_KEY }}
         run: node scripts/build-cache.js
 
       - name: Verify cache was built
