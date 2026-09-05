@@ -1,4 +1,6 @@
-// server.js
+// server.js — South Streams
+// Serves the landing page, manifest, and catalog/meta endpoints from data/cache.json
+
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
@@ -33,26 +35,36 @@ const server = http.createServer((req, res) => {
 
   const url = req.url.split('?')[0]; // Remove query params
 
-  // ── Serve HTML page for root ──
+  // ── Serve HTML landing page for root ──
   if (url === '/') {
     const manifestPath = path.join(__dirname, 'manifest.json');
-    if (fs.existsSync(manifestPath)) {
-      const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+    if (!fs.existsSync(manifestPath)) {
+      res.writeHead(404);
+      res.end('Manifest not found');
+      return;
+    }
 
-      // Live stats from cache — shows visitors the addon is alive
-      const cache = readJsonFile(path.join(__dirname, 'data', 'cache.json'));
-      const counts = cache ? {
-        mm: (cache['malayalam-movies']  || []).length,
-        ms: (cache['malayalam-series']  || []).length,
-        tm: (cache['tamil-movies']      || []).length,
-        ts: (cache['tamil-series']      || []).length,
-      } : { mm: 0, ms: 0, tm: 0, ts: 0 };
-      const total = counts.mm + counts.ms + counts.tm + counts.ts;
-      const host = req.headers.host;
+    const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 
-      res.writeHead(200, { 'Content-Type': 'text/html' });
-      res.end(`
-<!DOCTYPE html>
+    // Live stats from cache — shows visitors the addon is alive
+    const cache = readJsonFile(path.join(__dirname, 'data', 'cache.json'));
+    const counts = cache ? {
+      mm: (cache['malayalam-movies'] || []).length,
+      ms: (cache['malayalam-series'] || []).length,
+      tm: (cache['tamil-movies'] || []).length,
+      ts: (cache['tamil-series'] || []).length,
+    } : { mm: 0, ms: 0, tm: 0, ts: 0 };
+    const total = counts.mm + counts.ms + counts.tm + counts.ts;
+    const host = req.headers.host || 'localhost:' + PORT;
+
+    // Optional screenshot (only rendered if the file exists in /public)
+    const screenshotPath = path.join(__dirname, 'public', 'screenshot-catalog.jpg');
+    const screenshotHtml = fs.existsSync(screenshotPath)
+      ? '<img src="/public/screenshot-catalog.jpg" alt="South Streams in Stremio" style="max-width:100%; border-radius:12px; border:1px solid #1e2c3d; margin-top:36px; box-shadow:0 10px 40px rgba(0,0,0,.5);">'
+      : '';
+
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.end(`<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -61,13 +73,11 @@ const server = http.createServer((req, res) => {
   <meta name="description" content="${manifest.description}">
   <meta property="og:title" content="${manifest.name} — Mollywood & Kollywood on OTT, day-0">
   <meta property="og:description" content="New Malayalam & Tamil movies and series on OTT — detected the day they drop. Free Stremio addon, updated 5x daily.">
-  <meta property="og:image" content="https://${host}/public/og-image.png">
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
     body { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; background:#0a0e14; color:#e6edf3; line-height:1.6; }
     .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
     a { color:#4fd1c5; }
-
     .hero { text-align:center; padding: 80px 0 50px; background: radial-gradient(ellipse at top, #0f2733 0%, #0a0e14 70%); }
     .badge { display:inline-block; background:#132a33; color:#4fd1c5; border:1px solid #1e4a52; padding:5px 14px; border-radius:20px; font-size:.8rem; font-weight:600; letter-spacing:.5px; margin-bottom:22px; }
     h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); background: linear-gradient(90deg,#4fd1c5,#63b3ed); -webkit-background-clip:text; background-clip:text; color:transparent; }
@@ -77,19 +87,15 @@ const server = http.createServer((req, res) => {
     .btn { display:inline-block; padding:14px 32px; border-radius:10px; font-size:1.05rem; font-weight:700; text-decoration:none; transition: transform .15s, box-shadow .15s; }
     .btn:hover { transform: translateY(-2px); }
     .btn-primary { background: linear-gradient(90deg,#14b8a6,#3b82f6); color:#fff; box-shadow: 0 4px 24px rgba(20,184,166,.35); }
-    .btn-primary:hover { box-shadow: 0 6px 32px rgba(20,184,166,.5); }
     .btn-ghost { background:#16202b; color:#c9d6e2; border:1px solid #263444; }
     .stats { display:flex; gap:30px; justify-content:center; margin-top:36px; flex-wrap:wrap; }
     .stat b { display:block; font-size:1.5rem; color:#4fd1c5; }
     .stat span { font-size:.8rem; color:#7a8ea3; text-transform:uppercase; letter-spacing:1px; }
-
     section { padding: 44px 0; }
     h2 { font-size:1.5rem; margin-bottom:20px; text-align:center; }
     h2 span { color:#4fd1c5; }
-
     .callout { background:#1a2332; border:1px solid #2b6a5e; border-left:4px solid #14b8a6; border-radius:10px; padding:18px 22px; font-size:.95rem; }
     .callout b { color:#4fd1c5; }
-
     .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; }
     .card { background:#111926; border:1px solid #1e2c3d; border-radius:12px; padding:20px; transition: border-color .2s; }
     .card:hover { border-color:#2b6a5e; }
@@ -97,17 +103,13 @@ const server = http.createServer((req, res) => {
     .card h3 { font-size:1rem; margin:8px 0 4px; }
     .card p { font-size:.85rem; color:#8ba0b5; }
     .card .num { font-size:1.3rem; font-weight:800; color:#4fd1c5; }
-
-    .steps { counter-reset: step; }
     .step { display:flex; gap:16px; padding:14px 0; align-items:flex-start; }
-    .step::before { counter-increment: step; content: counter(step); flex-shrink:0; width:32px; height:32px; border-radius:50%; background:#132a33; color:#4fd1c5; font-weight:700; display:flex; align-items:center; justify-content:center; border:1px solid #1e4a52; }
-    .step div b { display:block; }
+    .step b { display:block; color:#e6edf3; }
     .step div { color:#9fb3c8; font-size:.95rem; }
-
+    .stepnum { flex-shrink:0; width:32px; height:32px; border-radius:50%; background:#132a33; color:#4fd1c5; font-weight:700; display:flex; align-items:center; justify-content:center; border:1px solid #1e4a52; }
     details { background:#111926; border:1px solid #1e2c3d; border-radius:10px; padding:14px 18px; margin-bottom:10px; }
     summary { cursor:pointer; font-weight:600; }
     details p { color:#9fb3c8; font-size:.92rem; margin-top:10px; }
-
     footer { border-top:1px solid #1a2433; margin-top:40px; padding:34px 0 50px; text-align:center; color:#7a8ea3; font-size:.85rem; }
     footer .heart { color:#e2556e; }
     @media (max-width:600px){ .hero{padding:56px 0 36px;} .stats{gap:18px;} }
@@ -130,6 +132,7 @@ const server = http.createServer((req, res) => {
         <div class="stat"><b>${counts.ms + counts.ts}</b><span>Series</span></div>
         <div class="stat"><b>4</b><span>Catalogs</span></div>
       </div>
+      ${screenshotHtml}
     </div>
   </div>
 
@@ -156,12 +159,10 @@ const server = http.createServer((req, res) => {
   <section>
     <div class="wrap">
       <h2>⚙️ <span>How it works</span></h2>
-      <div class="steps">
-        <div class="step"><div><b>Day-0 detection</b>Official streaming-catalog APIs watch every Indian OTT platform — Hotstar, Prime, SonyLIV, Zee5, SunNXT, ManoramaMAX & more — for new arrivals.</div></div>
-        <div class="step"><div><b>Smart enrichment</b>TMDB & OMDb attach posters, descriptions, ratings and IMDb IDs. Wrong-language titles are filtered out automatically.</div></div>
-        <div class="step"><div><b>Human verification</b>A manually maintained release-date sheet patches and corrects anything the machines get wrong.</div></div>
-        <div class="step"><div><b>Straight to your home screen</b>The catalog refreshes 5 times a day. New premieres appear at the top — on release day, not a week later.</div></div>
-      </div>
+      <div class="step"><div class="stepnum">1</div><div><b>Day-0 detection</b>Official streaming-catalog APIs watch every Indian OTT platform — JioHotstar, Prime, SonyLIV, Zee5, SunNXT, Aha, ManoramaMAX & more — for new arrivals.</div></div>
+      <div class="step"><div class="stepnum">2</div><div><b>Smart enrichment</b>TMDB & OMDb attach posters, descriptions, ratings and IMDb IDs. Wrong-language titles are filtered out automatically.</div></div>
+      <div class="step"><div class="stepnum">3</div><div><b>Human verification</b>A manually maintained release-date sheet patches and corrects anything the machines get wrong.</div></div>
+      <div class="step"><div class="stepnum">4</div><div><b>Straight to your home screen</b>The catalog refreshes 5 times a day. New premieres appear at the top — on release day, not a week later.</div></div>
     </div>
   </section>
 
@@ -184,8 +185,8 @@ const server = http.createServer((req, res) => {
       <h2>❓ <span>FAQ</span></h2>
       <details open><summary>How do I watch the movies?</summary><p>South Streams is a catalog addon — it shows you what's new. Install a stream addon like <b>Torrentio</b> (free, torrent-based) or <b>TorBox</b> alongside it, and play buttons appear automatically on every title.</p></details>
       <details><summary>Does it cost anything?</summary><p>No. The addon is completely free and open source. Your Stremio account and any stream addons you choose are separate.</p></details>
-      <details><summary>How often does it update?</summary><p>Five times daily (midnight, early morning, morning, noon and evening IST) — new OTT premieres usually appear within hours of release.</p></details>
-      <details><summary>A movie I expected is missing?</summary><p>Only titles that genuinely premiered on Indian OTT appear at the top. Catalog re-licenses appear lower, labeled "Re-release". Very rare edge cases can be reported on GitHub.</p></details>
+      <details><summary>How often does it update?</summary><p>Five times daily — new OTT premieres usually appear within hours of release, with a deep sweep just after midnight IST.</p></details>
+      <details><summary>A movie I expected is missing?</summary><p>Only titles that genuinely premiered on Indian OTT appear at the top. Catalog re-licenses appear lower, labeled "Re-release". Rare edge cases can be reported on GitHub.</p></details>
     </div>
   </section>
 
@@ -198,14 +199,112 @@ const server = http.createServer((req, res) => {
   </footer>
 
 </body>
-</html>
-      `);
+</html>`);
+    return;
+  }
+
+  // ── Serve static files from /public (screenshots, og-image) ──
+  if (url.startsWith('/public/')) {
+    const filePath = path.join(__dirname, url);
+    if (filePath.startsWith(path.join(__dirname, 'public')) && fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
+      const mime = { '.png':'image/png', '.jpg':'image/jpeg', '.jpeg':'image/jpeg', '.webp':'image/webp', '.svg':'image/svg+xml' }[path.extname(filePath).toLowerCase()] || 'application/octet-stream';
+      res.writeHead(200, { 'Content-Type': mime });
+      fs.createReadStream(filePath).pipe(res);
+    } else {
+      res.writeHead(404);
+      res.end('Not found');
+    }
+    return;
+  }
+
+  // ── Serve manifest.json ──
+  if (url === '/manifest.json') {
+    const manifestPath = path.join(__dirname, 'manifest.json');
+    if (fs.existsSync(manifestPath)) {
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      fs.createReadStream(manifestPath).pipe(res);
     } else {
       res.writeHead(404);
       res.end('Manifest not found');
     }
     return;
   }
+
+  // ── SERVE META ENDPOINT ──
+  // Stremio/Nuvio calls this when user clicks a title from our catalogue
+  if (url.startsWith('/meta/')) {
+    const parts = url.split('/');
+    const id = parts[3] ? parts[3].replace('.json', '') : '';
+
+    console.log('[Meta] Request: ' + id);
+
+    const cache = readJsonFile(path.join(__dirname, 'data', 'cache.json'));
+    let found = null;
+
+    if (cache) {
+      const allItems = [
+        ...(cache['malayalam-movies'] || []),
+        ...(cache['malayalam-series'] || []),
+        ...(cache['tamil-movies'] || []),
+        ...(cache['tamil-series'] || []),
+      ];
+      found = allItems.find(item => item.id === id) || null;
+    }
+
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({
+      meta: found || null,
+      cacheMaxAge: 3600,
+      staleRevalidate: 86400,
+      staleError: 86400,
+    }));
+    return;
+  }
+
+  // ── SERVE CATALOG ENDPOINTS ──
+  // Stremio expects: /catalog/{type}/{catalogId}.json
+  if (url.startsWith('/catalog/')) {
+    const parts = url.split('/');
+    const catalogId = parts[3] ? parts[3].replace('.json', '') : '';
+
+    console.log('[Catalog] Request: ' + catalogId);
+
+    const cache = readJsonFile(path.join(__dirname, 'data', 'cache.json'));
+    if (!cache) {
+      res.writeHead(500);
+      res.end('Cache not found');
+      return;
+    }
+
+    const catalogData = cache[catalogId] || [];
+
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({
+      metas: catalogData,
+      cacheMaxAge: 3600,
+      staleRevalidate: 86400,
+      staleError: 86400
+    }));
+    return;
+  }
+
+  // ── Serve raw cache.json (for debugging) ──
+  if (url === '/data/cache.json') {
+    const cache = readJsonFile(path.join(__dirname, 'data', 'cache.json'));
+    if (cache) {
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify(cache));
+    } else {
+      res.writeHead(404);
+      res.end('Cache not found');
+    }
+    return;
+  }
+
+  // ── Default: return 404 ──
+  res.writeHead(404);
+  res.end('Not found');
+});
 
 server.listen(PORT, () => {
   console.log('🌊 South Streams server running on port ' + PORT);
