@@ -2,10 +2,11 @@ name: Scrape & Update Cache
 
 on:
   schedule:
-    - cron: '0 19 * * *'   # 12:30 AM IST
-    - cron: '30 1 * * *'   #  7:00 AM IST
-    - cron: '0 7 * * *'    # 12:30 PM IST
-    - cron: '30 12 * * *'  #  6:00 PM IST
+    - cron: '31 18 * * *'   # 00:01 AM IST — first sweep
+    - cron: '0 20 * * *'    # 01:30 AM IST — second sweep (catches late-indexed titles)
+    - cron: '30 1 * * *'    # 07:00 AM IST
+    - cron: '0 7 * * *'     # 12:30 PM IST
+    - cron: '30 12 * * *'   # 06:00 PM IST
   workflow_dispatch:
 
 jobs:
