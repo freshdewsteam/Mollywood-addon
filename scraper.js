@@ -2,9 +2,9 @@
  * scraper.js — South Streams
  *
  * Movies  → Movie of the Night changes API (official day-0, primary)
- *           → JustWatch GraphQL newTitles (fallback)
+ *           → JustWatch GraphQL newTitles (ALWAYS-ON safety net, 5 days)
  *           → TMDB Auto-Discover (foundation) → Google Sheet (patch + gaps)
- * Series  → Movie of the Night changes API → JustWatch fallback
+ * Series  → Movie of the Night changes API → JustWatch safety net
  *           → Google Sheet (patch + gaps)
  * Enrichment → TMDB / OMDb API (posters, descriptions, IMDb IDs)
  *
@@ -17,6 +17,10 @@
  *   a renewal: kept in the catalogue, sorted by its ORIGINAL release date and
  *   labeled "♻️ Re-release" — so premieres always sit at the top.
  * - New seasons (season >= 2) of returning shows are always fresh content.
+ *
+ * MoN scheduling: the 00:01 IST run sweeps DEEP (3 days) to catch titles MoN
+ * indexed late (Aha/SonyLIV regional lag). Other runs are lean (since last
+ * fetch). The JustWatch net runs on EVERY run regardless — it is free.
  */
 
 const https = require('https');
@@ -33,7 +37,7 @@ const BASE        = 'https://api.themoviedb.org/3';
 const IMG         = 'https://image.tmdb.org/t/p/';
 
 const JW_GRAPHQL_URL = 'https://apis.justwatch.com/graphql';
-const JW_DAYS_TO_SCAN = 3; // JustWatch fallback window (days)
+const JW_DAYS_TO_SCAN = 5; // JustWatch safety-net window (days)
 
 const MON_CHANGES_URL = 'https://api.movieofthenight.com/v4/changes';
 
@@ -396,23 +400,22 @@ async function fetchSheetContent(filterLang, filterType) {
 // changes are country-wide — fetch once per kind, share across languages.
 const monRawCache = { MOVIE: null, SHOW: null };
 
-// Window start: first run scans 3 days; later runs scan since the last
-// successful fetch (minus 1h buffer), never more than 12h. Keeps us ~300-500
-// requests/month against the 1,000 free budget.
+// Window start: the 00:01 IST run sweeps DEEP (3 days) to catch titles MoN
+// indexed late (Aha/SonyLIV regional lag). All other runs are lean — only
+// fetching changes since the last successful fetch (~720 requests/month
+// against the 1,000 free budget).
 function monWindowStart(kind) {
   const now = Date.now();
   const utcHour = new Date().getUTCHours();
 
   // DEEP SWEEP: the 00:01–01:30 IST runs (18:00–20:00 UTC) scan back 3 days.
-  // This catches titles MoN indexed late (Aha/SonyLIV regional lag) — the
-  // exact titles that previously required the Sheet rescue.
   if (utcHour >= 18 && utcHour < 20) return now - 3 * 86400 * 1000;
 
   // First run ever: also deep
   const last = seen['mon_' + kind];
   if (!last || isNaN(last)) return now - 3 * 86400 * 1000;
 
-  // Lean runs (07:00, 12:30, 18:30 IST): only since the last successful fetch
+  // Lean runs: only since the last successful fetch
   return Math.max(last - 3600 * 1000, now - 12 * 3600 * 1000);
 }
 
@@ -443,9 +446,9 @@ async function fetchMonRaw(kind) {
       const text = await fetchUrl(MON_CHANGES_URL + '?' + params.toString(), { 'X-API-Key': MON_API_KEY });
       const data = JSON.parse(text);
 
-      // ── MoN returns `shows` as an OBJECT MAP keyed by show ID (not an
-      // array). Object.entries() converts it into a list we can iterate.
-      // We also keep array support in case they change the shape someday.
+      // MoN returns `shows` as an OBJECT MAP keyed by show ID (not an array).
+      // Object.entries() converts it into a list we can iterate. Array support
+      // kept in case they change the shape someday.
       let showsList = [];
       if (Array.isArray(data.shows)) {
         showsList = data.shows;
@@ -478,13 +481,12 @@ async function fetchMonRaw(kind) {
 
   if (!changes.length) {
     console.warn('[MoN] ' + showType + ': no changes fetched' + (lastErr ? ' (' + lastErr.message + ')' : ''));
-    return null; // null = failure → caller falls back to JustWatch
+    return null; // null = failure → JustWatch net still runs from fetchDay0Items
   }
 
-  // SAFETY GUARD: changes without shows are unusable — treat as failure so
-  // the JustWatch fallback engages instead of silently resolving 0 titles.
+  // SAFETY GUARD: changes without shows are unusable
   if (!Object.keys(showsById).length) {
-    console.warn('[MoN] ' + showType + ': changes fetched but no shows parsed — falling back');
+    console.warn('[MoN] ' + showType + ': changes fetched but no shows parsed');
     return null;
   }
 
@@ -581,15 +583,7 @@ async function resolveMonForLang(raw, lang, kind) {
   return items;
 }
 
-// Unified day-0 entry point: MoN (official) first, JustWatch GraphQL fallback
-async function fetchDay0Items(lang, kind) {
-  const raw = await fetchMonRaw(kind);
-  if (raw) return resolveMonForLang(raw, lang, kind);
-  console.log('[Day0] MoN unavailable — falling back to JustWatch');
-  return fetchJustWatch(lang, kind);
-}
-
-// ── JUSTWATCH (DAY-0 FALLBACK — GraphQL newTitles) ───────────────────────────
+// ── JUSTWATCH (ALWAYS-ON SAFETY NET — GraphQL newTitles) ──────────────────────
 
 const JW_NEW_QUERY_MOVIE_RICH = `
 query JwNew($country: Country!, $date: Date!, $language: Language!, $filter: TitleFilter, $first: Int!, $after: String) {
@@ -897,6 +891,35 @@ async function fetchJustWatch(lang, kind) {
   return resolved;
 }
 
+// Unified day-0 entry point: MoN (official, exact timestamps) first, and
+// JustWatch ALWAYS runs as a multi-day safety net (it's free). This catches
+// titles MoN indexed late or missed entirely (Aha/SonyLIV regional lag).
+// Dedup by TMDB id — MoN's exact arrival timestamps win because it runs first.
+async function fetchDay0Items(lang, kind) {
+  const byId = new Map();
+
+  const monRaw = await fetchMonRaw(kind);
+  if (monRaw) {
+    for (const it of await resolveMonForLang(monRaw, lang, kind)) {
+      if (!byId.has(it.id)) byId.set(it.id, it);
+    }
+  } else {
+    console.log('[Day0] MoN unavailable — JustWatch becomes primary');
+  }
+
+  // JustWatch net — ALWAYS on, scans several days back
+  try {
+    for (const it of await fetchJustWatch(lang, kind)) {
+      if (!byId.has(it.id)) byId.set(it.id, it);
+    }
+  } catch (e) {
+    console.warn('[Day0] JustWatch net failed: ' + e.message);
+  }
+
+  console.log('[Day0] Combined day-0 pool: ' + byId.size + ' titles');
+  return Array.from(byId.values());
+}
+
 // ── MOVIES: TMDB DISCOVER (FOUNDATION) ────────────────────────────────────────
 
 async function discoverMovies(lang, lookbackDays) {
@@ -945,8 +968,8 @@ async function processMovie(item, lang, expectedLang, strictLang) {
     const detail = await tmdb('/movie/' + item.id + '?language=en-US&append_to_response=watch/providers');
 
     if (!detail.imdb_id) {
-      setSkip(movieCache, cacheKey);
-      console.log('[Skip] No IMDb ID: ' + (detail.title || ''));
+      setRetry(movieCache, cacheKey); // IMDb IDs often appear on TMDB days later — retry
+      console.log('[Skip] No IMDb ID (will retry): ' + (detail.title || ''));
       return null;
     }
 
@@ -1047,8 +1070,8 @@ async function processSeriesJW(item, lang) {
     }
 
     if (!detail) {
-      setSkip(seriesCache, cacheKey);
-      console.log('[JW Series] Could not resolve on TMDB: ' + (item.title || ('ID ' + item.id)));
+      setRetry(seriesCache, cacheKey);
+      console.log('[JW Series] Could not resolve on TMDB (will retry): ' + (item.title || ('ID ' + item.id)));
       return null;
     }
 
@@ -1060,8 +1083,8 @@ async function processSeriesJW(item, lang) {
     }
 
     if (detail.status && detail.status !== 'Returning Series' && detail.status !== 'Ended' && detail.status !== 'Released') {
-      setSkip(seriesCache, cacheKey);
-      console.log('[Skip] Not released yet: ' + (detail.name || ''));
+      setRetry(seriesCache, cacheKey);
+      console.log('[Skip] Not released yet (will retry): ' + (detail.name || ''));
       return null;
     }
 
@@ -1072,8 +1095,8 @@ async function processSeriesJW(item, lang) {
       imdbId = ext.imdb_id || null;
     } catch(e) {}
     if (!imdbId) {
-      setSkip(seriesCache, cacheKey);
-      console.log('[Skip] No IMDb ID: ' + (detail.name || ''));
+      setRetry(seriesCache, cacheKey); // IMDb IDs often appear later — retry
+      console.log('[Skip] No IMDb ID (will retry): ' + (detail.name || ''));
       return null;
     }
 
@@ -1226,7 +1249,7 @@ async function scrapeMovies(lang) {
   const metas = [];
   const processedImdbIds = new Set();
 
-  // --- STEP 1: DAY-0 DETECTION (MoN official API → JustWatch fallback) ---
+  // --- STEP 1: DAY-0 DETECTION (MoN official + JustWatch always-on net) ---
   console.log('\n[Movies] Fetching ' + langLabel + ' day-0 arrivals (MoN → JustWatch)...');
   const day0Items = await fetchDay0Items(lang, 'MOVIE');
   for (const day0Item of day0Items) {
@@ -1360,7 +1383,7 @@ async function scrapeMovies(lang) {
   return finalResult;
 }
 
-// ── SERIES (MoN day-0 → JustWatch fallback → Sheet patch/gap-fill) ───────────
+// ── SERIES (MoN day-0 → JustWatch net → Sheet patch/gap-fill) ────────────────
 async function enrichSeries(imdbId, title, lang) {
   const cacheKey = imdbId && imdbId.startsWith('tt') ? imdbId : 'title_' + title.toLowerCase().replace(/[^a-z0-9]/g, '_').slice(0, 50);
   const cached   = readCacheEntry(seriesCache[cacheKey]);
@@ -1479,7 +1502,7 @@ async function scrapeSeries(lang) {
   const processedImdbIds = new Set();
   const skipped = [];
 
-  // --- STEP 1: DAY-0 DETECTION (MoN official API → JustWatch fallback) ---
+  // --- STEP 1: DAY-0 DETECTION (MoN official + JustWatch always-on net) ---
   console.log('\n[Series] Fetching ' + langLabel + ' series day-0 arrivals (MoN → JustWatch)...');
   const day0Items = await fetchDay0Items(lang, 'SHOW');
   for (const day0Item of day0Items) {
