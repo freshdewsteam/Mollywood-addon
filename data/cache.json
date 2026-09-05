@@ -1321,20 +1321,6 @@
       ]
     },
     {
-      "id": "tt1545976",
-      "type": "movie",
-      "name": "Angel John",
-      "releaseInfo": "2009-10-22",
-      "description": "Maradonna, an irresponsible young man, joins a group of drug dealers and suffers a financial loss. When he is about to commit suicide, a divine force intervenes.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2009-10-22\n⭐ Rating: 3.4/10\n\n♻️ Re-release: back on OTT on 2026-09-04",
-      "poster": "https://image.tmdb.org/t/p/w500/yKpfUxuZ4IDtPcmRpGSHoJpNdBV.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/qM8LCpkiHQPzpAjbsjPiLBOouEC.jpg",
-      "genres": [
-        "Drama",
-        "Fantasy",
-        "Comedy"
-      ]
-    },
-    {
       "id": "tt0277780",
       "type": "movie",
       "name": "Kattukuthira",
@@ -3124,5 +3110,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-09-05T12:25:10.853Z"
+  "builtAt": "2026-09-05T12:54:21.991Z"
 }
