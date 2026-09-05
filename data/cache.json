@@ -1,6 +1,119 @@
 {
   "malayalam-movies": [
     {
+      "id": "tt6409416",
+      "type": "movie",
+      "name": "Moothon",
+      "releaseInfo": "2026-09-05",
+      "description": "A child from Lakshadweep sets off to Mumbai in pursuit of Akbar, an elder brother who left the island and never returned.\n\n📺 Streaming on: Zee5, aha\n📅 Release: 2019-10-18\n⭐ Rating: 6.2/10",
+      "poster": "https://image.tmdb.org/t/p/w500/wyyHGE5uHgUFDUKDHzO6TGq6EJs.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/1m5jJSZZJgqNh2DzefAJ9SMls2o.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt0248946",
+      "type": "movie",
+      "name": "Koodevide?",
+      "releaseInfo": "2026-09-04",
+      "description": "Alice is a teacher at a boarding school in Ooty. A prodigal and unruly son of a Member of Parliament Xavier Puthooran, Ravi Puthooran joins the school in Alice's class. Alice manages to mentor him into a good student.\n\n📺 Streaming on: VI movies and tv, JioHotstar\n📅 Release: 1983-06-21\n⭐ Rating: 7.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/x1yebBb2cMLpm996d5kVQ9r9ef1.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt0277780",
+      "type": "movie",
+      "name": "Kattukuthira",
+      "releaseInfo": "2026-09-04",
+      "description": "In an era when caste still plays a major role in society; an upper caste girl seduces a lowly toddy collector Kunjiraman. They get caught in the act and this ends up in the lynching of Kunjiraman by the family of the girl. Kunjiraman's young son Kochuvava witnesses the horrific scene of his father's body lying in a pool of blood. Fast forward to the present time and Kochuvava has grown into a rich and ruthless tycoon who's determined to take slow poisonous revenge on the kin of his father's killers.\n\n📺 Streaming on: JioHotstar\n📅 Release: 1990-05-25\n⭐ Rating: 10.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/7f7cXFzcJaXiDWLAOs6cN9AKIxA.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/l7z2dLo8o1P0nlQgWJLzNcxUZgG.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt19886242",
+      "type": "movie",
+      "name": "Rorschach",
+      "releaseInfo": "2026-09-04",
+      "description": "When Luke Antony's wife goes missing, he sets off to search for her and stumbles upon the Balan family. However, terrorising events start occurring as Luke grows closer to them.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2022-10-07\n⭐ Rating: 6.6/10",
+      "poster": "https://image.tmdb.org/t/p/w500/hKVeDdgpjR8CAEd73ioDe7wni4o.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/2IwJkMqaTDBpKOVgeKnEp2KnAug.jpg",
+      "genres": [
+        "Thriller",
+        "Mystery"
+      ]
+    },
+    {
+      "id": "tt2458524",
+      "type": "movie",
+      "name": "Trivandrum Lodge",
+      "releaseInfo": "2026-09-04",
+      "description": "A small residential lodge at Kochi becomes the witness for many stories, of many people, their search for love, money, sex, and the true meaning of life.\n\n📺 Streaming on: VI movies and tv, JioHotstar\n📅 Release: 2012-09-21\n⭐ Rating: 7.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/k0W6g28d1E9WDyi18RxZUaG133v.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/69jpCCZLJT5arik5e25SyorVZxF.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt3198468",
+      "type": "movie",
+      "name": "North 24 Kaatham",
+      "releaseInfo": "2026-09-04",
+      "description": "Harikrishnan is a geeky software professional who suffers from an obsessive compulsive disorder. A harthal day sees him travelling to Trivandrum for a conference, and in the midst of the night, he ends up at Paravur railway station with two strangers - Gopalan  a veteran politician and Narayani a social worker - for company.\n\n📺 Streaming on: ManoramaMax, VI movies and tv, ManoramaMAX Amazon Channel,  AP International South Cinema Amazon Channel, JioHotstar\n📅 Release: 2013-09-14\n⭐ Rating: 7.6/10",
+      "poster": "https://image.tmdb.org/t/p/w500/p5mmJFoAch1GxGpy2HMQ9M0eQ16.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/ylq2JH1WSdvGrR9iqmHHDnAcfRs.jpg",
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Family"
+      ]
+    },
+    {
+      "id": "tt1545976",
+      "type": "movie",
+      "name": "Angel John",
+      "releaseInfo": "2026-09-04",
+      "description": "Maradonna, an irresponsible young man, joins a group of drug dealers and suffers a financial loss. When he is about to commit suicide, a divine force intervenes.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2009-10-22\n⭐ Rating: 3.4/10",
+      "poster": "https://image.tmdb.org/t/p/w500/yKpfUxuZ4IDtPcmRpGSHoJpNdBV.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/qM8LCpkiHQPzpAjbsjPiLBOouEC.jpg",
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "Comedy"
+      ]
+    },
+    {
+      "id": "tt0155969",
+      "type": "movie",
+      "name": "Prayanam",
+      "releaseInfo": "2026-09-04",
+      "description": "Prayanam is a 1975 Malayalam language feature film written by Padmarajan and directed by Bharathan. It was the debut of both Padmarajan and Bharathan.\n\n📺 Streaming on: Eros Now Select Apple TV channel, JioHotstar\n📅 Release: 1975-06-20\n⭐ Rating: 8.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/os2X0mS2OtATLK2VOmzObID3hXB.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/eR4rVXXkBUf0bEqm7mmvwmbQxWt.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt1102354",
+      "type": "movie",
+      "name": "Veeralipattu",
+      "releaseInfo": "2026-09-04",
+      "description": "Hari, a Chennai-based software engineer, falls in love with Pooja. After having settled in life, Hari returns to his village in Kerala, years after falling out with his father. Pooja too arrives and does her best to reconcile the estranged father and son.\n\n📺 Streaming on: Eros Now Select Apple TV channel\n📅 Release: 2007-07-01\n⭐ Rating: 4.8/10",
+      "poster": "https://image.tmdb.org/t/p/w500/1YSYaF51lFaAHVWh2GlM4jY2U25.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/b6LsHhGOEHiMj4ETOWlmiFmk0f8.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
       "id": "tt26445387",
       "type": "movie",
       "name": "I, Nobody",
@@ -1503,6 +1616,69 @@
   ],
   "tamil-movies": [
     {
+      "id": "tt5934894",
+      "type": "movie",
+      "name": "Dharmadurai",
+      "releaseInfo": "2026-09-04",
+      "description": "A once-promising village doctor, burdened by personal loss and family betrayal, spirals into alcoholism and becomes an outcast. His journey of pain, resilience, and rediscovery takes him from despair to a chance at redemption, as he confronts his past and searches for purpose, love, and reconciliation.\n\n📺 Streaming on: Sun Nxt, VI movies and tv, JioHotstar\n📅 Release: 2016-08-19\n⭐ Rating: 7.4/10",
+      "poster": "https://image.tmdb.org/t/p/w500/cmSUOVaaaZsQRjSYpkSuWGbDStT.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/eoiQdUrCUtO29HueK0pnESaaky1.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ]
+    },
+    {
+      "id": "tt3822396",
+      "type": "movie",
+      "name": "Velaiyilla Pattathari",
+      "releaseInfo": "2026-09-04",
+      "description": "Raghuvaran, who is unemployed for years, gets his dream job but a powerful rival is keen to put him down. Can he take on his adversary?\n\n📺 Streaming on: Sun Nxt, VI movies and tv, JioHotstar\n📅 Release: 2014-07-18\n⭐ Rating: 7.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/fQ8JzXRf68xlzyquLn7TEe3S2Nh.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/gw9nXilG4CzcqLGxZjI8x9HCbkS.jpg",
+      "genres": [
+        "Drama",
+        "Comedy",
+        "Action"
+      ]
+    },
+    {
+      "id": "tt6317052",
+      "type": "movie",
+      "name": "Chennai 600028 II: Second Innings",
+      "releaseInfo": "2026-09-04",
+      "description": "A group of friends reunite for the wedding of one of their own. However, when a mishap threatens to ruin the event, only a series of cricket matches can save the day.\n\n📺 Streaming on: JioHotstar\n📅 Release: 2016-12-09\n⭐ Rating: 5.7/10",
+      "poster": "https://image.tmdb.org/t/p/w500/vSlBmLzEne3kGNZTPnZZCGZvKBC.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/1HnXrkUV4UxDhGrkNnf9ORm25Q.jpg",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ]
+    },
+    {
+      "id": "tt38854883",
+      "type": "movie",
+      "name": "Anantha",
+      "releaseInfo": "2026-09-04",
+      "description": "An anthology film centered on the divine grace and miracles of Sri Sathya Sai Baba, showcasing how faith transforms lives, featuring stories of a mischievous man's redemption and a village facing floods, emphasizing universal love and divinity, not a specific religion\n\n📺 Streaming on: JioHotstar,  AP International South Cinema Amazon Channel\n📅 Release: 2026-01-13\n⭐ Rating: 2.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/y1GAbomStmF8dnvrsYzUGiqBFy4.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/n5MUCtRz1iqTOprqAqx9I7lyW58.jpg",
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "id": "tt1657293",
+      "type": "movie",
+      "name": "Kutti Pisasu",
+      "releaseInfo": "2026-09-04",
+      "description": "The spirits of two siblings who were killed by an evil man seek to avenge themselves. While the woman possesses a young girl, her brother turns into a robot and together they wreak havoc on their foe.\n\n📺 Streaming on: Zee5\n📅 Release: 2010-05-07\n⭐ Rating: 3.5/10",
+      "poster": "https://image.tmdb.org/t/p/w500/eGv6QsKViJ0y13rTia0MWZ8I7nK.jpg",
+      "genres": [
+        "Fantasy"
+      ]
+    },
+    {
       "id": "tt39260895",
       "type": "movie",
       "name": "Pyaar Prema Kalyanam",
@@ -1597,7 +1773,8 @@
       "name": "Arulvaan",
       "releaseInfo": "2026-07-17",
       "description": "Follows Muthuvel, a resolute collector who overcomes all obstacles to educate a tribal girl and provide school access for the entire forest community.\n\n📺 Streaming on: Amazon Prime Video, Amazon Prime Video with Ads\n📅 Release: 2026-07-17",
-      "poster": "https://image.tmdb.org/t/p/w500/mAL7zUkSoHVl5LzjpuhBuzhJztk.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/m9KJuxjN0n9VnHDACqLEfltZv8z.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/x1GPEffctNTnoqmUXQeP3iTcslW.jpg",
       "genres": [
         "Drama"
       ]
@@ -2184,18 +2361,6 @@
       "genres": [
         "Comedy",
         "Action"
-      ]
-    },
-    {
-      "id": "tt38854883",
-      "type": "movie",
-      "name": "Anantha",
-      "releaseInfo": "2026-01-13",
-      "description": "An anthology film centered on the divine grace and miracles of Sri Sathya Sai Baba, showcasing how faith transforms lives, featuring stories of a mischievous man's redemption and a village facing floods, emphasizing universal love and divinity, not a specific religion\n\n📺 Streaming on: JioHotstar,  AP International South Cinema Amazon Channel\n📅 Release: 2026-01-13\n⭐ Rating: 2.0/10",
-      "poster": "https://image.tmdb.org/t/p/w500/y1GAbomStmF8dnvrsYzUGiqBFy4.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/n5MUCtRz1iqTOprqAqx9I7lyW58.jpg",
-      "genres": [
-        "Drama"
       ]
     },
     {
@@ -2807,7 +2972,7 @@
       "type": "series",
       "name": "Heart Beat",
       "releaseInfo": "2026-07-30",
-      "description": "RK Multispeciality Hospital is a beacon of hope and healing. Its doctors are resilient even when they have to deal with medical and personal challenges.\n\n📺 Streaming on: Jiohotstar\n📅 Release: 2026-07-30\n⭐ Rating: 8.2/10",
+      "description": "📺 Streaming on: Jiohotstar\n📅 OTT Release: 2026-07-30",
       "poster": "https://image.tmdb.org/t/p/w500/aHEr565AkKrwC7Q18u3OEjGavyj.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/t0btQjhAnL0z6I4QYB5KEPyl5Gb.jpg",
       "genres": [
@@ -2998,5 +3163,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-09-05T05:35:43.621Z"
+  "builtAt": "2026-09-05T07:41:37.372Z"
 }
