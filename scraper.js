@@ -400,9 +400,19 @@ const monRawCache = { MOVIE: null, SHOW: null };
 // successful fetch (minus 1h buffer), never more than 12h. Keeps us ~300-500
 // requests/month against the 1,000 free budget.
 function monWindowStart(kind) {
+  const now = Date.now();
+  const utcHour = new Date().getUTCHours();
+
+  // DEEP SWEEP: the 00:01–01:30 IST runs (18:00–20:00 UTC) scan back 3 days.
+  // This catches titles MoN indexed late (Aha/SonyLIV regional lag) — the
+  // exact titles that previously required the Sheet rescue.
+  if (utcHour >= 18 && utcHour < 20) return now - 3 * 86400 * 1000;
+
+  // First run ever: also deep
   const last = seen['mon_' + kind];
-  const now  = Date.now();
   if (!last || isNaN(last)) return now - 3 * 86400 * 1000;
+
+  // Lean runs (07:00, 12:30, 18:30 IST): only since the last successful fetch
   return Math.max(last - 3600 * 1000, now - 12 * 3600 * 1000);
 }
 
