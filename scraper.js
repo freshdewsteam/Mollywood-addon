@@ -951,8 +951,8 @@ async function processMovie(item, lang, expectedLang, strictLang) {
     const IN  = detail['watch/providers'] && detail['watch/providers'].results && detail['watch/providers'].results.IN;
     const all = IN ? [...(IN.flatrate||[]), ...(IN.free||[]), ...(IN.ads||[])] : [];
     if (!all.length) {
-      setSkip(movieCache, cacheKey);
-      console.log('[Skip] Not on OTT/IN: ' + (detail.title || ''));
+      setRetry(movieCache, cacheKey); // provider tags sync from JustWatch with lag — retry in 3 days
+      console.log('[Skip] Not on OTT/IN (will retry): ' + (detail.title || ''));
       return null;
     }
 
