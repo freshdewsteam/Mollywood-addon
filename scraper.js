@@ -8,9 +8,15 @@
  *           → Google Sheet (patch + gaps)
  * Enrichment → TMDB / OMDb API (posters, descriptions, IMDb IDs)
  *
- * MoN changes API: official, documented, returns exact arrival timestamps.
- * Budget: free tier 1,000 req/month; steady state ≈ 2-4 requests/run.
- * JustWatch GraphQL is only used when MoN fails (quota/network/schema).
+ * Day-0 vs renewal logic:
+ * - MoN/JustWatch "new" changes include re-licenses, renewals and back-catalog
+ *   acquisitions — NOT just premieres.
+ * - A genuine first OTT release is always recent by its TMDB release date
+ *   (Indian theatrical→OTT windows are 4–8 weeks). If the title's TMDB release
+ *   date is older than RERELEASE_MAX_AGE_DAYS, the "new" arrival is treated as
+ *   a renewal: kept in the catalogue, sorted by its ORIGINAL release date and
+ *   labeled "♻️ Re-release" — so premieres always sit at the top.
+ * - New seasons (season >= 2) of returning shows are always fresh content.
  */
 
 const https = require('https');
@@ -38,6 +44,11 @@ const MOVIE_LOOKBACK  = 30;
 const MOVIE_FIRST_RUN = 730;
 const SKIP_TTL        = 14 * 24 * 60 * 60 * 1000; // 14 days
 const RETRY_TTL       =  3 * 24 * 60 * 60 * 1000; //  3 days
+
+// Day-0 arrivals whose TMDB release date is older than this are treated as
+// renewals/re-releases (sorted by ORIGINAL date + labeled), not premieres.
+// Indian theatrical→OTT windows are 4–8 weeks, so 90 days is a safe margin.
+const RERELEASE_MAX_AGE_DAYS = 90;
 
 // ── CACHE ─────────────────────────────────────────────────────────────────────
 let movieCache  = {};
@@ -379,10 +390,7 @@ async function fetchSheetContent(filterLang, filterType) {
 // GET https://api.movieofthenight.com/v4/changes
 //   country=in, change_type=new, item_type=show, show_type=movie|series,
 //   from=<unix>, order_direction=desc, cursor pagination (25/page)
-// Response: { changes: [...], shows: [...], hasMore, nextCursor }
-// Each change: { changeType, itemType, showId, showType, streamingOptionType,
-//                timestamp, service, link }
-// Shows are matched by showId and (per docs) include full show details.
+// Response: { changes: [...], shows: {...map keyed by show id...}, hasMore, nextCursor }
 
 // Module cache: the build runs 4 scrape calls (ml/ta × movie/series) but MoN
 // changes are country-wide — fetch once per kind, share across languages.
@@ -425,7 +433,7 @@ async function fetchMonRaw(kind) {
       const text = await fetchUrl(MON_CHANGES_URL + '?' + params.toString(), { 'X-API-Key': MON_API_KEY });
       const data = JSON.parse(text);
 
-      // ── FIX: MoN returns `shows` as an OBJECT MAP keyed by show ID (not an
+      // ── MoN returns `shows` as an OBJECT MAP keyed by show ID (not an
       // array). Object.entries() converts it into a list we can iterate.
       // We also keep array support in case they change the shape someday.
       let showsList = [];
@@ -480,8 +488,7 @@ async function fetchMonRaw(kind) {
 }
 
 // Filter MoN changes to one language + resolve to TMDB IDs.
-// Returns [{ id, arrivalDate, title, imdbId, year }] (possibly empty — that's
-// normal, e.g. no Malayalam arrivals today).
+// Returns [{ id, arrivalDate, title, imdbId, year, isNewSeason }]
 async function resolveMonForLang(raw, lang, kind) {
   const langLabel = lang === 'ml' ? 'Malayalam' : 'Tamil';
   const showType  = kind === 'SHOW' ? 'series' : 'movies';
@@ -515,13 +522,16 @@ async function resolveMonForLang(raw, lang, kind) {
       ? new Date(ch.timestamp * 1000).toISOString().slice(0, 10)
       : today();
 
+    // Season ≥2 change = returning show's new season → always fresh content
+    const isNewSeason = ch.itemType === 'season' && (ch.season || 0) >= 2;
+
     const tmdbId = (sh.tmdbId !== undefined && sh.tmdbId !== null) ? parseInt(sh.tmdbId, 10) : NaN;
     const imdbId = sh.imdbId || null;
     const year   = sh.releaseYear || null;
 
     // Path A: TMDB ID provided directly
     if (!isNaN(tmdbId) && tmdbId > 0) {
-      if (!seenIds.has(tmdbId)) { seenIds.add(tmdbId); items.push({ id: tmdbId, arrivalDate, title, imdbId, year }); }
+      if (!seenIds.has(tmdbId)) { seenIds.add(tmdbId); items.push({ id: tmdbId, arrivalDate, title, imdbId, year, isNewSeason }); }
       continue;
     }
 
@@ -530,7 +540,7 @@ async function resolveMonForLang(raw, lang, kind) {
       try {
         const data = await tmdb('/find/' + imdbId + '?external_source=imdb_id');
         const hit  = kind === 'SHOW' ? (data.tv_results || [])[0] : (data.movie_results || [])[0];
-        if (hit && !seenIds.has(hit.id)) { seenIds.add(hit.id); items.push({ id: hit.id, arrivalDate, title, imdbId, year }); }
+        if (hit && !seenIds.has(hit.id)) { seenIds.add(hit.id); items.push({ id: hit.id, arrivalDate, title, imdbId, year, isNewSeason }); }
         continue;
       } catch (e) { console.warn('[MoN] Find failed for ' + imdbId + ': ' + e.message); }
     }
@@ -549,7 +559,7 @@ async function resolveMonForLang(raw, lang, kind) {
         const data = await tmdb('/search/movie?query=' + encodeURIComponent(title) + '&language=en-US&page=1' + yearParam);
         r = (data.results || [])[0];
       }
-      if (r && !seenIds.has(r.id)) { seenIds.add(r.id); items.push({ id: r.id, arrivalDate, title, imdbId, year }); }
+      if (r && !seenIds.has(r.id)) { seenIds.add(r.id); items.push({ id: r.id, arrivalDate, title, imdbId, year, isNewSeason }); }
       else {
         console.log('[MoN] "' + title + '" not on TMDB yet — will retry');
         setRetry(movieCache, retryKey);
@@ -910,6 +920,8 @@ async function discoverMovies(lang, lookbackDays) {
 }
 
 // processMovie(item, lang, expectedLang, strictLang)
+// - expectedLang: reject movies whose TMDB original_language doesn't match (day-0 path)
+// - strictLang: when true, English is ALSO rejected (blocks Hollywood from day-0 feed)
 async function processMovie(item, lang, expectedLang, strictLang) {
   const langPfx  = lang + '_';
   const cacheKey = langPfx + item.id;
@@ -975,8 +987,8 @@ async function processMovie(item, lang, expectedLang, strictLang) {
 
 // processSeriesJW(item, lang) — for day-0-sourced series arrivals.
 // item: { id (TMDB), title, imdbId, year, arrivalDate }
-// Handles stale source TMDB IDs: if /tv/{id} 404s, re-resolves via IMDb ID
-// first, then title+year search, before giving up.
+// Handles stale source TMDB IDs: if /tv/{id} 404s, re-resolves via the
+// IMDb ID first, then title+year search, before giving up.
 async function processSeriesJW(item, lang) {
   const cacheKey = lang + '_series_' + item.id;
   const cached   = readCacheEntry(seriesCache[cacheKey]);
@@ -993,7 +1005,7 @@ async function processSeriesJW(item, lang) {
     try {
       detail = await tmdb('/tv/' + tmdbId + '?language=en-US&append_to_response=watch/providers');
     } catch (e) {
-      if (!String(e.message).includes('HTTP 404')) throw e;
+      if (!String(e.message).includes('HTTP 404')) throw e; // real errors propagate
       console.log('[JW Series] TMDB ID ' + tmdbId + ' not found for "' + item.title + '" — re-resolving...');
     }
 
@@ -1030,7 +1042,7 @@ async function processSeriesJW(item, lang) {
       return null;
     }
 
-    // STRICT language guard
+    // STRICT language guard: day-0-sourced series must be exactly the target language
     if (!detail.original_language || detail.original_language !== lang) {
       setSkip(seriesCache, cacheKey);
       console.log('[Skip] Wrong language (' + (detail.original_language || '?') + '): ' + (detail.name || ''));
@@ -1043,6 +1055,7 @@ async function processSeriesJW(item, lang) {
       return null;
     }
 
+    // Get IMDb ID — mandatory for Stremio
     let imdbId = null;
     try {
       const ext = await tmdb('/tv/' + tmdbId + '/external_ids');
@@ -1066,7 +1079,7 @@ async function processSeriesJW(item, lang) {
       type:        'series',
       title:       detail.name || '',
       platform,
-      releaseDate: item.arrivalDate || today(),
+      releaseDate: detail.first_air_date || item.arrivalDate || today(),
       overview:    detail.overview || '',
       rating:      detail.vote_average,
       posterPath:  detail.poster_path,
@@ -1214,7 +1227,24 @@ async function scrapeMovies(lang) {
     const meta = await processMovie(day0Item, lang, lang, true);
     if (meta && meta.id && !processedImdbIds.has(meta.id) && !metas.some(m => m.id === meta.id)) {
       if (isNewDiscovery) {
-        meta.releaseInfo = day0Item.arrivalDate || today();
+        const arrivalDate = day0Item.arrivalDate || today();
+        // meta.releaseInfo = TMDB's release date (theatrical, or OTT date for
+        // direct-to-OTT). Genuine premieres are always recent by that measure.
+        const tmdbDate    = meta.releaseInfo || arrivalDate;
+        const ageMs       = Date.now() - new Date(tmdbDate).getTime();
+        const isRerelease = !isNaN(ageMs) && ageMs > RERELEASE_MAX_AGE_DAYS * 24 * 3600 * 1000;
+
+        if (isRerelease) {
+          // Renewal: keep ORIGINAL date → sorts where it belongs, not on top
+          let desc = meta.description || '';
+          desc += '\n\n♻️ Re-release: back on OTT on ' + arrivalDate;
+          meta.description = desc.trim();
+          console.log('[Rerelease] ' + meta.name + ' (from ' + tmdbDate + ') — back on OTT ' + arrivalDate);
+        } else {
+          // Genuine first OTT release → arrival date is the release date
+          meta.releaseInfo = arrivalDate;
+        }
+
         movieCache[cacheKey] = meta;
         cacheDirty = true;
       }
@@ -1263,6 +1293,8 @@ async function scrapeMovies(lang) {
       }
     }
 
+    // SMART PATCH: already added by day-0/TMDB, BUT the Sheet has a more
+    // accurate OTT date! Overwrite the date, keep the rest of the metadata.
     if (checkId && processedImdbIds.has(checkId)) {
       const existingIndex = metas.findIndex(m => m.id === checkId);
       if (existingIndex !== -1) {
@@ -1282,6 +1314,7 @@ async function scrapeMovies(lang) {
       continue;
     }
 
+    // Day-0 & TMDB both missed it — process from scratch
     const tmdbData    = await enrichMovie(item.imdbId, item.title, lang);
     const finalImdbId = item.imdbId || (tmdbData && tmdbData.imdbId) || checkId || null;
 
@@ -1309,6 +1342,7 @@ async function scrapeMovies(lang) {
     await new Promise(r => setTimeout(r, 100));
   }
 
+  // Final Sort
   metas.sort((a, b) => (b.releaseInfo || '').localeCompare(a.releaseInfo || ''));
   const finalResult = metas.slice(0, 120);
 
@@ -1446,7 +1480,23 @@ async function scrapeSeries(lang) {
     const meta = await processSeriesJW(day0Item, lang);
     if (meta && meta.id && !processedImdbIds.has(meta.id) && !metas.some(m => m.id === meta.id)) {
       if (isNewDiscovery) {
-        meta.releaseInfo = day0Item.arrivalDate || today();
+        const arrivalDate = day0Item.arrivalDate || today();
+        // meta.releaseInfo = TMDB first_air_date (set in processSeriesJW)
+        const firstAir    = meta.releaseInfo || arrivalDate;
+        const ageMs       = Date.now() - new Date(firstAir).getTime();
+        // New seasons of returning shows are always fresh content
+        const isNewSeason = day0Item.isNewSeason === true;
+        const isRerelease = !isNewSeason && !isNaN(ageMs) && ageMs > RERELEASE_MAX_AGE_DAYS * 24 * 3600 * 1000;
+
+        if (isRerelease) {
+          let desc = meta.description || '';
+          desc += '\n\n♻️ Re-release: back on OTT on ' + arrivalDate;
+          meta.description = desc.trim();
+          console.log('[Rerelease] ' + meta.name + ' (first aired ' + firstAir + ') — back on OTT ' + arrivalDate);
+        } else {
+          meta.releaseInfo = arrivalDate; // premiere OR new season
+        }
+
         seriesCache[cacheKey] = meta;
         cacheDirty = true;
       }
@@ -1476,6 +1526,7 @@ async function scrapeSeries(lang) {
       }
     }
 
+    // SMART PATCH: already added by day-0, BUT the Sheet has the accurate OTT date
     if (checkId && processedImdbIds.has(checkId)) {
       const existingIndex = metas.findIndex(m => m.id === checkId);
       if (existingIndex !== -1) {
@@ -1495,6 +1546,7 @@ async function scrapeSeries(lang) {
       continue;
     }
 
+    // Day-0 missed it — process from scratch via Sheet enrichment
     const tmdbData    = await enrichSeries(item.imdbId, item.title, lang);
     const finalImdbId = item.imdbId || (tmdbData && tmdbData.imdbId) || checkId || null;
 
@@ -1529,6 +1581,7 @@ async function scrapeSeries(lang) {
     await sendAlert('Series skipped (no IMDb ID): ' + skipped.join(', '));
   }
 
+  // Final Sort (newest OTT arrivals first)
   metas.sort((a, b) => (b.releaseInfo || '').localeCompare(a.releaseInfo || ''));
   const finalResult = metas.slice(0, 80);
 
