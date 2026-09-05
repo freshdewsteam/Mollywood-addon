@@ -90,30 +90,6 @@
       ]
     },
     {
-      "id": "tt0155969",
-      "type": "movie",
-      "name": "Prayanam",
-      "releaseInfo": "2026-09-04",
-      "description": "Prayanam is a 1975 Malayalam language feature film written by Padmarajan and directed by Bharathan. It was the debut of both Padmarajan and Bharathan.\n\n📺 Streaming on: Eros Now Select Apple TV channel, JioHotstar\n📅 Release: 1975-06-20\n⭐ Rating: 8.0/10",
-      "poster": "https://image.tmdb.org/t/p/w500/os2X0mS2OtATLK2VOmzObID3hXB.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/eR4rVXXkBUf0bEqm7mmvwmbQxWt.jpg",
-      "genres": [
-        "Drama"
-      ]
-    },
-    {
-      "id": "tt1102354",
-      "type": "movie",
-      "name": "Veeralipattu",
-      "releaseInfo": "2026-09-04",
-      "description": "Hari, a Chennai-based software engineer, falls in love with Pooja. After having settled in life, Hari returns to his village in Kerala, years after falling out with his father. Pooja too arrives and does her best to reconcile the estranged father and son.\n\n📺 Streaming on: Eros Now Select Apple TV channel\n📅 Release: 2007-07-01\n⭐ Rating: 4.8/10",
-      "poster": "https://image.tmdb.org/t/p/w500/1YSYaF51lFaAHVWh2GlM4jY2U25.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/b6LsHhGOEHiMj4ETOWlmiFmk0f8.jpg",
-      "genres": [
-        "Drama"
-      ]
-    },
-    {
       "id": "tt26445387",
       "type": "movie",
       "name": "I, Nobody",
@@ -2699,21 +2675,6 @@
       ]
     },
     {
-      "id": "tt27148214",
-      "type": "movie",
-      "name": "Kiss",
-      "releaseInfo": "2025-09-19",
-      "description": "A musician is gifted with the supernatural ability to see a couple's destiny whenever they kiss. But when he sees the grim fate of the woman he loves, he must use his powers to defy destiny itself.\n\n📺 Streaming on: Zee5\n📅 Release: 2025-09-19\n⭐ Rating: 8.0/10",
-      "poster": "https://image.tmdb.org/t/p/w500/rLO7zY3JuEwkNSvXDM9rTD3kGg4.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/nsa8Qwneg6yzlcr8J6Bch1kbQQk.jpg",
-      "genres": [
-        "Romance",
-        "Comedy",
-        "Drama",
-        "Fantasy"
-      ]
-    },
-    {
       "id": "tt26659974",
       "type": "movie",
       "name": "Thandakaaranyam",
@@ -3163,5 +3124,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-09-05T07:41:37.372Z"
+  "builtAt": "2026-09-05T11:04:56.578Z"
 }
