@@ -425,13 +425,29 @@ async function fetchMonRaw(kind) {
       const text = await fetchUrl(MON_CHANGES_URL + '?' + params.toString(), { 'X-API-Key': MON_API_KEY });
       const data = JSON.parse(text);
 
-      // One-time field dump — verifies the show object shape (tmdbId? originalLanguage?)
-      if (page === 0 && Array.isArray(data.shows) && data.shows.length) {
-        console.log('[MoN] Show fields available: ' + Object.keys(data.shows[0]).join(', '));
+      // ── FIX: MoN returns `shows` as an OBJECT MAP keyed by show ID (not an
+      // array). Object.entries() converts it into a list we can iterate.
+      // We also keep array support in case they change the shape someday.
+      let showsList = [];
+      if (Array.isArray(data.shows)) {
+        showsList = data.shows;
+      } else if (data.shows && typeof data.shows === 'object') {
+        showsList = Object.entries(data.shows).map(([key, val]) => {
+          if (val && typeof val === 'object') {
+            if (val.id === undefined || val.id === null) val.id = key; // ensure id — use the map key
+            return val;
+          }
+          return { id: key };
+        });
       }
 
-      for (const ch of (data.changes || [])) changes.push(ch);
-      for (const sh of (data.shows || [])) if (sh && sh.id !== undefined) showsById[String(sh.id)] = sh;
+      // One-time field dump — verifies the show object shape (tmdbId? originalLanguage?)
+      if (page === 0 && showsList.length) {
+        console.log('[MoN] Show fields available: ' + Object.keys(showsList[0]).join(', '));
+      }
+
+      for (const ch of (Array.isArray(data.changes) ? data.changes : [])) changes.push(ch);
+      for (const sh of showsList) if (sh && sh.id !== undefined) showsById[String(sh.id)] = sh;
 
       if (!data.hasMore || !data.nextCursor) break;
       cursor = data.nextCursor;
@@ -445,6 +461,13 @@ async function fetchMonRaw(kind) {
   if (!changes.length) {
     console.warn('[MoN] ' + showType + ': no changes fetched' + (lastErr ? ' (' + lastErr.message + ')' : ''));
     return null; // null = failure → caller falls back to JustWatch
+  }
+
+  // SAFETY GUARD: changes without shows are unusable — treat as failure so
+  // the JustWatch fallback engages instead of silently resolving 0 titles.
+  if (!Object.keys(showsById).length) {
+    console.warn('[MoN] ' + showType + ': changes fetched but no shows parsed — falling back');
+    return null;
   }
 
   // Remember fetch time so the next run queries only newer changes
