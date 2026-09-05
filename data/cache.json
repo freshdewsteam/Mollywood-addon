@@ -109,7 +109,7 @@
       "type": "movie",
       "name": "Ananthan Kaadu",
       "releaseInfo": "2026-06-25",
-      "description": "Set against the socio-political landscape of the 1980s and 1990s, this gripping drama weaves together themes of ambition, survival, violence, and retribution. As choices made in desperation set powerful forces in motion, the story unfolds into a compelling journey where karma relentlessly pursues those trying to outrun their past.\n\n📺 Streaming on: Amazon Prime Video, Lionsgate Play Apple TV Channel, Lionsgate Play Amazon Channel, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel\n📅 Release: 2026-06-25\n⭐ Rating: 4.0/10",
+      "description": "Set against the socio-political landscape of the 1980s and 1990s, this gripping drama weaves together themes of ambition, survival, violence, and retribution. As choices made in desperation set powerful forces in motion, the story unfolds into a compelling journey where karma relentlessly pursues those trying to outrun their past.\n\n📺 Streaming on: Amazon Prime Video, Lionsgate Play Apple TV Channel, Lionsgate Play Amazon Channel, ManoramaMAX Amazon Channel, Amazon Prime Video with Ads,  AP International South Cinema Amazon Channel\n📅 Release: 2026-06-25\n⭐ Rating: 4.0/10",
       "poster": "https://image.tmdb.org/t/p/w500/a8Ut1fkbqvolWfEIl8Voa1oUsDG.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/AvMub4XZABMznZBn7W5fot7ghDS.jpg",
       "genres": [
@@ -415,7 +415,7 @@
       "type": "movie",
       "name": "Bhishmar",
       "releaseInfo": "2026-03-20",
-      "description": "Two men meet by chance, setting off a night of chaos with romance and action, as their paths cross and intertwine through various unexpected events.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2026-03-20\n⭐ Rating: 1.0/10",
+      "description": "Two men meet by chance, setting off a night of chaos with romance and action, as their paths cross and intertwine through various unexpected events.\n\n📺 Streaming on: Amazon Prime Video, Sun Nxt, Amazon Prime Video with Ads\n📅 Release: 2026-03-20\n⭐ Rating: 2.3/10",
       "poster": "https://image.tmdb.org/t/p/w500/wkiu7ez8oL1Yme4k5cBxFz0zN4U.jpg",
       "background": "https://image.tmdb.org/t/p/w1280/pkbJDrFuICmwSmksldZnYAjPk5M.jpg",
       "genres": [
@@ -2610,6 +2610,21 @@
       ]
     },
     {
+      "id": "tt27148214",
+      "type": "movie",
+      "name": "Kiss",
+      "releaseInfo": "2025-09-19",
+      "description": "A musician is gifted with the supernatural ability to see a couple's destiny whenever they kiss. But when he sees the grim fate of the woman he loves, he must use his powers to defy destiny itself.\n\n📺 Streaming on: Zee5\n📅 Release: 2025-09-19\n⭐ Rating: 8.0/10",
+      "poster": "https://image.tmdb.org/t/p/w500/rLO7zY3JuEwkNSvXDM9rTD3kGg4.jpg",
+      "background": "https://image.tmdb.org/t/p/w1280/nsa8Qwneg6yzlcr8J6Bch1kbQQk.jpg",
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Drama",
+        "Fantasy"
+      ]
+    },
+    {
       "id": "tt26659974",
       "type": "movie",
       "name": "Thandakaaranyam",
@@ -2820,19 +2835,6 @@
       "background": "https://image.tmdb.org/t/p/w1280/avf83LbIvRCVxTJjjpdyDwBZxB9.jpg",
       "genres": [
         "Romance"
-      ]
-    },
-    {
-      "id": "tt35834896",
-      "type": "movie",
-      "name": "Akkenam",
-      "releaseInfo": "2025-07-04",
-      "description": "A brave cab driver and a released convict find themselves unlikely allies as they confront a greater evil that threatens to destroy many lives.\n\n📺 Streaming on:  AP International South Cinema Amazon Channel\n📅 Release: 2025-07-04\n⭐ Rating: 10.0/10",
-      "poster": "https://image.tmdb.org/t/p/w500/1tUVshO5qTfoZZ1lv4AlPFGnTnH.jpg",
-      "background": "https://image.tmdb.org/t/p/w1280/9iI4ACDAC5cuxtl6UgNZ2vYn7l9.jpg",
-      "genres": [
-        "Thriller",
-        "Crime"
       ]
     },
     {
@@ -3110,5 +3112,5 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJjNDVhN2YtN2YxZS00NzVmLWI1MTctOTk0Yzc2NDE3ZTQxXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "builtAt": "2026-09-05T12:54:21.991Z"
+  "builtAt": "2026-09-05T13:21:09.197Z"
 }
